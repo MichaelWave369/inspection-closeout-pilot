@@ -336,7 +336,7 @@ function App() {
             <span className="section-kicker">FOUNDER-LED LOCAL PILOT</span>
             <h2>Built around the real handoff between field work and customer delivery.</h2>
             <p>
-              I’m Michael “Mikey” Hughes, a Sacramento-area technical builder with field-service, systems, networking, and workflow experience. The first pilots are delivered hands-on so the repeatable work can be understood before it is automated.
+              I’m Michael W. Hughes, a Sacramento-area technical builder with field-service, systems, networking, and workflow experience. The first pilots are delivered hands-on so the repeatable work can be understood before it is automated.
             </p>
             <div className="founder-contact">
               <span><MapPin size={17} /> Sacramento Area, California</span>
@@ -387,7 +387,7 @@ function App() {
       <footer>
         <div>
           <strong>Inspection Readiness & Closeout Pilot</strong>
-          <span>Michael “Mikey” Hughes · Sacramento Area, California</span>
+          <span>Michael W. Hughes · Sacramento Area, California</span>
           <span>530-838-5844 · enterthefieldmichael@gmail.com</span>
         </div>
         <p>
