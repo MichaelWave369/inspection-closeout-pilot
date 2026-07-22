@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090817" />
+  <meta name="description" content="Michael W. Hughes - Network Infrastructure Specialist, systems builder, creator, and musician." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Michael W. Hughes | Connect" />
+  <meta property="og:description" content="Networks, field technology, systems, projects, products, and music." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/247459237?v=4" />
+  <meta property="og:url" content="https://michaelwave369.github.io/inspection-closeout-pilot/links/" />
+  <title>Michael W. Hughes | Connect</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070711;
+      --panel: rgba(19, 16, 39, 0.82);
+      --panel-2: rgba(13, 25, 46, 0.82);
+      --text: #f7f5ff;
+      --muted: #b8b4ca;
+      --purple: #9867ff;
+      --blue: #45b7ff;
+      --orange: #ff9f43;
+      --green: #58e6a9;
+      --line: rgba(255,255,255,0.11);
+      --shadow: 0 22px 70px rgba(0,0,0,0.42);
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--bg); }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(152,103,255,.28), transparent 34%),
+        radial-gradient(circle at 88% 18%, rgba(69,183,255,.20), transparent 34%),
+        radial-gradient(circle at 48% 92%, rgba(88,230,169,.13), transparent 36%),
+        linear-gradient(145deg, #06060e 0%, #0b0919 48%, #06121c 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, black, transparent 84%);
+    }
+    main {
+      width: min(720px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 34px 0 54px;
+      position: relative;
+      z-index: 1;
+    }
+    .card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 28px;
+      background: linear-gradient(145deg, var(--panel), var(--panel-2));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -70px;
+      top: -70px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.13);
+      box-shadow: 0 0 0 28px rgba(152,103,255,.05), 0 0 0 58px rgba(69,183,255,.035);
+    }
+    .identity {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .avatar-wrap {
+      width: 104px;
+      height: 104px;
+      border-radius: 27px;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--purple), var(--blue), var(--green), var(--orange));
+      box-shadow: 0 12px 34px rgba(69,183,255,.18);
+    }
+    .avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
+      border: 3px solid #0a0a15;
+      background: #0a0a15;
+    }
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: .74rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 8vw, 3.2rem);
+      line-height: .97;
+      letter-spacing: -.055em;
+    }
+    .role {
+      margin: 10px 0 0;
+      font-weight: 720;
+      color: #d9d6e7;
+      font-size: 1rem;
+    }
+    .summary {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 58ch;
+      position: relative;
+      z-index: 2;
+    }
+    .direct-actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 22px;
+      position: relative;
+      z-index: 2;
+    }
+    .action, .link {
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--line);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .action:hover, .link:hover { transform: translateY(-2px); border-color: rgba(152,103,255,.58); }
+    .action {
+      border-radius: 16px;
+      padding: 13px 10px;
+      text-align: center;
+      font-weight: 760;
+      background: rgba(255,255,255,.055);
+    }
+    .action.primary {
+      color: #0a0911;
+      border-color: transparent;
+      background: linear-gradient(135deg, #b38cff, #66c8ff);
+    }
+    section { margin-top: 28px; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 12px;
+      font-size: .76rem;
+      font-weight: 840;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: #d4d0e0;
+    }
+    .section-title::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+    .links { display: grid; gap: 10px; }
+    .link {
+      min-height: 68px;
+      display: grid;
+      grid-template-columns: 46px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      border-radius: 19px;
+      padding: 10px 16px 10px 11px;
+      background: rgba(255,255,255,.045);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+    }
+    .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #090812;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+    }
+    .icon.green { background: linear-gradient(135deg, var(--green), #8fffd1); }
+    .icon.orange { background: linear-gradient(135deg, var(--orange), #ffd166); }
+    .icon.blue { background: linear-gradient(135deg, var(--blue), #8ed8ff); }
+    .link strong { display: block; font-size: 1rem; }
+    .link small { display: block; margin-top: 3px; color: var(--muted); font-size: .82rem; }
+    .arrow { font-size: 1.25rem; color: #b7b1c7; }
+    footer {
+      text-align: center;
+      padding: 26px 12px 4px;
+      color: #918aa5;
+      font-size: .82rem;
+      line-height: 1.5;
+    }
+    footer strong { color: #cdc8da; }
+    @media (max-width: 520px) {
+      main { width: min(100% - 18px, 720px); padding-top: 10px; }
+      .card { padding: 21px 17px; border-radius: 24px; }
+      .identity { grid-template-columns: 82px 1fr; gap: 14px; }
+      .avatar-wrap { width: 82px; height: 82px; border-radius: 23px; }
+      .avatar { border-radius: 20px; }
+      .direct-actions { grid-template-columns: 1fr; }
+      .action { padding: 14px; }
+      .link { grid-template-columns: 43px 1fr auto; padding-right: 13px; }
+      .icon { width: 43px; height: 43px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="card">
+      <header class="identity">
+        <div class="avatar-wrap">
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/247459237?v=4" alt="Michael W. Hughes" />
+        </div>
+        <div>
+          <p class="eyebrow">Connect with Mikey</p>
+          <h1>Michael W. Hughes</h1>
+          <p class="role">Network Infrastructure Specialist</p>
+        </div>
+      </header>
+
+      <p class="summary">Networks, field technology, systems building, practical AI, independent projects, and a whole lot of music.</p>
+
+      <nav class="direct-actions" aria-label="Contact actions">
+        <a class="action primary" href="michael-hughes.vcf" download>Save Contact</a>
+        <a class="action" href="tel:+15308385844">Call / Text</a>
+        <a class="action" href="mailto:enterthefieldmichael@gmail.com">Email</a>
+      </nav>
+
+      <section>
+        <h2 class="section-title">Work & Projects</h2>
+        <div class="links">
+          <a class="link" href="https://enterthefield.org/" target="_blank" rel="noopener">
+            <span class="icon green">E</span><span><strong>Enter The Field</strong><small>Main website and project gateway</small></span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://github.com/MichaelWave369" target="_blank" rel="noopener">
+            <span class="icon">GH</span><span><strong>GitHub</strong><small>Open projects, prototypes, and source work</small></span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://microneesia.gumroad.com/" target="_blank" rel="noopener">
+            <span class="icon orange">G</span><span><strong>Gumroad</strong><small>Digital products, tools, and publications</small></span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://www.linkedin.com/in/michaelhughes777/" target="_blank" rel="noopener">
+            <span class="icon blue">in</span><span><strong>LinkedIn</strong><small>Professional profile and experience</small></span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://profile.indeed.com/p/michaelh-9y6d98g" target="_blank" rel="noopener">
+            <span class="icon blue">I</span><span><strong>Indeed</strong><small>Field technology and infrastructure profile</small></span><span class="arrow">›</span>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Music & Media</h2>
+        <div class="links">
+          <a class="link" href="https://suno.com/@michaelwave369" target="_blank" rel="noopener">
+            <span class="icon orange">S</span><span><strong>Suno</strong><small>MichaelWave369 music laboratory</small></span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://open.spotify.com/artist/07baw1sa0EyrbxrAffDLYd" target="_blank" rel="noopener">
+            <span class="icon green">▶</span><span><strong>Spotify</strong><small>MicTek artist catalog</small></span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://soundcloud.com/microneesia" target="_blank" rel="noopener">
+            <span class="icon orange">SC</span><span><strong>SoundCloud</strong><small>MicTek tracks, albums, and experiments</small></span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://www.youtube.com/@ARCTower" target="_blank" rel="noopener">
+            <span class="icon">YT</span><span><strong>YouTube</strong><small>Music, media, and creative work</small></span><span class="arrow">›</span>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Social</h2>
+        <div class="links">
+          <a class="link" href="https://x.com/mictekmusicc" target="_blank" rel="noopener">
+            <span class="icon blue">X</span><span><strong>@mictekmusicc</strong><small>Builds, music, discoveries, and conversation</small></span><span class="arrow">›</span>
+          </a>
+        </div>
+      </section>
+    </article>
+
+    <footer><strong>Michael W. Hughes</strong><br />Northern California · 530-838-5844</footer>
+  </main>
+</body>
+</html>
