@@ -75,6 +75,9 @@ jobs:
       - name: Check Vibe compiler boundaries
         run: npm run check:vibe
 
+      - name: Check Agentora operator boundaries
+        run: npm run check:agentora
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
