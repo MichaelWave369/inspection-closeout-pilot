@@ -54,6 +54,9 @@ jobs:
       - name: Check Parallax Institute boundaries
         run: npm run check:institute
 
+      - name: Check Coherence Bridge boundaries
+        run: npm run check:coherence
+
       - name: Check public JavaScript
         run: npm run check:public-js
 

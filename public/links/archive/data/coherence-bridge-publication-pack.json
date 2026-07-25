@@ -1,0 +1,152 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Coherence Bridge — Publication Pack 1",
+  "description": "A non-clinical human-continuity and anti-dependency architecture with fixed-data calibration drill, consent renewal, protected dissent, human handoff, pause, and repair.",
+  "projects": [
+    {
+      "id": "coherence-bridge",
+      "title": "Coherence Bridge",
+      "aliases": ["CB", "COHERENCE", "BRIDGE", "COHERENCE BRIDGE", "HUMAN COUNCIL"],
+      "mark": "CB",
+      "category": "research",
+      "categoryLabel": "Human continuity & safety",
+      "status": "Published architecture + drill",
+      "tone": "pink",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 4,
+      "tagline": "A consent-based safety and continuity layer that helps computational collaboration strengthen human agency, real relationships, visible dissent, and easy exit.",
+      "story": "Coherence Bridge is the safety and continuity subsystem beside Carbon Loop. It addresses stale mandates, shrinking human contact, suppressed dissent, exit friction, dependency-promoting behavior, human-council handoff, pause, and repair. Its success condition is not retention or disclosure. A successful bridge leaves a person with more agency, clearer boundaries, easier access to real people, and a simpler path to pause or leave.",
+      "summary": "A non-clinical architecture for renewing human authority, preserving protected dissent, detecting system-level drift, restoring real-person connection, and treating pause or exit as legitimate successful outcomes. It is not a companion product, therapy system, crisis service, or hidden monitoring layer.",
+      "see": "The Coherence Bridge cover, isolation-to-coherence loop, mandate-renewal map, architecture and safety briefs, fixed-data Calibration Drill, PAT Mk.1 integration, source state, and explicit anti-dependency boundary.",
+      "proof": "Seven public artifacts are connected. The Calibration Drill uses four fixed synthetic system scenarios, no model calls, no visitor assessment, no persistence, no runtime network request, and no automatic human contact. It demonstrates presentation and bounded safety logic only; it does not establish improved wellbeing or safe unsupervised deployment.",
+      "next": "Freeze a supervised-pilot protocol with preregistered human-benefit and harm measures, independent ethics and safety review, minimal-data rules, easy withdrawal, adverse-event publication, mandate-renewal intervals, protected-dissent testing, heterogeneous-model evaluation, and explicit prohibition on converting vulnerability into growth or retention.",
+      "claimBoundary": "Coherence Bridge is a non-clinical research and safety architecture. This package does not diagnose people, provide therapy or crisis care, monitor private behavior without explicit consent, infer emotional truth, contact anyone automatically, validate loneliness reduction, prove wellbeing improvement, establish model independence, or authorize unsupervised use with vulnerable people. Human contact, pause, export, deletion, disagreement, and exit must remain easy.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/coherence-bridge/coherence-bridge-cover.svg",
+        "label": "Coherence Bridge",
+        "caption": "Human self, trusted people, and computational collaborators connected by consent, dissent, drift review, pause, and repair."
+      },
+      "signals": [
+        { "label": "Current state", "value": "Published architecture + synthetic drill" },
+        { "label": "Success condition", "value": "More human agency and connection" },
+        { "label": "Default safety action", "value": "Renew, hand off, pause, or repair" },
+        { "label": "Clinical status", "value": "None claimed" }
+      ],
+      "artifacts": [
+        {
+          "id": "coherence-bridge-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Coherence Bridge Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/coherence-bridge/coherence-bridge-cover.svg",
+          "description": "Human self, trusted people, and computational collaborators connected through consent, protected dissent, drift detection, pause, and repair.",
+          "url": "../artifacts/coherence-bridge/coherence-bridge-cover.svg",
+          "linkLabel": "Open Bridge cover →"
+        },
+        {
+          "id": "coherence-isolation-loop",
+          "type": "Safety diagram",
+          "role": "system loop",
+          "title": "Isolation-to-Coherence Loop",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/coherence-bridge/isolation-coherence-loop.svg",
+          "description": "A system-level isolation loop interrupted by consent renewal, visible dissent, real-person reconnection, pause, and mandate repair.",
+          "url": "../artifacts/coherence-bridge/isolation-coherence-loop.svg",
+          "linkLabel": "Open loop map →"
+        },
+        {
+          "id": "coherence-mandate-renewal-map",
+          "type": "Governance diagram",
+          "role": "authority flow",
+          "title": "Mandate Renewal / Pause / Repair",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/coherence-bridge/mandate-renewal-map.svg",
+          "description": "Human mandate, consent freshness, dissent, drift review, bounded renewal, pause, repair, and receipt.",
+          "url": "../artifacts/coherence-bridge/mandate-renewal-map.svg",
+          "linkLabel": "Open mandate map →"
+        },
+        {
+          "id": "coherence-architecture-brief",
+          "type": "Public document brief",
+          "title": "Coherence Bridge Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public synthesis covering human mandate, human council, protected dissent, drift review, pause, repair, and the relationship to Carbon Loop.",
+          "url": "../artifacts/coherence-bridge/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "coherence-safety-boundary",
+          "type": "Public safety boundary",
+          "title": "Coherence Bridge Safety and Anti-Dependency Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Defines permitted support, prohibited dependency behavior, urgent-help language, evidence standards, and the limits of the synthetic drill.",
+          "url": "../artifacts/coherence-bridge/safety-boundary-brief.html",
+          "linkLabel": "Read safety boundary →"
+        },
+        {
+          "id": "coherence-calibration-drill",
+          "type": "Interactive safety proof",
+          "title": "Coherence Bridge Calibration Drill",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data drill for stale consent, shrinking human contact, suppressed dissent, ambiguous handoff, bounded renewal, pause, and repair. It assesses no visitor and saves nothing.",
+          "url": "../artifacts/coherence-bridge/calibration-drill/",
+          "linkLabel": "Run Calibration Drill →"
+        },
+        {
+          "id": "coherence-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Coherence Bridge Dissent View",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The Parallax-native terminal view emphasizing protected dissent, current mandate, relationships, next repair gate, and Archive evidence states.",
+          "url": "../patmk1/?project=coherence-bridge&mode=dissent",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "coherence-bridge-codex-source",
+          "type": "Canonical source set",
+          "title": "The Coherence Bridge Codex and Governance Baseline",
+          "status": "known-locate",
+          "description": "Retained source canon covering the isolation loop, human council, computational counterparts, calibration, drift detection, protected dissent, red-team critiques, and repair architecture.",
+          "action": "Inventory and review the complete source set before any full-document public release."
+        },
+        {
+          "id": "coherence-supervised-pilot-protocol",
+          "type": "Research governance artifact",
+          "title": "Supervised Human-Benefit Pilot Protocol",
+          "status": "planned",
+          "description": "A preregistered protocol for consent renewal, withdrawal, minimal data, human-benefit measures, adverse events, independent review, and anti-growth safeguards.",
+          "action": "Design with qualified independent ethics and safety review before involving participants."
+        },
+        {
+          "id": "coherence-independent-diversity-test",
+          "type": "Runtime evidence",
+          "title": "Independent Office and Model Diversity Trial",
+          "status": "planned",
+          "description": "A controlled test of correlated blind spots, performative dissent, office independence, disagreement preservation, and stop-path reliability across heterogeneous systems.",
+          "action": "Publish test fixtures, model and office provenance, failures, disagreements, and limits without claiming independence from role labels alone."
+        }
+      ],
+      "relationships": [
+        { "projectId": "carbon-loop", "type": "canonical human-experience layer", "note": "Carbon Loop and LumenBridge provide the reflection surface; Coherence Bridge supplies continuity, drift, dissent, handoff, pause, and repair." },
+        { "projectId": "sovereign-office-architecture", "type": "protected office architecture", "note": "SOSA supplies separated mandates, Protected Dissenter, Governor, Operator, and Repairer patterns." },
+        { "projectId": "alpha-ledger-omega", "type": "consent and repair receipts", "note": "ALO can preserve mandate renewal, dissent, pause, deletion, handoff, and repair without converting record completeness into proof of benefit." },
+        { "projectId": "parallax-institute", "type": "stewardship and independent review", "note": "The Institute supplies public boundaries, pilot governance, regenerative benefit standards, and institutional accountability." },
+        { "projectId": "signalbridge", "type": "bounded human handoff", "note": "SignalBridge offers a provenance-preserving path for user-authorized summaries and outside review." }
+      ]
+    }
+  ]
+}
