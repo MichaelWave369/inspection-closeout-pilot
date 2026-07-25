@@ -36,7 +36,7 @@ const required = [
   'Nothing is saved.',
   'No one has been notified by this page.',
   'It does not diagnose, treat, monitor, or provide crisis support.',
-  'No account, analytics, network request, or hidden score is used.',
+  'No account, analytics, runtime network request after the static page loads, or hidden score is used.',
 ]
 
 for (const disclosure of required) {
