@@ -63,6 +63,9 @@ jobs:
       - name: Check Double C language boundaries
         run: npm run check:double-c
 
+      - name: Check SOSA governance boundaries
+        run: npm run check:sosa
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
