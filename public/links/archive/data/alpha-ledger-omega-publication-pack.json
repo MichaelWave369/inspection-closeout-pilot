@@ -1,0 +1,152 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "AlphaLedgerOmega — Publication Pack 1",
+  "description": "Evidence-ledger architecture, receipt-family visuals, claim-boundary briefs, and a manifest-verified synthetic Receipt Inspector.",
+  "projects": [
+    {
+      "id": "alpha-ledger-omega",
+      "title": "AlphaLedgerOmega",
+      "aliases": ["ALO", "LEDGER", "ALPHA LEDGER OMEGA", "RECEIPT", "RECEIPTS"],
+      "mark": "ALO",
+      "category": "governance",
+      "categoryLabel": "Evidence & governance",
+      "status": "Published architecture + receipt inspector",
+      "tone": "green",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 4,
+      "tagline": "A family of evidence ledgers connecting claims, sources, authority, actions, custody, uncertainty, continuity, and repair.",
+      "story": "AlphaLedgerOmega is the receipt layer beneath Parallax. It preserves inspectable continuity without pretending that complete records automatically create strong evidence. Nine specialized ledger families—Proteo, Element, Atom, Circuit, Neuro, Material, Spatial, Energy, and DataCenter—share a common receipt envelope while retaining domain-specific evidence requirements. Publication Pack 1 makes the family map, envelope anatomy, no-trust-laundering boundary, and a first manifest-verified synthetic inspector publicly inspectable.",
+      "summary": "ALO records who or what acted, which source and authority applied, what changed, which claims the receipt supports, which claims it cannot support, what remains uncertain, which dissent survives, and what repair or supersession is required. Integrity checks establish byte continuity; independent evidence evaluation determines whether a claim deserves trust.",
+      "see": "The nine-family map, receipt anatomy, architecture brief, evidence and claim-boundary brief, browser-side SHA-256 Receipt Inspector, four synthetic cross-project fixtures, and PAT Mk.1 Ledger Mode.",
+      "proof": "Seven public artifacts are connected. The Receipt Inspector loads four bundled synthetic receipts for MENDALA, Graph Cinema, Carbon Loop, and Archive publication; calculates each fixture's SHA-256 digest in the browser; compares it with an external manifest; exposes required envelope fields; and keeps supported and unsupported claims separate. These fixtures prove schema and integrity-check behavior only—not real-world events.",
+      "next": "Freeze a portable ALO receipt schema and deterministic validator; publish a real signed receipt bundle from one bounded project test; preserve raw source files and custody; then verify the same receipt independently in two implementations without allowing either viewer to alter canonical data.",
+      "claimBoundary": "AlphaLedgerOmega is not automatically a blockchain, immutable store, distributed consensus system, truth machine, legal evidence system, or substitute for calibration, replication, expert review, and domain-specific validation. A matching digest shows that inspected bytes match a registered expectation; it does not prove authorship, honesty, method quality, authority legitimacy, or that the described event occurred. All public inspector receipts in Publication Pack 1 are synthetic demonstration fixtures.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/alpha-ledger-omega/alo-cover.svg",
+        "label": "AlphaLedgerOmega",
+        "caption": "A shared receipt envelope linking claim, source, authority, action, custody, verification, uncertainty, and repair across nine specialized ledger families."
+      },
+      "signals": [
+        { "label": "Ledger families", "value": "9 specialized domains" },
+        { "label": "Shared grammar", "value": "ALO receipt envelope v0.1" },
+        { "label": "Public fixtures", "value": "4 synthetic examples" },
+        { "label": "Integrity rule", "value": "Matching bytes ≠ proven truth" }
+      ],
+      "artifacts": [
+        {
+          "id": "alo-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "AlphaLedgerOmega Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/alpha-ledger-omega/alo-cover.svg",
+          "description": "The receipt layer connecting claim, source, authority, action, custody, verification, uncertainty, and repair.",
+          "url": "../artifacts/alpha-ledger-omega/alo-cover.svg",
+          "linkLabel": "Open cover visual →"
+        },
+        {
+          "id": "alo-ledger-family-map",
+          "type": "Architecture diagram",
+          "role": "family map",
+          "title": "ALO Ledger Family Map",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/alpha-ledger-omega/ledger-family-map.svg",
+          "description": "Proteo, Element, Atom, Circuit, Neuro, Material, Spatial, Energy, and DataCenter around one shared receipt grammar.",
+          "url": "../artifacts/alpha-ledger-omega/ledger-family-map.svg",
+          "linkLabel": "Open family map →"
+        },
+        {
+          "id": "alo-receipt-anatomy",
+          "type": "Evidence diagram",
+          "role": "receipt anatomy",
+          "title": "Anatomy of an ALO Receipt",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/alpha-ledger-omega/receipt-anatomy.svg",
+          "description": "Identity, source, custody, authority, event, state transition, claim boundary, uncertainty, dissent, integrity, and repair.",
+          "url": "../artifacts/alpha-ledger-omega/receipt-anatomy.svg",
+          "linkLabel": "Open receipt anatomy →"
+        },
+        {
+          "id": "alo-architecture-brief",
+          "type": "Public document brief",
+          "title": "AlphaLedgerOmega Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Archive synthesis defining the nine families, shared receipt envelope, correction and supersession, and the first public proof.",
+          "url": "../artifacts/alpha-ledger-omega/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "alo-evidence-boundary-brief",
+          "type": "Evidence and claim-boundary brief",
+          "title": "Evidence, Verification, Validation, and Proof",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Separates observation, assertion, evidence, receipt, integrity verification, validation, proof, and repair while enforcing the no-trust-laundering rule.",
+          "url": "../artifacts/alpha-ledger-omega/evidence-boundary-brief.html",
+          "linkLabel": "Read evidence boundary →"
+        },
+        {
+          "id": "alo-receipt-inspector",
+          "type": "Interactive proof",
+          "title": "ALO Receipt Inspector",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A browser-side inspector for four synthetic receipts with external manifest hashes, SHA-256 verification, changed-byte simulation, envelope completeness, claims, uncertainty, dissent, and repair.",
+          "url": "../artifacts/alpha-ledger-omega/inspector/",
+          "linkLabel": "Open Receipt Inspector →"
+        },
+        {
+          "id": "pat-mk1-alo-ledger-mode",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 ALO Ledger View",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The Parallax-native terminal view for the ALO project record, artifacts, relationships, proof state, and claim boundary.",
+          "url": "../patmk1/?project=alpha-ledger-omega&mode=ledger",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "alo-retained-source-canon",
+          "type": "Canonical source set",
+          "title": "AlphaLedgerOmega retained architecture and ledger-family canon",
+          "status": "known-locate",
+          "description": "The broader ALO source program is known and retained outside this repository. The public briefs are curated Archive syntheses rather than silent replacements.",
+          "action": "Inventory, version, and review the retained family specifications before any complete source release."
+        },
+        {
+          "id": "alo-portable-schema-validator",
+          "type": "Reference implementation",
+          "title": "Portable ALO Receipt Schema and Deterministic Validator",
+          "status": "planned",
+          "description": "A shell-neutral open receipt format with deterministic validation, correction, revocation, supersession, custody, and claim-boundary rules.",
+          "action": "Freeze v0.1, publish test vectors, and verify equivalent results in two independent implementations."
+        },
+        {
+          "id": "alo-real-receipt-bundle",
+          "type": "Operational evidence",
+          "title": "First Real Signed Cross-Project Receipt Bundle",
+          "status": "planned",
+          "description": "A bounded real-world evidence package preserving raw sources, conditions, authority, signatures, hashes, failures, dissent, and a claim no broader than the evidence permits.",
+          "action": "Choose one narrow physical or software test, execute it, preserve source custody, and publish the complete receipt with independent verification."
+        }
+      ],
+      "relationships": [
+        { "projectId": "parallax-mendala", "type": "physical test receipts", "note": "ALO can preserve MENDALA instrument logs, conditions, failures, maintenance, repairs, and bounded performance claims." },
+        { "projectId": "graph-cinema", "type": "trajectory continuity", "note": "ALO preserves decision packets, sealed judgments, authority, dissent, rewrites, receipts, and deterministic replay objects." },
+        { "projectId": "carbon-loop", "type": "consent continuity", "note": "ALO can preserve consent, correction, export, revocation, deletion, and mandate-renewal events without storing deleted reflection content." },
+        { "projectId": "parallax-archive-terminal-system", "type": "artifact provenance", "note": "ALO can record source identity, curator authority, rights review, checksums, publication state, and deployment receipts for Archive artifacts." },
+        { "projectId": "sovereign-office-architecture", "type": "authority and independent judgments", "note": "SOSA supplies separated office mandates and protected dissent that ALO records without collapsing into one self-validating voice." }
+      ]
+    }
+  ]
+}
