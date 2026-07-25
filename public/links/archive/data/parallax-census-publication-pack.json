@@ -1,0 +1,153 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-26",
+  "title": "Parallax Census — Publication Pack 1",
+  "description": "A local-first project and artifact registry architecture with deterministic fixed-data intake review, provenance, consent, duplicate, custody, and publication boundaries.",
+  "projects": [
+    {
+      "id": "parallax-census",
+      "title": "Parallax Census",
+      "aliases": ["CENSUS", "REGISTRY", "PARALLAX REGISTRY", "PROJECT CENSUS", "ARTIFACT CENSUS"],
+      "mark": "PC",
+      "category": "foundation",
+      "categoryLabel": "Registry and provenance",
+      "status": "Published architecture + workbench",
+      "tone": "blue",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 9,
+      "tagline": "A local-first registry for projects, artifacts, sources, aliases, relationships, evidence states, and custody receipts.",
+      "story": "Parallax Census helps the Archive discover and organize the growing body of Parallax work without confusing discovery with ownership, consent, truth, uniqueness, or permission to publish. Candidate records pass through normalization, provenance, custody, duplicate, privacy, freshness, claim-boundary, and human-authority review before any canonical change is allowed.",
+      "summary": "A project-and-artifact registry architecture preserving local control, deterministic validation, custody, quarantine, aliases, supersession, withdrawal, and explicit human approval. It is not a population census, identity system, surveillance platform, web crawler, or automatic publisher.",
+      "see": "The Census cover, registry lifecycle, consent-and-provenance gate, architecture and boundary briefs, fixed-data Registry Workbench, source lineage, relationships, planned portable schema, and the next audited ingestion proof.",
+      "proof": "Seven public artifacts are connected. The fixed-data Workbench deterministically distinguishes a clean public candidate, exact duplicate, alias collision, private source, stale canonical state, and orphan artifact while performing no personal-data intake, crawling, persistence, model calls, or Archive mutation.",
+      "next": "Freeze a portable versioned registry schema and import/export manifest, then run the first audited ingestion across the existing Archive pack files. Publish candidate counts, aliases, duplicate findings, missing provenance, consent states, accepted changes, rejected changes, and custody receipts without silently mutating canonical records.",
+      "claimBoundary": "This package demonstrates registry architecture, public explanation, deterministic fixed synthetic review logic, and Archive integration. It does not prove complete discovery, legal ownership, authorship, copyright permission, authenticity, consent, claim truth, absence of duplicates, public-release authority, or that omitted work does not exist. Census is a project-and-artifact registry, not a population census or identity-profiling system. Every real canonical change requires explicit human approval and a versioned receipt.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/parallax-census/census-cover.svg",
+        "label": "Parallax Census",
+        "caption": "Discovery becomes a candidate; provenance, consent, human authority, and a receipt determine whether it may enter the canonical Archive."
+      },
+      "signals": [
+        { "label": "Registry scope", "value": "Projects and artifacts" },
+        { "label": "Known lineage", "value": "v0.1.1–v0.5" },
+        { "label": "Validation", "value": "Deterministic + custody-aware" },
+        { "label": "Canonical authority", "value": "Explicit human approval" }
+      ],
+      "links": [],
+      "artifacts": [
+        {
+          "id": "parallax-census-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Parallax Census Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-census/census-cover.svg",
+          "description": "Candidate discovery through normalization, evidence gates, human review, receipt formation, and canonical Archive admission.",
+          "url": "../artifacts/parallax-census/census-cover.svg",
+          "linkLabel": "Open Census cover →"
+        },
+        {
+          "id": "parallax-census-registry-lifecycle",
+          "type": "Architecture visual",
+          "role": "lifecycle",
+          "title": "Parallax Census Registry Lifecycle",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-census/registry-lifecycle.svg",
+          "description": "Discovered, quarantined, linked, canonical, superseded, withdrawn, and repaired states with visible continuity.",
+          "url": "../artifacts/parallax-census/registry-lifecycle.svg",
+          "linkLabel": "Open registry lifecycle →"
+        },
+        {
+          "id": "parallax-census-consent-provenance-gate",
+          "type": "Governance visual",
+          "role": "admission gate",
+          "title": "Consent and Provenance Gate",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-census/consent-provenance-gate.svg",
+          "description": "Source, custody, duplicate, permission, privacy, freshness, claim-boundary, and human-approval checks before public canon.",
+          "url": "../artifacts/parallax-census/consent-provenance-gate.svg",
+          "linkLabel": "Open admission gate →"
+        },
+        {
+          "id": "parallax-census-architecture-brief",
+          "type": "Public document brief",
+          "title": "Parallax Census Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public explanation of candidates, canonical records, aliases, relationships, local-first custody, deterministic lineage, admission, supersession, and repair.",
+          "url": "../artifacts/parallax-census/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "parallax-census-registry-boundary",
+          "type": "Public boundary brief",
+          "title": "Privacy, Permission, and Registry Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Defines the project-and-artifact scope and rejects identity profiling, hidden tracking, automatic collection, silent appropriation, and automatic publication.",
+          "url": "../artifacts/parallax-census/registry-boundary-brief.html",
+          "linkLabel": "Read registry boundary →"
+        },
+        {
+          "id": "parallax-census-registry-workbench",
+          "type": "Interactive registry demonstration",
+          "title": "Parallax Census Registry Workbench",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data deterministic review of six synthetic candidate states with demonstration-only non-canonical receipt previews.",
+          "url": "../artifacts/parallax-census/registry-workbench/",
+          "linkLabel": "Open Registry Workbench →"
+        },
+        {
+          "id": "parallax-census-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Registry Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The Parallax-native terminal presentation for Census architecture, artifacts, evidence states, relationships, and claim boundary.",
+          "url": "../patmk1/?project=parallax-census&mode=registry",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "parallax-census-source-lineage",
+          "type": "Canonical source set",
+          "title": "Parallax Census v0.1.1–v0.5 Source Lineage",
+          "status": "known-locate",
+          "description": "Retained Census source materials spanning deterministic validation, custody receipts, registry evolution, and local-first project organization.",
+          "action": "Inventory and version the retained source set before any full public source release."
+        },
+        {
+          "id": "parallax-census-portable-schema",
+          "type": "Schema artifact",
+          "title": "Portable Census Registry Schema and Manifest",
+          "status": "planned",
+          "description": "A versioned open schema for candidates, canonical records, aliases, relationships, sources, permissions, custody, evidence states, supersession, withdrawal, and repair.",
+          "action": "Freeze the schema with deterministic fixtures, migration rules, and import/export validation."
+        },
+        {
+          "id": "parallax-census-first-audited-ingestion",
+          "type": "Registry evidence",
+          "title": "First Audited Archive Ingestion",
+          "status": "planned",
+          "description": "A non-destructive Census pass over the current Archive pack files producing candidate, duplicate, alias, missing-source, consent, and custody findings before human approval.",
+          "action": "Run the audit against a frozen Archive snapshot and publish both accepted and rejected decisions with receipts."
+        }
+      ],
+      "relationships": [
+        { "projectId": "alpha-ledger-omega", "type": "custody and decision receipts", "note": "ALO records why a candidate was admitted, quarantined, linked, superseded, withdrawn, or repaired." },
+        { "projectId": "parallax-archive-terminal-system", "type": "canonical publication target", "note": "Approved Census records become inspectable through Archive Core and all six terminal shells." },
+        { "projectId": "parallax-institute", "type": "institutional stewardship", "note": "The Institute defines admission purpose, public-benefit expectations, authority, and source-boundary policy." },
+        { "projectId": "sovereign-office-architecture", "type": "admission governance", "note": "SOSA separates observation, mapping, dissent, authorization, operation, and repair during registry decisions." },
+        { "projectId": "graph-cinema", "type": "version and trajectory view", "note": "Graph Cinema can visualize candidate, canonical, superseded, withdrawn, and repaired record trajectories." }
+      ]
+    }
+  ]
+}
