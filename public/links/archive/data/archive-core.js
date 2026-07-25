@@ -42,7 +42,7 @@
   async function load({ refresh = false } = {}) {
     if (cache && !refresh) return cache
 
-    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe] = await Promise.all([
+    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe, agentora] = await Promise.all([
       fetchJson('projects.json'),
       fetchJson('flagship-pack.json'),
       fetchJson('terminal-system-pack.json'),
@@ -58,15 +58,16 @@
       fetchJson('parallax-census-publication-pack.json'),
       fetchJson('signalbridge-publication-pack.json'),
       fetchJson('vibe-publication-pack.json'),
+      fetchJson('agentora-publication-pack.json'),
     ])
 
-    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe])
+    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe, agentora])
       .sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || a.title.localeCompare(b.title))
 
     cache = {
       ...base,
-      schemaVersion: '0.15.0',
-      updated: vibe.updated || signalBridge.updated || parallaxCensus.updated || sosa.updated || doubleC.updated || roomLight.updated || coherenceBridge.updated || parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
+      schemaVersion: '0.16.0',
+      updated: agentora.updated || vibe.updated || signalBridge.updated || parallaxCensus.updated || sosa.updated || doubleC.updated || roomLight.updated || coherenceBridge.updated || parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
       projects,
       packs: [
         packRecord('flagship-wave-1', flagship),
@@ -83,6 +84,7 @@
         packRecord('parallax-census-publication-1', parallaxCensus),
         packRecord('signalbridge-publication-1', signalBridge),
         packRecord('vibe-publication-1', vibe),
+        packRecord('agentora-publication-1', agentora),
       ],
     }
 
