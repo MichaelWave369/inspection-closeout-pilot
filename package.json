@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "check:public-js": "node scripts/check-public-js.mjs",
+    "build": "npm run check:public-js && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
