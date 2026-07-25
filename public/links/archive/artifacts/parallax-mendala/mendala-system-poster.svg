@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Parallax MENDALA system poster</title><desc id="desc">A six-petal circular growing architecture with water, light, air, roots, data, and cycle surrounding a governed central operator core. Full-size and portable product families are listed below.</desc>
+<defs><radialGradient id="bg"><stop stop-color="#143127"/><stop offset="1" stop-color="#050b09"/></radialGradient><linearGradient id="petal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9ef0b8"/><stop offset="1" stop-color="#2f8e63"/></linearGradient><style>.t{font-family:Arial,sans-serif}.h{font-weight:900;fill:#effff4}.s{font-weight:600;fill:#b7d6c2}.p{font-weight:900;fill:#082014}.n{font-weight:900;fill:#d8ffe5}.m{font-weight:700;fill:#8fb9a0}</style></defs>
+<rect width="1600" height="1000" fill="url(#bg)"/><circle cx="800" cy="470" r="330" fill="none" stroke="#61d996" stroke-width="2" opacity=".35"/><circle cx="800" cy="470" r="235" fill="none" stroke="#6fb7ff" stroke-width="3" stroke-dasharray="12 16" opacity=".55"/>
+<text x="90" y="105" class="t h" font-size="68">PARALLAX MENDALA</text><text x="92" y="150" class="t s" font-size="24">Modular Ecological Nutrient Delivery &amp; Autonomous Living Agriculture</text>
+<g transform="translate(800 470)"><circle r="112" fill="#76e5a4"/><circle r="90" fill="#0b2118" stroke="#d8ffe5" stroke-width="3"/><text y="-8" text-anchor="middle" class="t n" font-size="34">MENDALA</text><text y="32" text-anchor="middle" class="t m" font-size="18">HUMAN-GOVERNED CORE</text></g>
+<g class="t p" font-size="22" text-anchor="middle">
+<g transform="translate(800 210)"><path d="M0-85 C80-75 110 0 0 95 C-110 0-80-75 0-85Z" fill="url(#petal)"/><text y="8">WATER</text></g>
+<g transform="translate(1025 340) rotate(60)"><path d="M0-85 C80-75 110 0 0 95 C-110 0-80-75 0-85Z" fill="url(#petal)"/><text transform="rotate(-60)" y="8">LIGHT</text></g>
+<g transform="translate(1025 600) rotate(120)"><path d="M0-85 C80-75 110 0 0 95 C-110 0-80-75 0-85Z" fill="url(#petal)"/><text transform="rotate(-120)" y="8">AIR</text></g>
+<g transform="translate(800 730) rotate(180)"><path d="M0-85 C80-75 110 0 0 95 C-110 0-80-75 0-85Z" fill="url(#petal)"/><text transform="rotate(-180)" y="8">ROOT</text></g>
+<g transform="translate(575 600) rotate(240)"><path d="M0-85 C80-75 110 0 0 95 C-110 0-80-75 0-85Z" fill="url(#petal)"/><text transform="rotate(-240)" y="8">DATA</text></g>
+<g transform="translate(575 340) rotate(300)"><path d="M0-85 C80-75 110 0 0 95 C-110 0-80-75 0-85Z" fill="url(#petal)"/><text transform="rotate(-300)" y="8">CYCLE</text></g>
+</g>
+<g class="t"><rect x="90" y="835" width="680" height="105" rx="24" fill="#0b1712" stroke="#62d996" opacity=".96"/><text x="125" y="875" class="n" font-size="21">FULL-SIZE FAMILY</text><text x="125" y="913" class="s" font-size="27">MENDALA-24 · 48 · 108 · 216</text><rect x="830" y="835" width="680" height="105" rx="24" fill="#0b1712" stroke="#6fb7ff" opacity=".96"/><text x="865" y="875" class="n" font-size="21">PORTABLE FAMILY</text><text x="865" y="913" class="s" font-size="27">SEED-6 · GO-18 · GO XL-36</text></g>
+<text x="800" y="975" text-anchor="middle" class="t m" font-size="17">DESIGN-STAGE SYSTEM · NEXT RECEIPT: WORKING DUAL-LOOP WATER BENCH</text>
+</svg>

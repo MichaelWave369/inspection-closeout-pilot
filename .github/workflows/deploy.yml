@@ -31,8 +31,25 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Validate Archive Core data
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run check:archive-data 2>&1 | tee archive-validation.log
+
+      - name: Upload validation diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: archive-validation-diagnostics
+          path: archive-validation.log
+          if-no-files-found: ignore
+
+      - name: Check public JavaScript
+        run: npm run check:public-js
+
       - name: Build site
-        run: npm run build
+        run: npm run build:site
 
       - name: Configure Pages
         if: github.event_name == 'push'

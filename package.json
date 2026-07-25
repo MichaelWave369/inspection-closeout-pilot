@@ -7,7 +7,8 @@
     "dev": "vite",
     "check:archive-data": "node scripts/check-archive-data.mjs",
     "check:public-js": "node scripts/check-public-js.mjs",
-    "build": "npm run check:archive-data && npm run check:public-js && vite build",
+    "build:site": "vite build",
+    "build": "npm run check:archive-data && npm run check:public-js && npm run build:site",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,0 +1,152 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Parallax MENDALA — Publication Pack 1",
+  "description": "Source-led public briefs and evidence-safe vector diagrams for the full-size and portable MENDALA product families.",
+  "projects": [
+    {
+      "id": "parallax-mendala",
+      "title": "Parallax MENDALA",
+      "aliases": ["PM", "MENDALA", "GROWER", "FOODWHEEL", "GO-18", "MENDALA-108"],
+      "status": "Published design package",
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 1,
+      "tagline": "A modular, observable growing-system family spanning portable learning units, household systems, and community foodwheels.",
+      "story": "Parallax MENDALA—Modular Ecological Nutrient Delivery & Autonomous Living Agriculture—organizes water, light, air, roots, sensing, maintenance, and human authority into a six-petal system pattern. The architecture spans the full-size MENDALA-24, 48, 108, and 216 family and the portable Seed-6, Go-18, and Go XL-36 family. Publication Pack 1 makes the design basis inspectable while keeping physical performance claims behind measured prototype receipts.",
+      "summary": "MENDALA is the first Parallax physical-product record with a published family map, system poster, prototype proof path, cost-planning boundary, and source-led architecture briefs. MENDALA-108 remains the reference full-size configuration, while Go-18 remains the first serious portable prototype target.",
+      "see": "The six-petal architecture, full-size and portable family maps, documented portable cost-planning bands, the dual-loop water-bench proof, and the staged path from Go-18 to MENDALA-48 and later reference-scale engineering.",
+      "proof": "Seven public artifacts are now connected: three reviewed SVG diagrams and four browser-readable briefs derived from two retained canonical DOCX specifications. This proves the publication package, not the agricultural performance. No physical water-bench, Go-18, MENDALA-48, yield, durability, or commercial-economics receipt is yet published.",
+      "next": "Build and instrument the dual-loop water bench; publish flow, leak, conditioning, uptime, maintenance, shutdown, and repair receipts; then use those findings to construct the Go-18 portable prototype and MENDALA-48 fixed pilot.",
+      "claimBoundary": "MENDALA remains a design-stage physical product family. The published visuals and briefs explain architecture and planning assumptions; they do not validate crop yield, monthly output, durability, food safety, emergency certification, final cost, manufacturing readiness, or commercial viability. The documented cost figures are planning bands, not retail quotes.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/parallax-mendala/mendala-system-poster.svg",
+        "label": "Parallax MENDALA system poster",
+        "caption": "The six-petal observable architecture and both documented product families. This is a new Archive publication visual, not the earlier brochure poster."
+      },
+      "signals": [
+        { "label": "Current state", "value": "Published design package" },
+        { "label": "Reference full-size", "value": "MENDALA-108" },
+        { "label": "Reference portable", "value": "Go-18" },
+        { "label": "Next proof", "value": "Dual-loop water bench" }
+      ],
+      "artifacts": [
+        {
+          "id": "mendala-system-poster",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Parallax MENDALA Archive System Poster",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-mendala/mendala-system-poster.svg",
+          "description": "A new Archive publication visual showing the six-petal system, human-governed core, full-size family, portable family, and next engineering receipt.",
+          "url": "../artifacts/parallax-mendala/mendala-system-poster.svg",
+          "linkLabel": "Open system poster →"
+        },
+        {
+          "id": "mendala-family-map",
+          "type": "Visual artifact",
+          "role": "family map",
+          "title": "MENDALA Product Family Map",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-mendala/mendala-family-map.svg",
+          "description": "Full-size MENDALA-24, 48, 108, and 216 beside portable Seed-6, Go-18, and Go XL-36, with reference configurations identified.",
+          "url": "../artifacts/parallax-mendala/mendala-family-map.svg",
+          "linkLabel": "Open family map →"
+        },
+        {
+          "id": "mendala-dual-loop-proof",
+          "type": "Engineering diagram",
+          "role": "next proof",
+          "title": "Dual-Loop Water Bench",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-mendala/mendala-dual-loop-proof.svg",
+          "description": "The bounded first engineering receipt: separated grow and service loops, measured exchange, human override, and explicit limits on what a successful bench can prove.",
+          "url": "../artifacts/parallax-mendala/mendala-dual-loop-proof.svg",
+          "linkLabel": "Open proof diagram →"
+        },
+        {
+          "id": "mendala-full-size-brief",
+          "type": "Public document brief",
+          "title": "MENDALA Full-Size Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Curated public brief derived from the canonical full-size master specification, including the MENDALA-108 reference configuration and proof sequence.",
+          "url": "../artifacts/parallax-mendala/mendala-full-size-brief.html",
+          "linkLabel": "Read full-size brief →"
+        },
+        {
+          "id": "mendala-portable-brief",
+          "type": "Public document brief",
+          "title": "MENDALA Portable Systems",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Curated public brief for Seed-6, Go-18, and Go XL-36, with Go-18 identified as the reference and first serious portable prototype.",
+          "url": "../artifacts/parallax-mendala/mendala-portable-brief.html",
+          "linkLabel": "Read portable brief →"
+        },
+        {
+          "id": "mendala-cost-planning-brief",
+          "type": "Planning analysis",
+          "title": "Portable Cost Planning Bands",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Documented early planning bands in US dollars, with an explicit boundary that they are not retail prices, bids, or final build costs.",
+          "url": "../artifacts/parallax-mendala/mendala-cost-planning-brief.html",
+          "linkLabel": "Read cost brief →"
+        },
+        {
+          "id": "mendala-proof-path-brief",
+          "type": "Engineering proof card",
+          "title": "MENDALA Prototype Proof Path",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A bounded sequence from dual-loop water bench to Go-18, MENDALA-48, and later reference-scale engineering, with each stage limited to its actual question.",
+          "url": "../artifacts/parallax-mendala/mendala-proof-path-brief.html",
+          "linkLabel": "Read proof path →"
+        },
+        {
+          "id": "mendala-master-spec-source",
+          "type": "Canonical source",
+          "title": "Parallax_MENDALA_Master_Design_Spec_v0.1.docx",
+          "status": "known-locate",
+          "description": "Layout-authoritative full-size source retained in the project archive. The public brief does not silently replace it.",
+          "action": "Review and publish the complete source only through an explicit full-document release."
+        },
+        {
+          "id": "mendala-portable-spec-source",
+          "type": "Canonical source",
+          "title": "Parallax_MENDALA_Portable_Systems_Master_Design_Spec_v0.1.docx",
+          "status": "known-locate",
+          "description": "Layout-authoritative portable source retained in the project archive. Public cost and prototype briefs are curated derivatives.",
+          "action": "Retain the canonical DOCX until its complete public-release review is finished."
+        },
+        {
+          "id": "mendala-original-brochure",
+          "type": "Historical visual artifact",
+          "title": "Original Mendala Product Brochure Poster",
+          "status": "known-locate",
+          "description": "The earlier brochure-style product artwork is part of the known project archive but is not mounted in this publication pack.",
+          "action": "Locate the final source image, verify the chosen edition, and publish it separately with concrete alt text."
+        },
+        {
+          "id": "mendala-instrumented-prototype",
+          "type": "Physical evidence",
+          "title": "Instrumented Dual-Loop Bench and Go-18 Prototype",
+          "status": "planned",
+          "description": "The first physical receipts intended to test water architecture, reliability, resource use, maintenance, crop conditions, and measured output.",
+          "action": "Build, instrument, test, photograph, log failures, and publish stated-condition results."
+        }
+      ],
+      "relationships": [
+        { "projectId": "roomlight-data-spine", "type": "sensor-and-control spine", "note": "RoomLight provides a natural local-first environmental sensing and evidence layer for physical trials." },
+        { "projectId": "carbon-loop", "type": "human-use layer", "note": "Carbon Loop frames operator usefulness, consent, continuity, and the boundary between assistance and substitution." },
+        { "projectId": "alpha-ledger-omega", "type": "physical receipt layer", "note": "ALO can preserve test conditions, measurements, failures, repairs, and custody for prototype claims." },
+        { "projectId": "parallax-institute", "type": "institutional home", "note": "The Institute provides stewardship, public-benefit context, and accountability for a physical product program." }
+      ]
+    }
+  ]
+}
