@@ -1,4 +1,4 @@
-const manifestUrl = '../data/projects.json'
+const coreLoaderUrl = '../data/archive-core.js'
 
 const bootPanel = document.getElementById('boot-panel')
 const bootOutput = document.getElementById('boot-output')
@@ -48,12 +48,22 @@ function appendHistory(text) {
   dosHistory.scrollTop = dosHistory.scrollHeight
 }
 
+function ensureArchiveCore() {
+  if (window.ParallaxArchiveCore) return Promise.resolve(window.ParallaxArchiveCore)
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script')
+    script.src = coreLoaderUrl
+    script.onload = () => resolve(window.ParallaxArchiveCore)
+    script.onerror = () => reject(new Error('Archive Core loader could not be loaded'))
+    document.head.appendChild(script)
+  })
+}
+
 async function loadArchiveCore() {
   try {
-    const response = await fetch(manifestUrl, { cache: 'no-cache' })
-    if (!response.ok) throw new Error(`HTTP ${response.status}`)
-
-    const manifest = await response.json()
+    const archiveCore = await ensureArchiveCore()
+    const manifest = await archiveCore.load()
     projects = Array.isArray(manifest.projects) ? manifest.projects : []
     if (!projects.length) throw new Error('No project records found')
 
@@ -77,7 +87,7 @@ function showDos({ focus = true } = {}) {
   archiveDesktop.hidden = true
   dosPanel.hidden = false
   if (!dosHistory.textContent) {
-    appendHistory('PARALLAX ARCHIVE DOS v0.2\nType HELP for available commands.\n')
+    appendHistory('PARALLAX ARCHIVE DOS v0.3\nType HELP for available commands.\n')
   }
   if (focus) commandInput.focus()
 }
@@ -127,6 +137,10 @@ function projectValues(project) {
 }
 
 function findProject(reference) {
+  if (window.ParallaxArchiveCore) {
+    return window.ParallaxArchiveCore.findProject(projects, reference)
+  }
+
   const needle = normalizeReference(reference)
   if (!needle) return null
 
@@ -144,10 +158,10 @@ function formatProjectDirectory() {
     '',
     ...projects
       .slice()
-      .sort((a, b) => a.title.localeCompare(b.title))
+      .sort((a, b) => Number(a.archiveOrder || 999) - Number(b.archiveOrder || 999) || a.title.localeCompare(b.title))
       .map(project => `${project.mark.padEnd(6)} ${project.title.toUpperCase().slice(0, 29).padEnd(29)} ${project.status}`),
     '',
-    `${projects.length} project file(s) / one canonical manifest`,
+    `${projects.length} project file(s) / one canonical archive core`,
     'Use OPEN <NAME> to inspect a record.',
   ].join('\n')
 }
@@ -167,7 +181,7 @@ function renderProjectDetail(project) {
   const title = createText('h2', '', project.title)
   const tagline = createText('p', '', project.tagline)
   tagline.style.fontWeight = '900'
-  const story = createText('p', '', project.story)
+  const story = createText('p', '', project.summary || project.story)
 
   const facts = document.createElement('div')
   facts.className = 'project-file-facts'
@@ -181,12 +195,17 @@ function renderProjectDetail(project) {
     facts.appendChild(block)
   })
 
-  const link = document.createElement('a')
-  link.className = 'project-open-link'
-  link.href = `../../network/?project=${encodeURIComponent(project.id)}#projects`
-  link.textContent = 'OPEN IN FULL NETWORK →'
+  const archiveLink = document.createElement('a')
+  archiveLink.className = 'project-open-link'
+  archiveLink.href = `../project/?id=${encodeURIComponent(project.id)}`
+  archiveLink.textContent = project.archiveFeatured ? 'OPEN FLAGSHIP ARCHIVE RECORD →' : 'OPEN ARCHIVE RECORD →'
 
-  projectFileDetail.append(meta, title, tagline, story, facts, link)
+  const networkLink = document.createElement('a')
+  networkLink.className = 'project-open-link'
+  networkLink.href = `../../network/?project=${encodeURIComponent(project.id)}#projects`
+  networkLink.textContent = 'OPEN NETWORK STORY →'
+
+  projectFileDetail.append(meta, title, tagline, story, facts, archiveLink, networkLink)
   projectBrowserStatus.textContent = `${project.mark}.PRX · ${project.id} · Archive Core record`
 
   projectFileList.querySelectorAll('.project-file').forEach(button => {
@@ -198,8 +217,8 @@ function renderProjectList(query = '') {
   projectFileList.replaceChildren()
   const needle = query.trim().toLowerCase()
   const visible = projects
-    .filter(project => [project.title, project.mark, project.categoryLabel, project.status, ...(project.aliases || [])].join(' ').toLowerCase().includes(needle))
-    .sort((a, b) => Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
+    .filter(project => [project.title, project.mark, project.categoryLabel, project.status, project.summary, ...(project.aliases || [])].join(' ').toLowerCase().includes(needle))
+    .sort((a, b) => Number(b.archiveFeatured) - Number(a.archiveFeatured) || Number(a.archiveOrder || 999) - Number(b.archiveOrder || 999) || a.title.localeCompare(b.title))
 
   visible.forEach(project => {
     const button = document.createElement('button')
@@ -209,7 +228,8 @@ function renderProjectList(query = '') {
     button.setAttribute('role', 'option')
     button.setAttribute('aria-selected', String(selectedProject?.id === project.id))
 
-    const mark = createText('span', 'project-file-mark', `${project.mark}.PRX`)
+    const fileLabel = project.archiveFeatured ? `${project.mark}.FLG` : `${project.mark}.PRX`
+    const mark = createText('span', 'project-file-mark', fileLabel)
     const copy = document.createElement('span')
     copy.append(createText('strong', '', project.title), createText('small', '', `${project.categoryLabel} · ${project.status}`))
     button.append(mark, copy)
@@ -270,7 +290,7 @@ async function openProjectFromCommand(reference) {
   }
 
   appendHistory([
-    `${project.mark}.PRX — ${project.title}`,
+    `${project.mark}.${project.archiveFeatured ? 'FLG' : 'PRX'} — ${project.title}`,
     `${project.categoryLabel} / ${project.status}`,
     project.tagline,
     '',
@@ -309,6 +329,8 @@ async function executeCommand(raw) {
         '  NETWORK          Open the full standard Network page',
         '  CLEAR            Clear this terminal',
         '  EXIT             Return to terminal selection',
+        '',
+        'FLAGSHIP FILES: OPEN MENDALA · OPEN CINEMA · OPEN CARBON',
       ].join('\n'))
       break
     case 'DIR':
