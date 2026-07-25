@@ -42,7 +42,7 @@
   async function load({ refresh = false } = {}) {
     if (cache && !refresh) return cache
 
-    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega] = await Promise.all([
+    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute] = await Promise.all([
       fetchJson('projects.json'),
       fetchJson('flagship-pack.json'),
       fetchJson('terminal-system-pack.json'),
@@ -50,15 +50,16 @@
       fetchJson('graph-cinema-publication-pack.json'),
       fetchJson('carbon-loop-publication-pack.json'),
       fetchJson('alpha-ledger-omega-publication-pack.json'),
+      fetchJson('parallax-institute-publication-pack.json'),
     ])
 
-    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega])
+    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute])
       .sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || a.title.localeCompare(b.title))
 
     cache = {
       ...base,
-      schemaVersion: '0.7.0',
-      updated: alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
+      schemaVersion: '0.8.0',
+      updated: parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
       projects,
       packs: [
         packRecord('flagship-wave-1', flagship),
@@ -67,6 +68,7 @@
         packRecord('graph-cinema-publication-1', graphCinema),
         packRecord('carbon-loop-publication-1', carbonLoop),
         packRecord('alpha-ledger-omega-publication-1', alphaLedgerOmega),
+        packRecord('parallax-institute-publication-1', parallaxInstitute),
       ],
     }
 
