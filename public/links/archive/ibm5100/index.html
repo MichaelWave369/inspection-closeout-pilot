@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171916" />
+  <meta name="description" content="Discover the Parallax Archive through a historically inspired IBM 5100 terminal shell." />
+  <title>IBM 5100 Archive Edition | Parallax Archive</title>
+  <link rel="stylesheet" href="ibm5100.css" />
+  <script src="../data/archive-core.js" defer></script>
+  <script src="ibm5100.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#terminal-panel">Skip machine introduction</a>
+
+  <main class="lab" id="top">
+    <header class="lab-header">
+      <a class="lab-link" href="../">← Choose another terminal</a>
+      <span>IBM 5100 EDITION / ARCHIVE DISCOVERY NODE</span>
+      <a class="lab-link" href="../../network/">Standard Network</a>
+    </header>
+
+    <section class="lab-scene" aria-label="IBM 5100 inspired Parallax archive terminal">
+      <div class="lab-light" aria-hidden="true"></div>
+      <div class="manual-stack" aria-hidden="true"><span>ARCHIVE<br />REFERENCE</span><i>01</i></div>
+
+      <div class="machine-wrap">
+        <section class="machine" aria-labelledby="machine-title">
+          <div class="machine-topline">
+            <div class="ibm-wordmark" aria-hidden="true">IBM</div>
+            <div class="model-block"><strong id="machine-title">5100</strong><span>PORTABLE COMPUTER / PARALLAX ARCHIVE EDITION</span></div>
+            <div class="power-block">
+              <span>POWER</span>
+              <button id="power-switch" class="power-switch is-on" type="button" aria-pressed="true" aria-label="Toggle terminal power"><i></i></button>
+            </div>
+          </div>
+
+          <div class="machine-face">
+            <div class="crt-bezel">
+              <div class="crt-label"><span>DISPLAY</span><span id="mode-label">ARCHIVE</span></div>
+              <div class="crt" id="terminal-panel">
+                <div class="crt-glass" aria-hidden="true"></div>
+
+                <section class="boot-screen" id="boot-screen" aria-labelledby="boot-title">
+                  <h1 class="sr-only" id="boot-title">IBM 5100 Archive Edition startup</h1>
+                  <pre id="boot-output" aria-live="polite"></pre>
+                  <button class="crt-button" id="skip-boot" type="button">SKIP</button>
+                </section>
+
+                <section class="terminal-screen" id="terminal-screen" hidden aria-labelledby="terminal-title">
+                  <h2 class="sr-only" id="terminal-title">Archive command terminal</h2>
+                  <div class="terminal-output" id="terminal-output" aria-live="polite"></div>
+                  <form class="terminal-form" id="terminal-form">
+                    <label for="terminal-input">&gt;</label>
+                    <input id="terminal-input" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="terminal-help" />
+                  </form>
+                  <p class="terminal-help" id="terminal-help">HELP · CATALOG · LOAD "MENDALA" · ENGINEER · NETWORK · EXIT</p>
+                </section>
+
+                <section class="engineer-screen" id="engineer-screen" hidden aria-labelledby="engineer-title">
+                  <div class="engineer-header"><strong id="engineer-title">ENGINEER / ARCHIVE DIAGNOSTICS</strong><button id="engineer-close" type="button">RETURN</button></div>
+                  <div class="engineer-grid">
+                    <div><span>ARCHIVE CORE</span><strong id="engineer-core">LOADING</strong></div>
+                    <div><span>PROJECT RECORDS</span><strong id="engineer-count">--</strong></div>
+                    <div><span>CONTENT PACKS</span><strong id="engineer-packs">--</strong></div>
+                    <div><span>SHELL STATE</span><strong>SIMULATION</strong></div>
+                    <div><span>HUMAN AUTHORITY</span><strong>PRESENT</strong></div>
+                    <div><span>NETWORK FALLBACK</span><strong>READY</strong></div>
+                  </div>
+                  <p class="engineer-note">Historical boundary: this public shell is an original Parallax archive simulation inspired by the IBM 5100. It does not claim to run original IBM firmware or reproduce every hardware behavior.</p>
+                </section>
+              </div>
+            </div>
+
+            <aside class="tape-bay" aria-label="Archive tape library">
+              <div class="tape-drive">
+                <span class="drive-label">TAPE</span>
+                <div class="tape-slot" id="tape-slot"><i></i></div>
+                <div class="drive-light" id="drive-light"></div>
+                <strong id="mounted-tape">NO TAPE</strong>
+              </div>
+
+              <div class="control-row" aria-label="Display controls">
+                <button class="panel-key" id="catalog-key" type="button">CATALOG</button>
+                <button class="panel-key" id="engineer-key" type="button">ENGINEER</button>
+                <button class="panel-key" id="clear-key" type="button">CLEAR</button>
+              </div>
+
+              <div class="tape-library" id="tape-library" aria-label="Featured archive tapes">
+                <button class="tape" type="button" data-project="parallax-mendala"><span>PM-01</span><strong>MENDALA</strong><small>PHYSICAL SYSTEM</small></button>
+                <button class="tape" type="button" data-project="graph-cinema"><span>GC-01</span><strong>GRAPH CINEMA</strong><small>RUNTIME MODEL</small></button>
+                <button class="tape" type="button" data-project="carbon-loop"><span>CL-01</span><strong>CARBON LOOP</strong><small>HUMAN EXPERIENCE OS</small></button>
+              </div>
+            </aside>
+          </div>
+
+          <div class="keyboard" aria-hidden="true">
+            <div class="key-grid"></div>
+            <div class="spacebar"></div>
+          </div>
+
+          <div class="machine-footer">
+            <span>ARCHIVE ADAPTER PX-5100 / 16 × 64 DISPLAY DISCIPLINE</span>
+            <span id="archive-status">ARCHIVE CORE: CONNECTING</span>
+          </div>
+        </section>
+      </div>
+
+      <aside class="research-note">
+        <p>DISCOVERY NODE</p>
+        <strong>THE ARCHIVE<br />WAS ALREADY HERE.</strong>
+        <span>Catalog it. Mount it. Inspect the record.</span>
+      </aside>
+    </section>
+  </main>
+
+  <dialog class="catalog-dialog" id="catalog-dialog" aria-labelledby="catalog-title">
+    <div class="catalog-titlebar">
+      <strong id="catalog-title">PARALLAX ARCHIVE TAPE CATALOG</strong>
+      <button id="catalog-close" type="button" aria-label="Close catalog">×</button>
+    </div>
+    <div class="catalog-tools">
+      <label for="catalog-filter">SEARCH</label>
+      <input id="catalog-filter" type="search" autocomplete="off" placeholder="MENDALA, CARBON, ALO…" />
+    </div>
+    <div class="catalog-body">
+      <div class="catalog-list" id="catalog-list" role="listbox" aria-label="Archive tape catalog"></div>
+      <article class="catalog-detail" id="catalog-detail" aria-live="polite">
+        <p class="catalog-kicker">ARCHIVE CORE</p>
+        <h2>Select a tape record.</h2>
+        <p>The catalog reads from the same canonical project records used by the SL1200 and standard Network.</p>
+      </article>
+    </div>
+    <div class="catalog-status" id="catalog-status">Loading archive catalog…</div>
+  </dialog>
+
+  <noscript><p class="noscript">JavaScript is optional. <a href="../../network/">Open the standard Parallax Network archive.</a></p></noscript>
+</body>
+</html>
