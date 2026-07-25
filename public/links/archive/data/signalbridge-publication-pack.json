@@ -1,0 +1,179 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-26",
+  "title": "SignalBridge — Publication Pack 1",
+  "description": "Outcome Migration Map architecture, fixed synthetic readiness review, mock Proof Run routing, and governed Parallax handoff manifests.",
+  "projects": [
+    {
+      "id": "signalbridge",
+      "title": "SignalBridge",
+      "aliases": ["SB", "SIGNAL", "SIGNAL BRIDGE", "OUTCOME MIGRATION MAP", "PARALLAX HANDOFF"],
+      "mark": "SB",
+      "category": "software",
+      "categoryLabel": "Outcome migration and trust infrastructure",
+      "status": "Published architecture + mock Proof Run",
+      "tone": "green",
+      "featured": true,
+      "tier": "B",
+      "wave": 2,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 10,
+      "tagline": "An evidence-led bridge from software sprawl to workflow outcomes, bounded Proof Runs, and governed Parallax execution-contract candidates.",
+      "story": "SignalBridge begins with manual or CSV software inventory—applications, spend, seats, owners, and usage notes—then clusters tools around the outcomes people actually need. It creates an Outcome Migration Map, evaluates Computational Collaborator readiness and custody, recommends a bounded next proof state, and carries the full decision context into Parallax through a Handoff Manifest.",
+      "summary": "A wedge product and handoff architecture for workflow clustering, readiness review, receipt requirements, risk and custody notes, economic-delta hypotheses, mock Proof Runs, and explicit human-authorized migration decisions. The original source term agent-readiness is retained in lineage and presented publicly as Computational Collaborator readiness.",
+      "see": "The SignalBridge cover, Outcome Migration Map, Parallax Handoff Manifest, architecture and Proof Run boundary briefs, fixed-data Outcome Migration Workbench, PAT Bridge Mode, canonical source lineage, and planned audited proof artifacts.",
+      "proof": "Seven public artifacts are connected. The Workbench deterministically evaluates six synthetic workflow clusters and produces unsigned demonstration handoff manifests while making no uploads, network calls, model calls, account connections, purchases, cancellations, data movements, contract changes, Archive mutations, or production actions.",
+      "next": "Freeze the portable Handoff Manifest schema and readiness-rubric fixtures, then conduct Proof Run 001 as a mock/no-live-action shadow trial using a frozen synthetic or owner-approved dataset. Publish assumptions, accepted and rejected candidates, authority gates, economic hypotheses, observed results, exceptions, and rollback receipts.",
+      "claimBoundary": "This package demonstrates SignalBridge architecture, public explanation, fixed synthetic readiness logic, mock Proof Run routing, and a demonstration-only Parallax Handoff Manifest. It does not establish production traction, revenue, verified savings, legal, finance, procurement, security, privacy, or employment advice, automated underwriting, implementation reliability, live integrations, ownership of source data, organizational consent, or authority to alter software, accounts, data, contracts, personnel, vendors, customers, funds, or production workflows. A Proof Run candidate is eligible for human review only and may correctly resolve to not yet.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/signalbridge/signalbridge-cover.svg",
+        "label": "SignalBridge",
+        "caption": "The bridge preserves outcome, evidence, custody, authority, boundaries, and rollback instead of carrying a recommendation alone."
+      },
+      "signals": [
+        { "label": "Canonical packet", "value": "v0.3" },
+        { "label": "Intake", "value": "Manual / CSV" },
+        { "label": "First proof", "value": "Mock / no live action" },
+        { "label": "Authority", "value": "Explicit human decision" }
+      ],
+      "links": [],
+      "artifacts": [
+        {
+          "id": "signalbridge-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "SignalBridge Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/signalbridge/signalbridge-cover.svg",
+          "description": "Software inventory through workflow clustering, readiness review, mock Proof Run, governed handoff, and human decision.",
+          "url": "../artifacts/signalbridge/signalbridge-cover.svg",
+          "linkLabel": "Open SignalBridge cover →"
+        },
+        {
+          "id": "signalbridge-outcome-migration-map",
+          "type": "Architecture visual",
+          "role": "outcome map",
+          "title": "SignalBridge Outcome Migration Map",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/signalbridge/outcome-migration-map.svg",
+          "description": "Routes workflow clusters to not yet, shadow trial, human-gated review, or bounded Proof Run candidate states.",
+          "url": "../artifacts/signalbridge/outcome-migration-map.svg",
+          "linkLabel": "Open Outcome Migration Map →"
+        },
+        {
+          "id": "signalbridge-handoff-manifest",
+          "type": "Protocol visual",
+          "role": "handoff",
+          "title": "Parallax Handoff Manifest",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/signalbridge/handoff-manifest.svg",
+          "description": "Carries intent, actor, authority, boundaries, allowed and prohibited actions, evidence, exceptions, rollback, and signature state.",
+          "url": "../artifacts/signalbridge/handoff-manifest.svg",
+          "linkLabel": "Open handoff manifest →"
+        },
+        {
+          "id": "signalbridge-architecture-brief",
+          "type": "Public document brief",
+          "title": "SignalBridge Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public explanation of intake, workflow clusters, Outcome Migration Maps, readiness, economic hypotheses, Proof Runs, and governed handoffs.",
+          "url": "../artifacts/signalbridge/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "signalbridge-proof-run-boundary",
+          "type": "Public boundary brief",
+          "title": "SignalBridge Proof Run Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Defines mock-first evidence, score and blocker limits, economic-delta boundaries, required handoff fields, receipts, and live-action prohibitions.",
+          "url": "../artifacts/signalbridge/proof-run-boundary-brief.html",
+          "linkLabel": "Read Proof Run boundary →"
+        },
+        {
+          "id": "signalbridge-outcome-workbench",
+          "type": "Interactive mock Proof Run",
+          "title": "SignalBridge Outcome Migration Workbench",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data deterministic review of six synthetic workflow clusters with unsigned demonstration-only Parallax Handoff Manifest previews.",
+          "url": "../artifacts/signalbridge/proof-run/",
+          "linkLabel": "Open Outcome Migration Workbench →"
+        },
+        {
+          "id": "signalbridge-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Bridge Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Parallax-native terminal presentation for SignalBridge architecture, artifacts, evidence states, relationships, and claim boundaries.",
+          "url": "../patmk1/?project=signalbridge&mode=bridge",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "signalbridge-packet-v03",
+          "type": "Canonical source document",
+          "title": "SignalBridge Packet v0.3",
+          "status": "known-locate",
+          "description": "Outcome Migration Map and wedge-product companion defining the strategic review and Parallax handoff path.",
+          "action": "Inventory and checksum SignalBridge_Packet_v0_3.docx before any public source release."
+        },
+        {
+          "id": "signalbridge-master-spec-v01",
+          "type": "Canonical source document",
+          "title": "SignalBridge Master Design Spec v0.1",
+          "status": "known-locate",
+          "description": "Defines manual/CSV intake, workflow clustering, exports, readiness scoring, receipt templates, and Handoff Manifest scope.",
+          "action": "Inventory and checksum SignalBridge_Master_Design_Spec_v0_1.docx."
+        },
+        {
+          "id": "signalbridge-proof-outcome-packet",
+          "type": "Canonical source document",
+          "title": "Parallax Proof of Outcome Master Packet v0.1",
+          "status": "known-locate",
+          "description": "Defines evidence-led Proof Runs, mock/no-live-action first proof, and the ability to resolve to not yet.",
+          "action": "Inventory and checksum Parallax_Proof_of_Outcome_Master_Packet_v0_1.docx."
+        },
+        {
+          "id": "signalbridge-lineage-object-spec",
+          "type": "Canonical source document",
+          "title": "Parallax Lineage Protocol Object Spec v0.2",
+          "status": "known-locate",
+          "description": "Defines intent, actor, authority, boundaries, actions, evidence, rollback, signatures, exceptions, compensation, and settlement.",
+          "action": "Inventory and checksum Parallax_Lineage_Protocol_Object_Spec_v0_2.docx."
+        },
+        {
+          "id": "signalbridge-portable-schema",
+          "type": "Schema artifact",
+          "title": "Portable SignalBridge Handoff Schema",
+          "status": "planned",
+          "description": "A versioned open manifest and deterministic readiness-fixture format for bounded cross-system handoffs.",
+          "action": "Freeze schema, validation rules, blocker precedence, migration rules, and example fixtures."
+        },
+        {
+          "id": "signalbridge-proof-run-001",
+          "type": "Operational evidence",
+          "title": "SignalBridge Proof Run 001",
+          "status": "planned",
+          "description": "A mock/no-live-action shadow trial publishing the frozen packet, assumptions, authority, recommendation, result, exceptions, rejected claims, and rollback receipt.",
+          "action": "Select an owner-approved low-risk workflow and run the proof without production effects."
+        }
+      ],
+      "relationships": [
+        { "projectId": "alpha-ledger-omega", "type": "receipt and lineage layer", "note": "ALO preserves inputs, assumptions, decisions, actions, evidence, exceptions, rollback, and settlement." },
+        { "projectId": "sovereign-office-architecture", "type": "independent review and authority", "note": "SOSA separates observation, mapping, dissent, authorization, operation, and repair around a handoff candidate." },
+        { "projectId": "parallax-census", "type": "source and artifact registry", "note": "Census tracks source location, custody, versions, public permission, and canonical artifact relationships." },
+        { "projectId": "roomlight-data-spine", "type": "future field-signal source", "note": "RoomLight may supply bounded environmental or operational evidence only through declared custody and field-safety rules." },
+        { "projectId": "coherence-bridge", "type": "human-benefit boundary", "note": "Coherence Bridge reinforces that operational efficiency must not replace human consent, relationship, dignity, or sovereignty." },
+        { "projectId": "parallax-institute", "type": "public-benefit stewardship", "note": "The Institute defines pilot purpose, partnership boundaries, evidence expectations, and benefit claims." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public evidence host", "note": "Archive Core publishes the bounded architecture and receipts without implying live deployment." }
+      ]
+    }
+  ]
+}
