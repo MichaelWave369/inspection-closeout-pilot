@@ -1,0 +1,178 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-26",
+  "title": "Agentora — Publication Pack 1",
+  "description": "Local-first Computational Collaborator operating-studio architecture with memory lineage, team traces, approval-gated actions, Operator Mode, and a fixed-data Mission Control Workbench.",
+  "projects": [
+    {
+      "id": "agentora",
+      "title": "Agentora",
+      "aliases": ["AG", "LOCAL AGENT OPERATING STUDIO", "COMPUTATIONAL COLLABORATOR STUDIO", "MISSION CONTROL", "OPERATOR MODE"],
+      "mark": "AG",
+      "category": "software",
+      "categoryLabel": "Local collaboration and operator orchestration",
+      "status": "Published operating architecture + mission workbench",
+      "tone": "blue",
+      "featured": true,
+      "tier": "B",
+      "wave": 3,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 12,
+      "tagline": "A local-first, private-by-default operating studio for memory-aware Computational Collaborator teams, approval-gated actions, replayable workflows, and explicit human control.",
+      "story": "Agentora v1.0.0 gives a human operator a visible place to prepare context, coordinate specialized collaborators, inspect plans and handoffs, review memory lineage and conflicts, approve or deny bounded actions, pause or repair workflows, replay histories, and decide whether outcomes should be written back. The source repository uses the established product term agent; this public Archive presents participating systems as Computational Collaborators while preserving the Agentora name and source language.",
+      "summary": "A verified public Streamlit and FastAPI application with local SQLite persistence, optional Ollama runtime, memory retrieval and maintenance, team planning and collaboration traces, action approvals and guardrails, workflow replay, Operator Mode controls, optional worker assistance, and environment-gated bridges to PhiOS, AgentCeption, watchers, alerts, MCP-style mission operations, retention, export/import, and heuristic mission intelligence.",
+      "see": "The Agentora cover, mission lifecycle, authority and memory gate, architecture and operator-boundary briefs, fixed-data Mission Control Workbench, PAT Mission Mode, verified source repository, Operator Mode documentation, and planned signed-judgment and public mission-proof fixtures.",
+      "proof": "Nine public artifacts are connected. The verified Agentora repository identifies stable v1.0.0 core surfaces and optional experimental modules. The Archive Workbench deterministically evaluates six synthetic operator situations while connecting to no models, memory stores, workers, browsers, desktops, repositories, webhooks, MCP operations, PhiOS, AgentCeption, or Agentora runtime.",
+      "next": "Freeze a portable mission-contract and receipt fixture that consumes a Vibe intent brief, separates role judgments through SOSA-compatible sealed outputs, records protected dissent and model/source diversity, and runs in Agentora mock mode. Publish the exact commands, environment flags, fixture hashes, action policy, operator decisions, rejected claims, output bundle, and writeback choice.",
+      "claimBoundary": "Agentora has a verified public v1.0.0 repository and implemented local operating surfaces, but this package does not establish model independence, heterogeneous judgment, correctness, safety, security certification, privacy certification, production suitability, reliable desktop or browser control, worker availability, complete or accurate memory, objective mission scoring, autonomous authority, organizational permission, or successful integration with PhiOS, AgentCeption, Ollama, MCP clients, webhooks, workers, browsers, desktops, repositories, or external services. Coordination, consensus, memory retrieval, role labels, heuristic scores, and generated summaries remain inspectable aids rather than truth or human authorization. The public Mission Control Workbench uses fixed synthetic data and cannot affect real files, accounts, browsers, code, repositories, networks, money, contracts, people, memory, actions, or workflows.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/agentora/agentora-cover.svg",
+        "label": "Agentora",
+        "caption": "Intent and context enter a visible team workflow; approvals, guardrails, operator controls, and receipts determine what may proceed."
+      },
+      "signals": [
+        { "label": "Verified release", "value": "v1.0.0" },
+        { "label": "Default posture", "value": "Local-first · private-by-default" },
+        { "label": "Operator approval", "value": "ask_once + guardrails" },
+        { "label": "Mission intelligence", "value": "Heuristic aid · not truth" }
+      ],
+      "links": [
+        { "label": "Open verified repository", "url": "https://github.com/MichaelWave369/Agentora" }
+      ],
+      "artifacts": [
+        {
+          "id": "agentora-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Agentora Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/agentora/agentora-cover.svg",
+          "description": "Human intent, bounded context, team orchestration, action gates, Operator Mode, and receipt flow.",
+          "url": "../artifacts/agentora/agentora-cover.svg",
+          "linkLabel": "Open Agentora cover →"
+        },
+        {
+          "id": "agentora-mission-lifecycle",
+          "type": "Architecture visual",
+          "role": "mission lifecycle",
+          "title": "Agentora Mission Lifecycle",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/agentora/mission-lifecycle.svg",
+          "description": "Prepare, launch, observe, control, review, optional writeback, and stop or repair at any stage.",
+          "url": "../artifacts/agentora/mission-lifecycle.svg",
+          "linkLabel": "Open mission lifecycle →"
+        },
+        {
+          "id": "agentora-authority-memory-gate",
+          "type": "Governance visual",
+          "role": "authority and memory gate",
+          "title": "Agentora Authority and Memory Gate",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/agentora/authority-memory-gate.svg",
+          "description": "Intent, lineage, conflicts, dissent, approval scope, action policy, reversibility, and writeback choice remain under operator review.",
+          "url": "../artifacts/agentora/authority-memory-gate.svg",
+          "linkLabel": "Open authority gate →"
+        },
+        {
+          "id": "agentora-architecture-brief",
+          "type": "Public document brief",
+          "title": "Agentora Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public explanation of the v1.0.0 core, local stack, memory and team surfaces, action approvals, Operator Mode, integrations, stable and experimental separation, and truth boundaries.",
+          "url": "../artifacts/agentora/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "agentora-operator-boundary",
+          "type": "Public boundary brief",
+          "title": "Agentora Operator Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Defines operator authority, approval scope, memory lineage, team-independence limits, heuristic scoring, optional automation, worker fallback, and public-demo boundaries.",
+          "url": "../artifacts/agentora/operator-boundary-brief.html",
+          "linkLabel": "Read operator boundary →"
+        },
+        {
+          "id": "agentora-mission-control-workbench",
+          "type": "Interactive operator demonstration",
+          "title": "Agentora Mission Control Workbench",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data deterministic review of six synthetic missions involving mock planning, correlated consensus, conflicting memory, blocked browser action, worker fallback, and dissent-erasing writeback.",
+          "url": "../artifacts/agentora/mission-control/",
+          "linkLabel": "Open Mission Control Workbench →"
+        },
+        {
+          "id": "agentora-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Mission Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Parallax-native terminal presentation for Agentora architecture, source evidence, operator controls, artifacts, relationships, and claim boundaries.",
+          "url": "../patmk1/?project=agentora&mode=mission",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "agentora-public-repository",
+          "type": "Source repository",
+          "title": "MichaelWave369/Agentora",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Verified public v1.0.0 repository containing the Streamlit operator interface, FastAPI runtime, SQLite persistence, memory, team, action, workflow, operator, worker, integration, mission-intelligence, documentation, and tests.",
+          "url": "https://github.com/MichaelWave369/Agentora",
+          "linkLabel": "Open Agentora repository →"
+        },
+        {
+          "id": "agentora-operator-mode-doc",
+          "type": "Canonical source document",
+          "title": "Agentora Operator Mode v1.0.0",
+          "status": "ready",
+          "mediaType": "text/markdown",
+          "description": "Canonical documentation for start, pause, resume, advance, retry, skip, pending approvals, action history, run status, replay, ask-once approval, guardrails, and bounded worker fallback.",
+          "url": "https://github.com/MichaelWave369/Agentora/blob/main/docs/operator-mode.md",
+          "linkLabel": "Open Operator Mode documentation →"
+        },
+        {
+          "id": "agentora-portable-mission-contract",
+          "type": "Schema artifact",
+          "title": "Portable Agentora Mission Contract and Receipt",
+          "status": "planned",
+          "description": "A versioned portable object for human intent, source lineage, role assignments, sealed judgments, protected dissent, action policies, approvals, controls, outcomes, exceptions, and optional writeback.",
+          "action": "Align the schema with Vibe intent briefs, SOSA offices, ALO receipts, Agentora export/import, and SignalBridge handoff boundaries."
+        },
+        {
+          "id": "agentora-independent-judgment-fixture",
+          "type": "Orchestration evidence",
+          "title": "Agentora Protected Judgment Diversity Fixture",
+          "status": "planned",
+          "description": "A mock-mode fixture comparing shared-model role play against genuinely separated models, prompts, context packets, evidence sources, and sealed judgments without claiming absolute independence.",
+          "action": "Publish configuration, model/source identities, sealed outputs, correlations, dissent preservation, synthesis behavior, limitations, and rejected claims."
+        },
+        {
+          "id": "agentora-public-mission-proof",
+          "type": "Operational evidence",
+          "title": "Agentora Public Mission Proof 001",
+          "status": "planned",
+          "description": "A local mock-mode mission consuming a frozen Vibe contract and producing an inspectable team trace, approval record, operator controls, outcome bundle, and optional declined or accepted writeback.",
+          "action": "Run with no external side effects and publish exact commands, environment flags, fixture hashes, policies, outcomes, exceptions, and receipts."
+        }
+      ],
+      "relationships": [
+        { "projectId": "vibe", "type": "intent and proof contract", "note": "Vibe can provide typed goals, constraints, preservation obligations, proof briefs, semantic changes, and explicit authority boundaries for Agentora missions." },
+        { "projectId": "sovereign-office-architecture", "type": "role and authority governance", "note": "SOSA separates observation, mapping, protected dissent, authorization, operation, and repair instead of allowing a team orchestrator to validate itself." },
+        { "projectId": "alpha-ledger-omega", "type": "mission and action receipts", "note": "ALO preserves context identity, plans, handoffs, approvals, denials, operator controls, outcomes, exceptions, repair, and writeback continuity." },
+        { "projectId": "signalbridge", "type": "bounded mission handoff", "note": "SignalBridge can supply an outcome, custody, evidence, authority, and rollback packet without turning the handoff into execution permission." },
+        { "projectId": "parallax-census", "type": "source and release registry", "note": "Census tracks Agentora releases, docs, fixture bundles, integrations, aliases, custody, and public evidence states." },
+        { "projectId": "coherence-bridge", "type": "human relationship boundary", "note": "Coherence Bridge reinforces that collaboration software should strengthen human agency and connection rather than become exclusive, coercive, or dependency-forming." },
+        { "projectId": "double-c", "type": "public collaboration terminology", "note": "Double C provides the public language for Computational Collaborators while Agentora retains its established product and source identity." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public evidence host", "note": "Archive Core presents Agentora’s verified repository, architecture, workbench, and claim boundaries without representing the demo as a live Agentora runtime." }
+      ]
+    }
+  ]
+}
