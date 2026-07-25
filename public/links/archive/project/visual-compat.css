@@ -1,0 +1,15 @@
+.mendala-pod:nth-child(7) { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+.mendala-pod:nth-child(8) { transform: rotate(60deg) translateY(-170px) rotate(-60deg); }
+.mendala-pod:nth-child(9) { transform: rotate(120deg) translateY(-170px) rotate(-120deg); }
+.mendala-pod:nth-child(10) { transform: rotate(180deg) translateY(-170px) rotate(-180deg); }
+.mendala-pod:nth-child(11) { transform: rotate(240deg) translateY(-170px) rotate(-240deg); }
+.mendala-pod:nth-child(12) { transform: rotate(300deg) translateY(-170px) rotate(-300deg); }
+
+@media (max-width: 520px) {
+  .mendala-pod:nth-child(7) { transform: rotate(0deg) translateY(-132px) rotate(0deg); }
+  .mendala-pod:nth-child(8) { transform: rotate(60deg) translateY(-132px) rotate(-60deg); }
+  .mendala-pod:nth-child(9) { transform: rotate(120deg) translateY(-132px) rotate(-120deg); }
+  .mendala-pod:nth-child(10) { transform: rotate(180deg) translateY(-132px) rotate(-180deg); }
+  .mendala-pod:nth-child(11) { transform: rotate(240deg) translateY(-132px) rotate(-240deg); }
+  .mendala-pod:nth-child(12) { transform: rotate(300deg) translateY(-132px) rotate(-300deg); }
+}

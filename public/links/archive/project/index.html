@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071019" />
+  <meta name="description" content="A canonical project record from the Parallax Archive Core." />
+  <title>Archive Record | Parallax Network</title>
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="visual-compat.css" />
+  <script src="../data/archive-core.js" defer></script>
+  <script src="project.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#record-main">Skip to project record</a>
+
+  <header class="record-bar">
+    <a class="record-brand" href="../">
+      <span class="record-brand-mark">P</span>
+      <span><strong>Parallax Archive</strong><small>Canonical project record</small></span>
+    </a>
+    <nav aria-label="Archive navigation">
+      <a href="../../network/#projects">Project Constellation</a>
+      <a href="../sl1200/">SL1200 Origin</a>
+      <a href="../">Choose Terminal</a>
+    </nav>
+  </header>
+
+  <main id="record-main" class="record-shell">
+    <section class="loading-card" id="loading-card" aria-live="polite">
+      <span class="loading-mark">P</span>
+      <p>Reading Archive Core…</p>
+    </section>
+
+    <article id="record" hidden>
+      <section class="record-hero">
+        <div class="record-visual" id="record-visual" aria-hidden="true">
+          <div class="visual-grid"></div>
+          <div class="visual-stage" id="visual-stage"></div>
+          <div class="visual-label"><span id="visual-label"></span><small id="visual-caption"></small></div>
+        </div>
+
+        <div class="record-intro">
+          <p class="record-kicker" id="record-kicker"></p>
+          <h1 id="record-title"></h1>
+          <p class="record-tagline" id="record-tagline"></p>
+          <p class="record-summary" id="record-summary"></p>
+          <div class="record-signals" id="record-signals"></div>
+          <div class="record-actions" id="record-actions"></div>
+        </div>
+      </section>
+
+      <section class="record-grid overview-grid">
+        <article class="record-panel story-panel">
+          <p class="section-label">THE PROJECT</p>
+          <h2>Why this record exists</h2>
+          <p id="record-story"></p>
+        </article>
+        <article class="record-panel boundary-panel">
+          <p class="section-label">CLAIM BOUNDARY</p>
+          <h2>What this does not claim</h2>
+          <p id="record-boundary"></p>
+        </article>
+      </section>
+
+      <section class="record-panel trajectory-panel">
+        <div class="section-heading">
+          <div><p class="section-label">TRAJECTORY</p><h2>From current evidence to the next proof</h2></div>
+          <span class="trajectory-state" id="trajectory-state"></span>
+        </div>
+        <div class="trajectory-grid">
+          <div><span>01</span><strong>What to see</strong><p id="record-see"></p></div>
+          <div><span>02</span><strong>What exists</strong><p id="record-proof"></p></div>
+          <div><span>03</span><strong>What happens next</strong><p id="record-next"></p></div>
+        </div>
+      </section>
+
+      <section class="record-section" aria-labelledby="artifact-title">
+        <div class="section-heading">
+          <div><p class="section-label">ARTIFACT INDEX</p><h2 id="artifact-title">Receipts, specifications, visuals, and proofs</h2></div>
+          <p class="section-note">Nothing is presented as downloadable until its canonical public file is actually connected.</p>
+        </div>
+        <div class="artifact-grid" id="artifact-grid"></div>
+      </section>
+
+      <section class="record-section" aria-labelledby="relationship-title">
+        <div class="section-heading">
+          <div><p class="section-label">RELATIONSHIPS</p><h2 id="relationship-title">How this project connects to the wider field</h2></div>
+        </div>
+        <div class="relationship-grid" id="relationship-grid"></div>
+      </section>
+
+      <nav class="record-pagination" id="record-pagination" aria-label="Other archive records"></nav>
+    </article>
+
+    <section class="error-card" id="error-card" hidden>
+      <p class="section-label">ARCHIVE ERROR</p>
+      <h1>That project record could not be opened.</h1>
+      <p id="error-message">The record may not exist yet, or Archive Core may be temporarily unavailable.</p>
+      <div class="record-actions">
+        <a class="record-button primary" href="../../network/#projects">Browse the Project Constellation</a>
+        <a class="record-button" href="../sl1200/">Return to the SL1200</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="record-footer"><strong>Parallax Archive Core</strong><span>One project truth · many machine views</span></footer>
+</body>
+</html>
