@@ -45,6 +45,20 @@ jobs:
           path: archive-validation.log
           if-no-files-found: ignore
 
+      - name: Check external collaborator ownership boundaries
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run check:ownership 2>&1 | tee ownership-validation.log
+
+      - name: Upload ownership diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ownership-validation-diagnostics
+          path: ownership-validation.log
+          if-no-files-found: ignore
+
       - name: Check LumenBridge boundaries
         run: npm run check:lumenbridge
 
