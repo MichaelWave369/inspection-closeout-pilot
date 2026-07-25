@@ -1,0 +1,152 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Sovereign Office Architecture — Publication Pack 1",
+  "description": "Public SOSA architecture, office-separation visuals, independence boundaries, and a fixed-data sealed council drill.",
+  "projects": [
+    {
+      "id": "sovereign-office-architecture",
+      "title": "Sovereign Office Architecture",
+      "aliases": ["SOSA", "OFFICES", "SOVEREIGN OFFICES", "PROTECTED DISSENTER", "OFFICE COUNCIL"],
+      "mark": "SOSA",
+      "category": "governance",
+      "categoryLabel": "Governed collaboration",
+      "status": "Published architecture + council drill",
+      "tone": "blue",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 5,
+      "tagline": "Separated offices, protected dissent, explicit human authority, bounded operation, signed-envelope lineage, and receipted repair.",
+      "story": "Sovereign Office Architecture separates observation, dependency mapping, dissent, governance, operation, and repair so one intelligence cannot silently observe, judge, authorize, execute, and excuse itself. The current public package preserves the v1.2 final baseline and v1.3 alpha lineage—including Bridge Runner, Operator Authority, Signed Envelopes, and Freeze Drift—while keeping the boundary clear that office labels and sealed prompts do not by themselves prove independence.",
+      "summary": "Observer, Cartographer, Protected Dissenter, Governor, Operator, and Repairer produce distinct judgments around a human-approved mandate. Agreement may inform a decision, but it cannot manufacture authority, erase dissent, expand scope, or convert correlated outputs into independent evidence.",
+      "see": "The six-office architecture, separation map, packet-to-receipt flow, v1.2/v1.3 lineage, Freeze Drift rule, independence boundary, fixed-data Sealed Office Council Drill, and PAT Mk.1 Governance Mode.",
+      "proof": "Seven public artifacts are connected. The council drill uses four fixed synthetic packets and no model calls. It demonstrates sealed judgments, preserved dissent, missing-authority refusal, majority-versus-admissibility, correlated-output caution, bounded authorization language, and demonstration-only receipt previews.",
+      "next": "Freeze a portable signed-envelope fixture containing a decision packet, six independently produced judgments, protected dissent identity, human authority capsule, bounded operator envelope, result receipt, repair path, and replay manifest. Then run a heterogeneous-model adversarial trial that measures correlated failure rather than assuming independence.",
+      "claimBoundary": "This package demonstrates governance architecture, fixed synthetic office judgments, public explanation, and Archive integration. It does not prove model independence, collusion resistance, correct reasoning, legal authority, secure signatures, safe autonomous operation, production readiness, or reliable governance outcomes. No office may authorize itself; majority agreement cannot override missing authority or constitutional dissent; and repair may never erase the original event or receipt.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/sovereign-office-architecture/sosa-cover.svg",
+        "label": "Sovereign Office Architecture",
+        "caption": "Six separated offices surrounding explicit human authority, with protected dissent and bounded execution."
+      },
+      "signals": [
+        { "label": "Published baseline", "value": "v1.2 final + v1.3 alpha lineage" },
+        { "label": "Core offices", "value": "Observer · Cartographer · Dissenter · Governor · Operator · Repairer" },
+        { "label": "Authority source", "value": "Explicit human or accountable institution" },
+        { "label": "Validated independence", "value": "Not established" }
+      ],
+      "artifacts": [
+        {
+          "id": "sosa-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Sovereign Office Architecture Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/sovereign-office-architecture/sosa-cover.svg",
+          "description": "The six offices surrounding the human authority core with agreement, dissent, and execution boundaries.",
+          "url": "../artifacts/sovereign-office-architecture/sosa-cover.svg",
+          "linkLabel": "Open SOSA cover →"
+        },
+        {
+          "id": "sosa-office-separation-map",
+          "type": "Governance diagram",
+          "role": "office map",
+          "title": "Separated Offices / Sealed Judgments",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/sovereign-office-architecture/office-separation-map.svg",
+          "description": "Mandate, output, and prohibition for Observer, Cartographer, Protected Dissenter, Governor, Operator, and Repairer.",
+          "url": "../artifacts/sovereign-office-architecture/office-separation-map.svg",
+          "linkLabel": "Open office map →"
+        },
+        {
+          "id": "sosa-sealed-decision-flow",
+          "type": "Governance diagram",
+          "role": "decision flow",
+          "title": "Decision Packet to Receipt and Repair",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/sovereign-office-architecture/sealed-decision-flow.svg",
+          "description": "Decision packet, sealed judgments, synthesis with dissent, human authority, bounded operation, receipt, repair, and Freeze Drift.",
+          "url": "../artifacts/sovereign-office-architecture/sealed-decision-flow.svg",
+          "linkLabel": "Open decision flow →"
+        },
+        {
+          "id": "sosa-architecture-brief",
+          "type": "Public document brief",
+          "title": "Sovereign Office Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public architecture brief for the six offices, sealed judgments, human authority, v1.2/v1.3 lineage, and Freeze Drift.",
+          "url": "../artifacts/sovereign-office-architecture/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "sosa-independence-boundary",
+          "type": "Public claim-boundary brief",
+          "title": "Independence, Authority, Execution, and Repair",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Explains correlated failure, majority-versus-admissibility, operator envelopes, repair limits, and signed-envelope boundaries.",
+          "url": "../artifacts/sovereign-office-architecture/independence-boundary-brief.html",
+          "linkLabel": "Read independence boundary →"
+        },
+        {
+          "id": "sosa-council-drill",
+          "type": "Interactive governance proof",
+          "title": "Sealed Office Council Drill",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data drill with four synthetic decision packets, six office judgments, authority checks, preserved dissent, correlated-output caution, and demonstration-only previews.",
+          "url": "../artifacts/sovereign-office-architecture/council-drill/",
+          "linkLabel": "Open council drill →"
+        },
+        {
+          "id": "sosa-pat-governance-mode",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Governance Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The Parallax-native terminal presentation for office relationships, authority, dissent, artifacts, and claim boundaries.",
+          "url": "../patmk1/?project=sovereign-office-architecture&mode=governance",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "sosa-source-canon",
+          "type": "Canonical source set",
+          "title": "SOSA v1.2 Final and v1.3 Alpha Source Canon",
+          "status": "known-locate",
+          "description": "Retained architecture covering the final v1.2 baseline and v1.3 alpha work for Bridge Runner, Operator Authority, Signed Envelopes, Freeze Drift, and protected dissent.",
+          "action": "Inventory and review the complete source set before any full-document public release."
+        },
+        {
+          "id": "sosa-signed-envelope-fixture",
+          "type": "Runtime evidence",
+          "title": "Portable Signed Decision Envelope Fixture",
+          "status": "planned",
+          "description": "A shell-neutral canonical packet with office judgments, dissent, authority, operator envelope, receipt, repair, hashes, signatures, and replay manifest.",
+          "action": "Freeze the schema and verify the same fixture in two independent implementations."
+        },
+        {
+          "id": "sosa-heterogeneous-trial",
+          "type": "Validation protocol",
+          "title": "Heterogeneous Office Independence Trial",
+          "status": "planned",
+          "description": "An adversarial trial measuring correlated errors across different model families, methods, retrieval boundaries, evaluators, and prompts.",
+          "action": "Publish test design, overlap disclosures, disagreement metrics, failures, and repair receipts before making independence claims."
+        }
+      ],
+      "relationships": [
+        { "projectId": "double-c", "type": "collaboration language", "note": "Double C supplies the public relationship language; SOSA supplies the separated governance structure beneath it." },
+        { "projectId": "alpha-ledger-omega", "type": "decision receipts", "note": "ALO preserves packets, judgments, authority, dissent, operation, repair, and replay evidence." },
+        { "projectId": "graph-cinema", "type": "trajectory visualization", "note": "Graph Cinema replays the receipted motion produced by SOSA decisions without becoming the source of truth." },
+        { "projectId": "coherence-bridge", "type": "mandate renewal and protected dissent", "note": "Coherence Bridge applies SOSA-style drift, dissent, pause, and repair to human-continuity systems." },
+        { "projectId": "parallax-institute", "type": "institutional stewardship", "note": "The Institute provides public stewardship, founding authority, and project-level mandate context." }
+      ]
+    }
+  ]
+}
