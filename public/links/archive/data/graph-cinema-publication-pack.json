@@ -1,0 +1,151 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Graph Cinema — Publication Pack 1",
+  "description": "Source-led public briefs, governed graphfield visuals, and a deterministic hand-authored trajectory comparison viewer.",
+  "projects": [
+    {
+      "id": "graph-cinema",
+      "title": "Graph Cinema",
+      "aliases": ["GC", "CINEMA", "GRAPH CINEMA", "GRAPHFIELD", "TRAJECTORY"],
+      "mark": "GC",
+      "category": "research",
+      "categoryLabel": "Runtime & trajectories",
+      "status": "Published architecture + demo",
+      "tone": "blue",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 2,
+      "tagline": "A downstream runtime that makes governed graph motion, alternate trajectories, protected dissent, and continuity receipts inspectable.",
+      "story": "Graph Cinema is the runtime and visualization layer within the larger Agentic Graphfield Engineering program. Agentic Graphfield Engineering is the engineering discipline; Parallax Graphfield Dynamics is the formal theory of governed rewrites, constraints, trajectories, and counterfactuals; Graph Cinema is the ledgered motion picture formed by successive graph frames and the decisions between them. Publication Pack 1 makes that hierarchy, its constitutional boundary, and a first deterministic comparison proof publicly inspectable.",
+      "summary": "A graph is one frame. A graphfield is the governed world producing frames. A trajectory is the motion picture through admissible states, while the ledger preserves the packets, judgments, authority, dissent, rewrites, receipts, and replay manifest that explain why motion occurred—or why it was blocked.",
+      "see": "The AGE/PGD/Graph Cinema hierarchy, graphfield and trajectory map, canonical office-judgment track, Phase 0 constitutional artifacts, the deterministic repair-versus-direct viewer, and the existing PAT Mk.1 Graph Mode.",
+      "proof": "Seven public artifacts are connected: three reviewed SVG visuals, two source-led public briefs, one standalone deterministic trajectory viewer, and the live PAT Mk.1 Graph Mode integration. The standalone viewer uses fixed hand-authored data and no model calls. The canonical source DOCX files remain retained rather than silently replaced.",
+      "next": "Freeze a shell-neutral signed trajectory fixture and connect the viewer to canonical packet, judgment, authority, rewrite, dissent, receipt, and frame objects without allowing the visualization layer to mutate them. Then test deterministic replay across two independent implementations.",
+      "claimBoundary": "Graph Cinema is a runtime and visualization architecture, not the source of canonical truth. The published deterministic viewer proves browser playback, stepping, comparison, preserved dissent, and fixed-data replay. It does not prove graph reasoning, model independence, optimal governance, cryptographic integrity, or correctness of generated judgments. A visualization may never authorize a rewrite or replace a complete receipt.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/graph-cinema/graph-cinema-cover.svg",
+        "label": "Graph Cinema",
+        "caption": "Successive graph frames, alternate trajectories, preserved dissent, and continuity receipts inside a governed graphfield."
+      },
+      "signals": [
+        { "label": "Engineering discipline", "value": "Agentic Graphfield Engineering" },
+        { "label": "Formal theory", "value": "Parallax Graphfield Dynamics" },
+        { "label": "Runtime layer", "value": "Graph Cinema" },
+        { "label": "Truth source", "value": "Continuity ledger" }
+      ],
+      "artifacts": [
+        {
+          "id": "graph-cinema-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Graph Cinema Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/graph-cinema/graph-cinema-cover.svg",
+          "description": "A filmstrip-like graphfield showing alternate trajectories, protected dissent, a successor frame, and the canonical motion path.",
+          "url": "../artifacts/graph-cinema/graph-cinema-cover.svg",
+          "linkLabel": "Open cover visual →"
+        },
+        {
+          "id": "graphfield-map",
+          "type": "Visual artifact",
+          "role": "diagram",
+          "title": "Graphfield and Trajectory Map",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/graph-cinema/graphfield-map.svg",
+          "description": "Three graph frames inside a governed graphfield with primary and alternate trajectories, policy, authority, dissent, and continuity constraints.",
+          "url": "../artifacts/graph-cinema/graphfield-map.svg",
+          "linkLabel": "Open graphfield map →"
+        },
+        {
+          "id": "office-judgment-track",
+          "type": "Governance diagram",
+          "role": "process",
+          "title": "Canonical Motion / Office Judgment Track",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/graph-cinema/office-judgment-track.svg",
+          "description": "Observer, Cartographer, Protected Dissenter, Governor, Operator, and Repairer along the path from packet to deterministic replay.",
+          "url": "../artifacts/graph-cinema/office-judgment-track.svg",
+          "linkLabel": "Open judgment track →"
+        },
+        {
+          "id": "graph-cinema-architecture-brief",
+          "type": "Public document brief",
+          "title": "Graph Cinema Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Curated public brief defining Agentic Graphfield Engineering, Parallax Graphfield Dynamics, Graph Cinema, graphframes, graphfields, trajectories, and ledgers.",
+          "url": "../artifacts/graph-cinema/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "age-phase-0-constitution-brief",
+          "type": "Public constitution brief",
+          "title": "AGE Phase 0 Constitutional Baseline",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public brief for the Graphfield Constitution, Determinism Boundary, Decision Packet Protocol, Fractal Action Envelope, Trajectory Policy Capsule, and Office Registry.",
+          "url": "../artifacts/graph-cinema/constitution-brief.html",
+          "linkLabel": "Read constitution brief →"
+        },
+        {
+          "id": "deterministic-graph-cinema-viewer",
+          "type": "Interactive proof",
+          "title": "Deterministic Trajectory Comparison Viewer",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data browser proof with play, pause, step, scrub, direct-versus-repair trajectories, office judgments, protected dissent, authority gates, receipts, and comparison mode.",
+          "url": "../artifacts/graph-cinema/viewer/",
+          "linkLabel": "Run deterministic viewer →"
+        },
+        {
+          "id": "pat-mk1-graph-mode",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Graph Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The existing Parallax-native terminal integration for relationship graphs, trajectory playback, ledger inspection, and dissent visibility.",
+          "url": "../patmk1/?project=graph-cinema&mode=graph",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "age-master-spec-source",
+          "type": "Canonical source",
+          "title": "Parallax_Agentic_Graphfield_Engineering_Master_Design_Spec_v0.1.docx",
+          "status": "known-locate",
+          "description": "Layout-authoritative AGE source retained in the project archive. The public architecture brief is a curated derivative, not a replacement.",
+          "action": "Review the complete source independently before any full-document public release."
+        },
+        {
+          "id": "age-phase-0-source",
+          "type": "Canonical source",
+          "title": "Parallax_AGE_Phase_0_Constitutional_Artifact_Set_v0.1.docx",
+          "status": "known-locate",
+          "description": "Layout-authoritative constitutional artifact set retained in the project archive.",
+          "action": "Preserve as the canonical source while the public brief remains the approved readable layer."
+        },
+        {
+          "id": "signed-ledger-fixture",
+          "type": "Runtime evidence",
+          "title": "Signed Canonical Trajectory Fixture",
+          "status": "planned",
+          "description": "A portable packet-to-frame dataset with canonical JSON, hashes, signed authority, sealed office judgments, dissent identity, rewrite receipt, and deterministic replay manifest.",
+          "action": "Freeze the schema, publish the fixture, and verify replay in two independent implementations."
+        }
+      ],
+      "relationships": [
+        { "projectId": "alpha-ledger-omega", "type": "continuity ledger", "note": "AlphaLedgerOmega supplies the evidence, custody, and receipt pattern behind trajectory replay." },
+        { "projectId": "sovereign-office-architecture", "type": "independent judgments", "note": "SOSA supplies separated office mandates and protected dissent along the canonical motion path." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public runtime host", "note": "The terminal system presents Graph Cinema through PAT Mk.1 and the shell-neutral Archive Record." },
+        { "projectId": "parallax-census", "type": "versioned archive source", "note": "Census can eventually provide approved project states and artifacts for real trajectory replay." }
+      ]
+    }
+  ]
+}
