@@ -40,25 +40,25 @@
                 <label for="command-input">C:\&gt;</label>
                 <input id="command-input" name="command" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="command-help" />
               </form>
-              <p class="command-help" id="command-help">Try HELP, DIR, ARCHIVE, ABOUT, NETWORK, CLEAR, or EXIT.</p>
+              <p class="command-help" id="command-help">Try HELP, PROJECTS, OPEN MENDALA, DIR PROJECTS, ARCHIVE, ABOUT, or NETWORK.</p>
             </section>
 
             <section class="archive-desktop" id="archive-desktop" hidden aria-labelledby="desktop-title">
               <div class="desktop-menu">
                 <button id="desktop-file" type="button">File</button>
                 <button id="desktop-view" type="button">View</button>
-                <span id="desktop-title">DeskMate / Parallax Archive</span>
+                <span id="desktop-title" tabindex="-1">DeskMate / Parallax Archive</span>
                 <button id="return-dos" type="button">DOS</button>
               </div>
               <div class="desktop-workspace">
-                <a class="desktop-icon" href="../../network/#projects"><span aria-hidden="true">▦</span><strong>Project<br />Constellation</strong></a>
+                <button class="desktop-icon" id="open-projects" type="button"><span aria-hidden="true">▦</span><strong>Project<br />Files</strong></button>
                 <a class="desktop-icon" href="../../network/#builds"><span aria-hidden="true">⌘</span><strong>Free<br />Builds</strong></a>
                 <a class="desktop-icon" href="../../network/#games"><span aria-hidden="true">◆</span><strong>Games &<br />Worlds</strong></a>
                 <a class="desktop-icon" href="../../network/#media"><span aria-hidden="true">♫</span><strong>Media &<br />Music</strong></a>
                 <button class="desktop-icon" id="open-origin" type="button"><span aria-hidden="true">M</span><strong>About<br />Mikey</strong></button>
                 <a class="desktop-icon" href="../../network/"><span aria-hidden="true">P</span><strong>Open Full<br />Network</strong></a>
               </div>
-              <div class="desktop-status"><span>ARCHIVE CORE: ONLINE</span><span>1 machine / many trajectories</span></div>
+              <div class="desktop-status"><span>ARCHIVE CORE: ONLINE · <strong id="project-count">LOADING</strong></span><span>1 machine / many trajectories</span></div>
             </section>
 
             <dialog class="origin-dialog" id="origin-dialog" aria-labelledby="origin-title">
@@ -67,6 +67,26 @@
               <h2 id="origin-title">This is where the doorway began.</h2>
               <p>The SL1200 Origin Edition is not a claim that every memory is a perfect historical photograph. It is a personal archive shell built around the feeling of a first home computer: curiosity, possibility, and the first sense that an entire world could be waiting behind a blinking cursor.</p>
               <p>From this small desk, the archive opens into systems, products, games, music, research, and the larger Parallax Network.</p>
+            </dialog>
+
+            <dialog class="project-browser" id="project-browser" aria-labelledby="project-browser-title">
+              <div class="window-titlebar">
+                <strong id="project-browser-title">PROJECT FILE MANAGER</strong>
+                <button id="project-browser-close" type="button" aria-label="Close project browser">×</button>
+              </div>
+              <div class="project-browser-tools">
+                <label for="project-filter">Find:</label>
+                <input id="project-filter" type="search" autocomplete="off" placeholder="MENDALA, GAMES, ALO…" />
+              </div>
+              <div class="project-browser-body">
+                <div class="project-file-list" id="project-file-list" role="listbox" aria-label="Archive project files"></div>
+                <article class="project-file-detail" id="project-file-detail" aria-live="polite">
+                  <p class="dialog-kicker">ARCHIVE CORE</p>
+                  <h2>Select a project file.</h2>
+                  <p>The records in this window come from the same canonical manifest used by the standard Network gallery.</p>
+                </article>
+              </div>
+              <div class="window-status" id="project-browser-status">Loading project records…</div>
             </dialog>
           </div>
         </div>
