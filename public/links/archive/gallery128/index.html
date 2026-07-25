@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#d8d5c9" />
+  <meta name="description" content="Browse Parallax posters, visual work, and curated project exhibitions through a compact monochrome gallery terminal." />
+  <title>Gallery 128 Edition | Parallax Archive</title>
+  <link rel="stylesheet" href="gallery128.css" />
+  <script src="../data/archive-core.js" defer></script>
+  <script src="gallery128.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#gallery-desktop">Skip startup</a>
+
+  <main class="museum">
+    <header class="museum-header">
+      <a href="../">← Choose terminal</a>
+      <span>GALLERY 128 / CURATED VISUAL EDITION</span>
+      <a href="../../network/">Standard Network</a>
+    </header>
+
+    <section class="exhibition-room" aria-label="Compact monochrome gallery computer">
+      <div class="wall-label"><strong>PARALLAX ARCHIVE</strong><span>VISUAL EXHIBITION NODE 06</span></div>
+
+      <section class="compact-machine">
+        <div class="machine-logo" aria-hidden="true">P</div>
+        <div class="machine-face">
+          <div class="screen-bezel">
+            <div class="screen" id="screen">
+              <section class="startup" id="startup">
+                <div class="hello-mark" aria-hidden="true">P</div>
+                <h1>Welcome to Gallery 128.</h1>
+                <p id="startup-status" role="status" aria-live="polite">Opening the Archive exhibition…</p>
+                <button id="skip-startup" type="button">Open Gallery</button>
+              </section>
+
+              <section class="gallery-desktop" id="gallery-desktop" hidden>
+                <header class="menu-bar">
+                  <strong>⌘ Parallax</strong>
+                  <button type="button" data-collection="all">File</button>
+                  <button type="button" data-collection="flagship">Exhibits</button>
+                  <button type="button" data-collection="visual">Gallery</button>
+                  <span id="clock">Archive Core</span>
+                </header>
+
+                <div class="desktop-area">
+                  <aside class="desktop-icons" aria-label="Gallery folders">
+                    <button type="button" data-collection="visual"><span class="folder-icon">▣</span><strong>Poster<br />Gallery</strong></button>
+                    <button type="button" data-collection="flagship"><span class="folder-icon">◆</span><strong>Flagship<br />Exhibit</strong></button>
+                    <button type="button" data-collection="creative"><span class="folder-icon">♫</span><strong>Games &<br />Creative</strong></button>
+                    <button type="button" data-collection="all"><span class="folder-icon">▤</span><strong>All Project<br />Records</strong></button>
+                  </aside>
+
+                  <section class="gallery-window" aria-labelledby="window-title">
+                    <header class="window-bar">
+                      <button id="window-close" type="button" aria-label="Return to gallery folders">□</button>
+                      <strong id="window-title">Poster Gallery</strong>
+                      <span class="window-lines" aria-hidden="true"></span>
+                    </header>
+                    <div class="window-tools">
+                      <label for="gallery-search">Find artwork:</label>
+                      <input id="gallery-search" type="search" autocomplete="off" />
+                      <span id="gallery-count">Loading…</span>
+                    </div>
+                    <div class="gallery-layout">
+                      <div class="art-grid" id="art-grid" role="listbox" aria-label="Project artwork and exhibition records"></div>
+                      <article class="inspector" id="inspector" aria-live="polite">
+                        <p class="inspector-label">CURATOR NOTE</p>
+                        <h2>Select an exhibition piece.</h2>
+                        <p>Where a final poster is not yet connected, the gallery displays an explicit archive placeholder rather than invented artwork.</p>
+                      </article>
+                    </div>
+                    <footer id="window-status">Reading Archive Core…</footer>
+                  </section>
+
+                  <button class="trash" type="button" id="about-gallery"><span>▥</span><strong>About<br />Gallery</strong></button>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="disk-slot" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="machine-base" aria-hidden="true"></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+    <header><strong id="about-title">About Gallery 128</strong><button id="about-close" type="button">×</button></header>
+    <div>
+      <p>This is a Parallax-built compact gallery shell inspired by early monochrome graphical computers. It does not reproduce original system software, logos, fonts, or copyrighted interface assets.</p>
+      <p>Its role is curatorial: posters, visual design, project exhibitions, and honest placeholders for artifacts that still need to be located and published.</p>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">JavaScript is optional. <a href="../../network/#projects">Browse project records in the standard Network.</a></p></noscript>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#171b18" />
+  <meta name="description" content="Inspect Parallax infrastructure, physical systems, governance, and practical builds through a rugged field archive terminal." />
+  <title>Field Luggable Edition | Parallax Archive</title>
+  <link rel="stylesheet" href="fieldluggable.css" />
+  <script src="../data/archive-core.js" defer></script>
+  <script src="fieldluggable.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#field-runtime">Skip field boot</a>
+
+  <main class="deployment-zone">
+    <header class="zone-header">
+      <a href="../">← Choose terminal</a>
+      <span>PARALLAX FIELD LUGGABLE / DEPLOYABLE ARCHIVE NODE</span>
+      <a href="../../network/">Standard Network</a>
+    </header>
+
+    <section class="field-scene" aria-label="Rugged portable field archive computer">
+      <div class="case-lid">
+        <div class="handle" aria-hidden="true"></div>
+        <div class="stencil"><strong>PARALLAX</strong><span>FIELD ARCHIVE NODE 01</span></div>
+        <div class="impact-label">EVIDENCE BEFORE DEPLOYMENT</div>
+
+        <section class="screen-bay">
+          <div class="screen-header"><span id="node-state">NODE STARTING</span><span id="core-state">ARCHIVE CORE --</span></div>
+          <div class="screen">
+            <section class="field-boot" id="field-boot">
+              <pre id="field-boot-output" aria-live="polite"></pre>
+              <button id="skip-field-boot" type="button">SKIP DIAGNOSTIC</button>
+            </section>
+
+            <section class="field-runtime" id="field-runtime" hidden>
+              <header class="runtime-header">
+                <div><p id="mode-label">MISSION BOARD</p><h1 id="runtime-title" tabindex="-1">Practical systems under inspection.</h1></div>
+                <div class="signal-cluster"><span class="signal-light" id="signal-light"></span><strong id="signal-label">LOCAL VIEW</strong></div>
+              </header>
+
+              <div class="runtime-layout">
+                <aside class="asset-panel">
+                  <label for="asset-search">Asset / project search</label>
+                  <input id="asset-search" type="search" autocomplete="off" placeholder="MENDALA, RLDS, SOSA…" />
+                  <div class="scope-buttons" role="group" aria-label="Field archive scopes">
+                    <button class="active" type="button" data-scope="field">FIELD</button>
+                    <button type="button" data-scope="physical">PHYSICAL</button>
+                    <button type="button" data-scope="systems">SYSTEMS</button>
+                    <button type="button" data-scope="all">ALL</button>
+                  </div>
+                  <div class="asset-list" id="asset-list" role="listbox" aria-label="Field project records"></div>
+                </aside>
+
+                <section class="inspection-stage" aria-live="polite">
+                  <section class="mode-panel mission-panel" id="mission-panel">
+                    <div class="mission-heading">
+                      <div><p id="project-meta"></p><h2 id="project-title">Mounting field records…</h2></div>
+                      <span id="readiness-badge">UNASSESSED</span>
+                    </div>
+                    <p class="project-tagline" id="project-tagline"></p>
+                    <p id="project-story"></p>
+                    <div class="mission-grid">
+                      <article><span>OPERATIONAL VALUE</span><p id="mission-value"></p></article>
+                      <article><span>CURRENT RECEIPTS</span><p id="mission-proof"></p></article>
+                      <article><span>NEXT FIELD GATE</span><p id="mission-next"></p></article>
+                    </div>
+                    <div class="mission-actions">
+                      <a id="open-record" href="../project/">Open Archive Record</a>
+                      <a id="open-network" href="../../network/#projects">Standard Network</a>
+                      <a href="../../">Contact Michael</a>
+                    </div>
+                  </section>
+
+                  <section class="mode-panel systems-panel" id="systems-panel" hidden>
+                    <div class="panel-heading"><p>SYSTEM MAP</p><h2>Components, controls, and dependencies</h2></div>
+                    <div class="systems-map" id="systems-map"></div>
+                    <p class="map-note" id="systems-note"></p>
+                  </section>
+
+                  <section class="mode-panel evidence-panel" id="evidence-panel" hidden>
+                    <div class="panel-heading"><p>EVIDENCE BOARD</p><h2>Deployment claims require receipts</h2></div>
+                    <div class="evidence-grid">
+                      <article><span>STATUS</span><strong id="evidence-status"></strong><p>Status is copied from the canonical Archive Core record.</p></article>
+                      <article><span>KNOWN EVIDENCE</span><strong>Current proof</strong><p id="evidence-proof"></p></article>
+                      <article><span>CLAIM BOUNDARY</span><strong>Do not overread</strong><p id="evidence-boundary"></p></article>
+                      <article><span>RELEASE GATE</span><strong>Next proof</strong><p id="evidence-next"></p></article>
+                    </div>
+                    <div class="receipt-strip" id="receipt-strip"></div>
+                  </section>
+
+                  <section class="mode-panel diagnostic-panel" id="diagnostic-panel" hidden>
+                    <div class="panel-heading"><p>NODE DIAGNOSTICS</p><h2>Archive and presentation state</h2></div>
+                    <dl class="diagnostic-list">
+                      <div><dt>ARCHIVE CORE</dt><dd id="diag-core">CONNECTING</dd></div>
+                      <div><dt>CANONICAL RECORDS</dt><dd id="diag-records">--</dd></div>
+                      <div><dt>CONTENT PACKS</dt><dd id="diag-packs">--</dd></div>
+                      <div><dt>ACCOUNT REQUIRED</dt><dd>NO</dd></div>
+                      <div><dt>TRACKING</dt><dd>NONE ADDED</dd></div>
+                      <div><dt>FIELD CLAIM</dt><dd>VIEWER ONLY</dd></div>
+                    </dl>
+                    <p class="diagnostic-note">This luggable is a public archive presentation, not evidence that the selected project has been physically deployed. Deployment state must come from project-specific receipts.</p>
+                  </section>
+                </section>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <section class="control-case" aria-label="Field terminal controls">
+        <div class="mode-keys" role="group" aria-label="Field terminal modes">
+          <button class="active" type="button" data-mode="mission"><span>01</span>MISSION</button>
+          <button type="button" data-mode="systems"><span>02</span>SYSTEMS</button>
+          <button type="button" data-mode="evidence"><span>03</span>EVIDENCE</button>
+          <button type="button" data-mode="diagnostic"><span>04</span>DIAGNOSTIC</button>
+        </div>
+        <div class="keyboard" aria-hidden="true"></div>
+        <div class="status-strip"><span>OPERATOR: MICHAEL W. HUGHES</span><span>HUMAN AUTHORITY: PRESENT</span><span id="footer-project">NO ASSET</span></div>
+      </section>
+    </section>
+  </main>
+
+  <noscript><p class="noscript">JavaScript is optional. <a href="../../network/#builds">Open practical builds in the standard Network.</a></p></noscript>
+</body>
+</html>
