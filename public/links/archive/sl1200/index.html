@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1b160d" />
+  <meta name="description" content="Enter the Parallax Archive through the SL1200 Origin Edition." />
+  <title>SL1200 Origin Edition | Parallax Archive</title>
+  <link rel="stylesheet" href="sl1200.css" />
+  <script src="sl1200.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#archive-desktop">Skip boot and open archive</a>
+
+  <main class="room" id="top">
+    <header class="room-header">
+      <a href="../" class="room-link">← Choose another terminal</a>
+      <span>SL1200 ORIGIN EDITION / ARCHIVE CORE</span>
+      <a href="../../network/" class="room-link">Standard Network</a>
+    </header>
+
+    <section class="desk-scene" aria-label="SL1200 home computer archive terminal">
+      <div class="lamp-glow" aria-hidden="true"></div>
+      <div class="computer-shell">
+        <div class="monitor-bezel">
+          <div class="monitor-label"><strong>SL1200</strong><span>ORIGIN EDITION</span></div>
+          <div class="screen" id="screen">
+            <div class="screen-glass" aria-hidden="true"></div>
+
+            <section class="boot-panel" id="boot-panel" aria-labelledby="boot-title">
+              <h1 id="boot-title" class="sr-only">SL1200 Origin Edition boot sequence</h1>
+              <pre id="boot-output" aria-live="polite"></pre>
+              <button class="screen-button" id="skip-boot" type="button">Skip boot</button>
+            </section>
+
+            <section class="dos-panel" id="dos-panel" hidden aria-labelledby="dos-title">
+              <div class="dos-titlebar"><span id="dos-title">PARALLAX ARCHIVE DOS</span><button id="open-desktop" type="button">DESKMATE</button></div>
+              <div class="dos-history" id="dos-history" aria-live="polite"></div>
+              <form class="command-line" id="command-form">
+                <label for="command-input">C:\&gt;</label>
+                <input id="command-input" name="command" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="command-help" />
+              </form>
+              <p class="command-help" id="command-help">Try HELP, DIR, ARCHIVE, ABOUT, NETWORK, CLEAR, or EXIT.</p>
+            </section>
+
+            <section class="archive-desktop" id="archive-desktop" hidden aria-labelledby="desktop-title">
+              <div class="desktop-menu">
+                <button id="desktop-file" type="button">File</button>
+                <button id="desktop-view" type="button">View</button>
+                <span id="desktop-title">DeskMate / Parallax Archive</span>
+                <button id="return-dos" type="button">DOS</button>
+              </div>
+              <div class="desktop-workspace">
+                <a class="desktop-icon" href="../../network/#projects"><span aria-hidden="true">▦</span><strong>Project<br />Constellation</strong></a>
+                <a class="desktop-icon" href="../../network/#builds"><span aria-hidden="true">⌘</span><strong>Free<br />Builds</strong></a>
+                <a class="desktop-icon" href="../../network/#games"><span aria-hidden="true">◆</span><strong>Games &<br />Worlds</strong></a>
+                <a class="desktop-icon" href="../../network/#media"><span aria-hidden="true">♫</span><strong>Media &<br />Music</strong></a>
+                <button class="desktop-icon" id="open-origin" type="button"><span aria-hidden="true">M</span><strong>About<br />Mikey</strong></button>
+                <a class="desktop-icon" href="../../network/"><span aria-hidden="true">P</span><strong>Open Full<br />Network</strong></a>
+              </div>
+              <div class="desktop-status"><span>ARCHIVE CORE: ONLINE</span><span>1 machine / many trajectories</span></div>
+            </section>
+
+            <dialog class="origin-dialog" id="origin-dialog" aria-labelledby="origin-title">
+              <button class="dialog-close" id="origin-close" type="button" aria-label="Close origin note">×</button>
+              <p class="dialog-kicker">ORIGIN NOTE</p>
+              <h2 id="origin-title">This is where the doorway began.</h2>
+              <p>The SL1200 Origin Edition is not a claim that every memory is a perfect historical photograph. It is a personal archive shell built around the feeling of a first home computer: curiosity, possibility, and the first sense that an entire world could be waiting behind a blinking cursor.</p>
+              <p>From this small desk, the archive opens into systems, products, games, music, research, and the larger Parallax Network.</p>
+            </dialog>
+          </div>
+        </div>
+
+        <div class="computer-base" aria-hidden="true">
+          <div class="drive"><span></span></div>
+          <div class="power-light"></div>
+          <div class="keyboard-lines"></div>
+        </div>
+      </div>
+
+      <aside class="desk-note">
+        <p>ORIGIN DISK</p>
+        <strong>PARALLAX<br />ARCHIVE</strong>
+        <span>Insert curiosity.</span>
+      </aside>
+    </section>
+  </main>
+
+  <noscript><p class="noscript">JavaScript is optional. <a href="../../network/">Open the standard Parallax Network archive.</a></p></noscript>
+</body>
+</html>
