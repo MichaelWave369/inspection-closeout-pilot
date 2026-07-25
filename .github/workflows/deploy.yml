@@ -31,8 +31,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Validate Archive Core data
+        run: npm run check:archive-data
+
+      - name: Check public JavaScript
+        run: npm run check:public-js
+
       - name: Build site
-        run: npm run build
+        run: npm run build:site
 
       - name: Configure Pages
         if: github.event_name == 'push'
