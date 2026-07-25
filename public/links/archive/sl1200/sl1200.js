@@ -1,3 +1,5 @@
+const manifestUrl = '../data/projects.json'
+
 const bootPanel = document.getElementById('boot-panel')
 const bootOutput = document.getElementById('boot-output')
 const skipBoot = document.getElementById('skip-boot')
@@ -11,6 +13,16 @@ const returnDos = document.getElementById('return-dos')
 const originDialog = document.getElementById('origin-dialog')
 const openOrigin = document.getElementById('open-origin')
 const originClose = document.getElementById('origin-close')
+const openProjects = document.getElementById('open-projects')
+const desktopFile = document.getElementById('desktop-file')
+const desktopView = document.getElementById('desktop-view')
+const projectBrowser = document.getElementById('project-browser')
+const projectBrowserClose = document.getElementById('project-browser-close')
+const projectFilter = document.getElementById('project-filter')
+const projectFileList = document.getElementById('project-file-list')
+const projectFileDetail = document.getElementById('project-file-detail')
+const projectBrowserStatus = document.getElementById('project-browser-status')
+const projectCount = document.getElementById('project-count')
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 const bootLines = [
@@ -28,6 +40,36 @@ const bootLines = [
 
 let bootTimer = null
 let bootIndex = 0
+let projects = []
+let selectedProject = null
+
+function appendHistory(text) {
+  dosHistory.textContent += `${text}\n`
+  dosHistory.scrollTop = dosHistory.scrollHeight
+}
+
+async function loadArchiveCore() {
+  try {
+    const response = await fetch(manifestUrl, { cache: 'no-cache' })
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+
+    const manifest = await response.json()
+    projects = Array.isArray(manifest.projects) ? manifest.projects : []
+    if (!projects.length) throw new Error('No project records found')
+
+    projectCount.textContent = `${projects.length} FILES`
+    projectBrowserStatus.textContent = `${projects.length} canonical project records · Archive Core ${manifest.schemaVersion || '0.1'}`
+    renderProjectList()
+    return projects
+  } catch (error) {
+    console.error('Archive Core manifest failed to load', error)
+    projectCount.textContent = 'OFFLINE'
+    projectBrowserStatus.textContent = 'Archive Core unavailable · use Standard Network'
+    throw error
+  }
+}
+
+const archiveCoreReady = loadArchiveCore()
 
 function showDos({ focus = true } = {}) {
   window.clearTimeout(bootTimer)
@@ -35,7 +77,7 @@ function showDos({ focus = true } = {}) {
   archiveDesktop.hidden = true
   dosPanel.hidden = false
   if (!dosHistory.textContent) {
-    appendHistory('PARALLAX ARCHIVE DOS v0.1\nType HELP for available commands.\n')
+    appendHistory('PARALLAX ARCHIVE DOS v0.2\nType HELP for available commands.\n')
   }
   if (focus) commandInput.focus()
 }
@@ -45,11 +87,6 @@ function showDesktop() {
   dosPanel.hidden = true
   archiveDesktop.hidden = false
   document.getElementById('desktop-title').focus?.()
-}
-
-function appendHistory(text) {
-  dosHistory.textContent += `${text}\n`
-  dosHistory.scrollTop = dosHistory.scrollHeight
 }
 
 function runBoot() {
@@ -75,22 +112,203 @@ function normalizeCommand(value) {
   return value.trim().replace(/\s+/g, ' ').toUpperCase()
 }
 
-function executeCommand(raw) {
+function normalizeReference(value) {
+  return value
+    .trim()
+    .replace(/^['"]|['"]$/g, '')
+    .replace(/\.PRX$/i, '')
+    .replace(/\.TXT$/i, '')
+    .toUpperCase()
+}
+
+function projectValues(project) {
+  return [project.id, project.title, project.mark, ...(project.aliases || [])]
+    .map(value => normalizeReference(String(value)))
+}
+
+function findProject(reference) {
+  const needle = normalizeReference(reference)
+  if (!needle) return null
+
+  const exact = projects.find(project => projectValues(project).includes(needle))
+  if (exact) return exact
+
+  const partial = projects.filter(project => projectValues(project).some(value => value.includes(needle)))
+  return partial.length === 1 ? partial[0] : null
+}
+
+function formatProjectDirectory() {
+  return [
+    ' Volume in drive C is PARALLAX',
+    ' Directory of C:\\PROJECTS',
+    '',
+    ...projects
+      .slice()
+      .sort((a, b) => a.title.localeCompare(b.title))
+      .map(project => `${project.mark.padEnd(6)} ${project.title.toUpperCase().slice(0, 29).padEnd(29)} ${project.status}`),
+    '',
+    `${projects.length} project file(s) / one canonical manifest`,
+    'Use OPEN <NAME> to inspect a record.',
+  ].join('\n')
+}
+
+function createText(tag, className, text) {
+  const element = document.createElement(tag)
+  if (className) element.className = className
+  element.textContent = text
+  return element
+}
+
+function renderProjectDetail(project) {
+  selectedProject = project
+  projectFileDetail.replaceChildren()
+
+  const meta = createText('p', 'project-file-meta', `${project.categoryLabel} · ${project.status} · TIER ${project.tier || '—'} · WAVE ${project.wave || '—'}`)
+  const title = createText('h2', '', project.title)
+  const tagline = createText('p', '', project.tagline)
+  tagline.style.fontWeight = '900'
+  const story = createText('p', '', project.story)
+
+  const facts = document.createElement('div')
+  facts.className = 'project-file-facts'
+  ;[
+    ['WHAT EXISTS', project.proof],
+    ['WHAT TO SEE', project.see],
+    ['NEXT TRAJECTORY', project.next],
+  ].forEach(([label, value]) => {
+    const block = document.createElement('div')
+    block.append(createText('strong', '', label), createText('span', '', value))
+    facts.appendChild(block)
+  })
+
+  const link = document.createElement('a')
+  link.className = 'project-open-link'
+  link.href = `../../network/?project=${encodeURIComponent(project.id)}#projects`
+  link.textContent = 'OPEN IN FULL NETWORK →'
+
+  projectFileDetail.append(meta, title, tagline, story, facts, link)
+  projectBrowserStatus.textContent = `${project.mark}.PRX · ${project.id} · Archive Core record`
+
+  projectFileList.querySelectorAll('.project-file').forEach(button => {
+    button.setAttribute('aria-selected', String(button.dataset.projectId === project.id))
+  })
+}
+
+function renderProjectList(query = '') {
+  projectFileList.replaceChildren()
+  const needle = query.trim().toLowerCase()
+  const visible = projects
+    .filter(project => [project.title, project.mark, project.categoryLabel, project.status, ...(project.aliases || [])].join(' ').toLowerCase().includes(needle))
+    .sort((a, b) => Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
+
+  visible.forEach(project => {
+    const button = document.createElement('button')
+    button.type = 'button'
+    button.className = 'project-file'
+    button.dataset.projectId = project.id
+    button.setAttribute('role', 'option')
+    button.setAttribute('aria-selected', String(selectedProject?.id === project.id))
+
+    const mark = createText('span', 'project-file-mark', `${project.mark}.PRX`)
+    const copy = document.createElement('span')
+    copy.append(createText('strong', '', project.title), createText('small', '', `${project.categoryLabel} · ${project.status}`))
+    button.append(mark, copy)
+    button.addEventListener('click', () => renderProjectDetail(project))
+    projectFileList.appendChild(button)
+  })
+
+  if (!visible.length) {
+    projectFileList.appendChild(createText('p', '', 'No matching project files.'))
+  }
+
+  projectBrowserStatus.textContent = `${visible.length} of ${projects.length} project file(s) shown`
+}
+
+async function showProjectBrowser(project = null) {
+  try {
+    await archiveCoreReady
+  } catch {
+    window.location.href = '../../network/#projects'
+    return
+  }
+
+  projectFilter.value = ''
+  renderProjectList()
+  if (project) renderProjectDetail(project)
+
+  if (!projectBrowser.open) {
+    if (typeof projectBrowser.showModal === 'function') {
+      projectBrowser.showModal()
+    } else {
+      projectBrowser.setAttribute('open', '')
+    }
+  }
+  window.setTimeout(() => projectFilter.focus(), 0)
+}
+
+function closeProjectBrowser() {
+  if (typeof projectBrowser.close === 'function' && projectBrowser.open) {
+    projectBrowser.close()
+  } else {
+    projectBrowser.removeAttribute('open')
+  }
+}
+
+async function openProjectFromCommand(reference) {
+  try {
+    await archiveCoreReady
+  } catch {
+    appendHistory('Archive Core unavailable. Opening standard Network…')
+    window.location.href = '../../network/#projects'
+    return
+  }
+
+  const project = findProject(reference)
+  if (!project) {
+    appendHistory(`Project file not found or reference is ambiguous: ${reference}\nUse DIR PROJECTS to list available files.`)
+    return
+  }
+
+  appendHistory([
+    `${project.mark}.PRX — ${project.title}`,
+    `${project.categoryLabel} / ${project.status}`,
+    project.tagline,
+    '',
+    'Opening project record…',
+  ].join('\n'))
+  window.setTimeout(() => showProjectBrowser(project), reducedMotion ? 0 : 260)
+}
+
+async function executeCommand(raw) {
   const command = normalizeCommand(raw)
   if (!command) return
 
   appendHistory(`C:\\>${command}`)
 
+  if (command.startsWith('OPEN ')) {
+    await openProjectFromCommand(command.slice(5))
+    return
+  }
+
+  if (command.startsWith('TYPE ') && command !== 'TYPE ABOUT.TXT') {
+    await openProjectFromCommand(command.slice(5))
+    return
+  }
+
   switch (command) {
     case 'HELP':
       appendHistory([
         'AVAILABLE COMMANDS',
-        '  ARCHIVE   Open the DeskMate archive desktop',
-        '  DIR       List mounted archive directories',
-        '  ABOUT     Read the SL1200 Origin note',
-        '  NETWORK   Open the full standard Network page',
-        '  CLEAR     Clear this terminal',
-        '  EXIT      Return to terminal selection',
+        '  ARCHIVE          Open the DeskMate archive desktop',
+        '  PROJECTS         Open canonical project files',
+        '  DIR PROJECTS     List every mounted project record',
+        '  OPEN <NAME>       Open a project, e.g. OPEN MENDALA',
+        '  TYPE <NAME>.PRX   Read a project file',
+        '  DIR              List mounted archive directories',
+        '  ABOUT            Read the SL1200 Origin note',
+        '  NETWORK          Open the full standard Network page',
+        '  CLEAR            Clear this terminal',
+        '  EXIT             Return to terminal selection',
       ].join('\n'))
       break
     case 'DIR':
@@ -106,6 +324,21 @@ function executeCommand(raw) {
         '',
         '8 item(s) / archive state preserved',
       ].join('\n'))
+      break
+    case 'DIR PROJECTS':
+    case 'DIR C:\\PROJECTS':
+    case 'CD PROJECTS':
+      try {
+        await archiveCoreReady
+        appendHistory(formatProjectDirectory())
+      } catch {
+        appendHistory('Archive Core project directory is unavailable.')
+      }
+      break
+    case 'PROJECTS':
+    case 'PROJECTS.EXE':
+      appendHistory('Opening canonical project files…')
+      await showProjectBrowser()
       break
     case 'ARCHIVE':
     case 'ARCHIVE.EXE':
@@ -138,20 +371,41 @@ function executeCommand(raw) {
 skipBoot.addEventListener('click', () => showDos())
 openDesktopButton.addEventListener('click', showDesktop)
 returnDos.addEventListener('click', () => showDos())
+openProjects.addEventListener('click', () => showProjectBrowser())
+desktopFile.addEventListener('click', () => showProjectBrowser())
+desktopView.addEventListener('click', () => showProjectBrowser(selectedProject))
 
-commandForm.addEventListener('submit', (event) => {
+commandForm.addEventListener('submit', async event => {
   event.preventDefault()
-  executeCommand(commandInput.value)
+  const value = commandInput.value
   commandInput.value = ''
+  await executeCommand(value)
 })
 
 openOrigin.addEventListener('click', () => originDialog.showModal())
 originClose.addEventListener('click', () => originDialog.close())
-originDialog.addEventListener('click', (event) => {
+originDialog.addEventListener('click', event => {
   if (event.target === originDialog) originDialog.close()
 })
 
-document.querySelector('.skip-link').addEventListener('click', (event) => {
+projectBrowserClose.addEventListener('click', closeProjectBrowser)
+projectBrowser.addEventListener('click', event => {
+  if (event.target === projectBrowser) closeProjectBrowser()
+})
+projectFilter.addEventListener('input', () => renderProjectList(projectFilter.value))
+
+projectFileList.addEventListener('keydown', event => {
+  if (!['ArrowDown', 'ArrowUp'].includes(event.key)) return
+  const files = [...projectFileList.querySelectorAll('.project-file')]
+  const index = files.indexOf(document.activeElement)
+  const nextIndex = event.key === 'ArrowDown'
+    ? Math.min(files.length - 1, index + 1)
+    : Math.max(0, index - 1)
+  files[nextIndex]?.focus()
+  event.preventDefault()
+})
+
+document.querySelector('.skip-link').addEventListener('click', event => {
   event.preventDefault()
   showDesktop()
 })

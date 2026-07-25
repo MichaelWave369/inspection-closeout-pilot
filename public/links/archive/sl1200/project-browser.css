@@ -1,0 +1,224 @@
+.project-browser {
+  width: min(780px, calc(100% - 28px));
+  max-height: min(650px, calc(100vh - 34px));
+  padding: 0;
+  overflow: hidden;
+  border: 4px double #294326;
+  border-radius: 3px;
+  color: #142011;
+  background: #d5dcc6;
+  box-shadow: 0 28px 90px rgba(0,0,0,.62);
+  font-family: "Courier New", ui-monospace, monospace;
+  text-shadow: none;
+}
+
+.project-browser::backdrop {
+  background: rgba(0,0,0,.76);
+  backdrop-filter: blur(3px);
+}
+
+.window-titlebar {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 7px 5px 11px;
+  color: #eef6df;
+  background: #31582e;
+  border-bottom: 3px double #172b15;
+  font-size: .82rem;
+  letter-spacing: .05em;
+}
+
+.window-titlebar button {
+  width: 32px;
+  height: 28px;
+  border: 2px outset #edf2df;
+  color: #172714;
+  background: #cfd8c1;
+  cursor: pointer;
+  font: 900 1rem/1 "Courier New", monospace;
+}
+
+.project-browser-tools {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border-bottom: 2px solid #526b4d;
+  background: #bfcbb2;
+  font-size: .78rem;
+  font-weight: 900;
+}
+
+.project-browser-tools input {
+  min-width: 0;
+  flex: 1;
+  padding: 7px 8px;
+  border: 2px inset #edf2df;
+  color: #142011;
+  background: #eff4e8;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.project-browser-tools input:focus {
+  box-shadow: 0 0 0 2px #31582e;
+}
+
+.project-browser-body {
+  min-height: 390px;
+  display: grid;
+  grid-template-columns: minmax(210px, .72fr) minmax(0, 1.28fr);
+  background: #d5dcc6;
+}
+
+.project-file-list {
+  max-height: 460px;
+  overflow: auto;
+  padding: 7px;
+  border-right: 3px double #526b4d;
+  background: #a9c09d;
+}
+
+.project-file {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 9px;
+  align-items: center;
+  padding: 8px;
+  border: 0;
+  color: #132211;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.project-file:hover,
+.project-file:focus-visible,
+.project-file[aria-selected="true"] {
+  outline: none;
+  color: #eef6df;
+  background: #31582e;
+}
+
+.project-file-mark {
+  display: grid;
+  place-items: center;
+  min-height: 34px;
+  border: 2px double currentColor;
+  font-size: .68rem;
+  font-weight: 900;
+}
+
+.project-file strong,
+.project-file small {
+  display: block;
+}
+
+.project-file strong {
+  overflow: hidden;
+  font-size: .75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-file small {
+  margin-top: 3px;
+  font-size: .62rem;
+  opacity: .82;
+}
+
+.project-file-detail {
+  min-width: 0;
+  max-height: 460px;
+  overflow: auto;
+  padding: 22px;
+  background: #e3e7d8;
+}
+
+.project-file-detail h2 {
+  margin: .3rem 0 .65rem;
+  font: 900 clamp(1.45rem, 4vw, 2.2rem)/1.02 Georgia, serif;
+  letter-spacing: -.025em;
+}
+
+.project-file-detail p {
+  line-height: 1.55;
+}
+
+.project-file-meta {
+  margin: 0 0 12px;
+  color: #31582e;
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.project-file-facts {
+  display: grid;
+  gap: 9px;
+  margin: 16px 0;
+}
+
+.project-file-facts div {
+  padding: 10px;
+  border: 1px solid #84967b;
+  background: rgba(255,255,255,.34);
+}
+
+.project-file-facts strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #31582e;
+  font-size: .68rem;
+  text-transform: uppercase;
+}
+
+.project-open-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 9px 12px;
+  border: 2px outset #edf2df;
+  color: #eef6df;
+  background: #31582e;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.window-status {
+  min-height: 27px;
+  padding: 6px 9px;
+  border-top: 2px solid #526b4d;
+  background: #bfcbb2;
+  font-size: .66rem;
+  font-weight: 800;
+}
+
+@media (max-width: 660px) {
+  .project-browser {
+    width: calc(100% - 12px);
+    max-height: calc(100vh - 12px);
+  }
+
+  .project-browser-body {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .project-file-list {
+    max-height: 190px;
+    border-right: 0;
+    border-bottom: 3px double #526b4d;
+  }
+
+  .project-file-detail {
+    max-height: 360px;
+    padding: 17px;
+  }
+}
