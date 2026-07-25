@@ -66,6 +66,9 @@ jobs:
       - name: Check SOSA governance boundaries
         run: npm run check:sosa
 
+      - name: Check Parallax Census boundaries
+        run: npm run check:census
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
