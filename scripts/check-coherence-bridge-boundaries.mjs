@@ -16,8 +16,8 @@ const required = {
     'non-clinical system architecture',
     'does not diagnose people',
     'does not diagnose people, provide therapy or crisis care',
-    'does not automatically confer ownership',
     'Success is measured by agency and connection—not retention.',
+    'pause or leave',
   ],
   safety: [
     'Secret mood, vulnerability, dependency, or risk scoring.',
