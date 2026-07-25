@@ -158,7 +158,7 @@
         { "projectId": "sovereign-office-architecture", "type": "independent review and authority separation", "note": "SOSA can separate request, security dissent, authorization, operation, review, merge, deployment, and repair judgments." },
         { "projectId": "alpha-ledger-omega", "type": "execution and delivery receipts", "note": "ALO preserves contracts, commands, patches, checks, failures, decisions, cleanup, merge, deployment, rollback, and outcome continuity." },
         { "projectId": "parallax-census", "type": "source, artifact, and release registry", "note": "Census tracks runtime versions, schemas, proof runs, branches, artifacts, receipts, aliases, and publication states." },
-        { "projectId": "parallax-archive-terminal-system", "type": "public evidence host", "note": "Archive Core publishes the architecture and synthetic workbench without implying a verified standalone implementation."
+        { "projectId": "parallax-archive-terminal-system", "type": "public evidence host", "note": "Archive Core publishes the architecture and synthetic workbench without implying a verified standalone implementation." }
       ]
     }
   ]
