@@ -94,7 +94,7 @@ if (!project) errors.push('SignalBridge pack must contain signalbridge.')
 if (project && project.status !== 'Published architecture + mock Proof Run') {
   errors.push('SignalBridge status must remain Published architecture + mock Proof Run.')
 }
-for (const phrase of ['production traction', 'verified savings', 'automated underwriting', 'explicit human', 'not yet']) {
+for (const phrase of ['production traction', 'verified savings', 'automated underwriting', 'human review', 'not yet']) {
   if (project && !String(project.claimBoundary || '').toLowerCase().includes(phrase.toLowerCase())) {
     errors.push(`SignalBridge claim boundary must preserve: ${phrase}`)
   }
