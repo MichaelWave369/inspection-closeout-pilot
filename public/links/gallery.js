@@ -1,5 +1,3 @@
-const manifestUrl = '../archive/data/projects.json'
-
 let categories = []
 let projects = []
 let activeCategory = 'all'
@@ -11,6 +9,18 @@ const search = document.getElementById('project-search')
 const resultCount = document.getElementById('result-count')
 const dialog = document.getElementById('project-dialog')
 const closeDialog = document.getElementById('dialog-close')
+
+function ensureArchiveCore() {
+  if (window.ParallaxArchiveCore) return Promise.resolve(window.ParallaxArchiveCore)
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script')
+    script.src = '../archive/data/archive-core.js'
+    script.onload = () => resolve(window.ParallaxArchiveCore)
+    script.onerror = () => reject(new Error('Archive Core loader could not be loaded'))
+    document.head.appendChild(script)
+  })
+}
 
 function createFilterButtons() {
   filters.replaceChildren()
@@ -43,6 +53,7 @@ function projectMatches(project, query) {
     project.tagline,
     project.story,
     project.status,
+    project.summary,
     ...(project.aliases || []),
   ].join(' ').toLowerCase()
 
@@ -53,7 +64,7 @@ function renderProjects() {
   const query = search.value.trim().toLowerCase()
   const visible = projects
     .filter(project => projectMatches(project, query))
-    .sort((a, b) => Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
+    .sort((a, b) => Number(b.featured) - Number(a.featured) || Number(a.archiveOrder || 999) - Number(b.archiveOrder || 999) || a.title.localeCompare(b.title))
 
   grid.replaceChildren()
   resultCount.textContent = `${visible.length} project${visible.length === 1 ? '' : 's'} shown · Archive Core ${projects.length} records`
@@ -81,7 +92,7 @@ function renderProjects() {
 
     const status = document.createElement('span')
     status.className = 'project-status'
-    status.textContent = project.status
+    status.textContent = project.archiveFeatured ? `${project.status} · Flagship` : project.status
 
     art.append(mark, status)
 
@@ -121,6 +132,18 @@ function writeProjectUrl(projectId, method = 'pushState') {
   window.history[method]({ projectId }, '', url)
 }
 
+function createDialogLink({ label, url, external = false, primary = false }) {
+  const anchor = document.createElement('a')
+  anchor.href = url
+  anchor.textContent = label
+  if (external) {
+    anchor.target = '_blank'
+    anchor.rel = 'noopener'
+  }
+  if (primary) anchor.classList.add('primary-link')
+  return anchor
+}
+
 function openProject(project, { updateUrl = false } = {}) {
   activeProject = project
   const dialogArt = document.getElementById('dialog-art')
@@ -136,13 +159,14 @@ function openProject(project, { updateUrl = false } = {}) {
 
   const links = document.getElementById('dialog-links')
   links.replaceChildren()
+  links.appendChild(createDialogLink({
+    label: project.archiveFeatured ? 'Open Flagship Archive Record' : 'Open Archive Record',
+    url: `../archive/project/?id=${encodeURIComponent(project.id)}`,
+    primary: true,
+  }))
+
   ;(project.links || []).forEach(link => {
-    const anchor = document.createElement('a')
-    anchor.href = link.url
-    anchor.target = '_blank'
-    anchor.rel = 'noopener'
-    anchor.textContent = link.label
-    links.appendChild(anchor)
+    links.appendChild(createDialogLink({ label: link.label, url: link.url, external: true }))
   })
 
   if (updateUrl) writeProjectUrl(project.id)
@@ -167,6 +191,10 @@ function closeProject({ updateUrl = true } = {}) {
 }
 
 function findProject(reference) {
+  if (window.ParallaxArchiveCore) {
+    return window.ParallaxArchiveCore.findProject(projects, reference)
+  }
+
   const needle = reference.trim().toLowerCase()
   return projects.find(project => {
     const values = [project.id, project.title, project.mark, ...(project.aliases || [])]
@@ -201,10 +229,8 @@ async function initArchive() {
   resultCount.textContent = 'Loading Archive Core…'
 
   try {
-    const response = await fetch(manifestUrl, { cache: 'no-cache' })
-    if (!response.ok) throw new Error(`HTTP ${response.status}`)
-
-    const manifest = await response.json()
+    const archiveCore = await ensureArchiveCore()
+    const manifest = await archiveCore.load()
     categories = Array.isArray(manifest.categories) ? manifest.categories : []
     projects = Array.isArray(manifest.projects) ? manifest.projects : []
 
