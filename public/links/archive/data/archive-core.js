@@ -42,7 +42,7 @@
   async function load({ refresh = false } = {}) {
     if (cache && !refresh) return cache
 
-    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe, agentora, phios] = await Promise.all([
+    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe, agentora, phios, agentception] = await Promise.all([
       fetchJson('projects.json'),
       fetchJson('flagship-pack.json'),
       fetchJson('terminal-system-pack.json'),
@@ -60,15 +60,16 @@
       fetchJson('vibe-publication-pack.json'),
       fetchJson('agentora-publication-pack.json'),
       fetchJson('phios-publication-pack.json'),
+      fetchJson('agentception-publication-pack.json'),
     ])
 
-    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe, agentora, phios])
+    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus, signalBridge, vibe, agentora, phios, agentception])
       .sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || a.title.localeCompare(b.title))
 
     cache = {
       ...base,
-      schemaVersion: '0.17.0',
-      updated: phios.updated || agentora.updated || vibe.updated || signalBridge.updated || parallaxCensus.updated || sosa.updated || doubleC.updated || roomLight.updated || coherenceBridge.updated || parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
+      schemaVersion: '0.18.0',
+      updated: agentception.updated || phios.updated || agentora.updated || vibe.updated || signalBridge.updated || parallaxCensus.updated || sosa.updated || doubleC.updated || roomLight.updated || coherenceBridge.updated || parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
       projects,
       packs: [
         packRecord('flagship-wave-1', flagship),
@@ -87,6 +88,7 @@
         packRecord('vibe-publication-1', vibe),
         packRecord('agentora-publication-1', agentora),
         packRecord('phios-publication-1', phios),
+        packRecord('agentception-publication-1', agentception),
       ],
     }
 
