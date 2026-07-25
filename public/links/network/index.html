@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070711" />
+  <meta name="description" content="The Parallax Network — public builds, systems, research, games, media, and music created by Michael W. Hughes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Parallax Network | Michael W. Hughes" />
+  <meta property="og:description" content="Explore free public repositories, governed systems, playable worlds, media studios, research, and music." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/247459237?v=4" />
+  <meta property="og:url" content="https://michaelwave369.github.io/inspection-closeout-pilot/links/network/" />
+  <title>The Parallax Network | Michael W. Hughes</title>
+  <link rel="stylesheet" href="../gallery.css" />
+  <style>
+    body { padding-bottom: 92px; }
+    .network-bar { position: sticky; top: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 18px; width: min(1120px, calc(100% - 28px)); margin: 12px auto 0; padding: 10px 14px; border: 1px solid var(--line); border-radius: 18px; background: rgba(7,7,17,.88); backdrop-filter: blur(18px); box-shadow: 0 14px 38px rgba(0,0,0,.28); }
+    .network-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .network-brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: #090812; font-weight: 950; background: linear-gradient(135deg,var(--green),var(--blue),var(--purple)); }
+    .network-brand strong,.network-brand small { display:block; }
+    .network-brand small { color: var(--muted); font-size: .72rem; margin-top: 2px; }
+    .network-nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+    .network-nav a { text-decoration:none; padding:8px 10px; border-radius:10px; color:var(--muted); font-size:.82rem; font-weight:720; }
+    .network-nav a:hover { color:var(--text); background:rgba(255,255,255,.06); }
+    .network-hero { margin-top: 24px; display:grid; grid-template-columns:1.25fr .75fr; gap:34px; align-items:center; border-radius:34px; padding:clamp(25px,5vw,52px); position:relative; overflow:hidden; }
+    .network-hero::before { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(circle at 82% 20%,rgba(69,183,255,.22),transparent 27%),radial-gradient(circle at 15% 85%,rgba(152,103,255,.18),transparent 32%); }
+    .network-hero > * { position:relative; z-index:1; }
+    .network-hero h1 { font-size:clamp(2.5rem,7vw,5.4rem); max-width:13ch; }
+    .network-hero .lede { color:var(--muted); line-height:1.7; max-width:66ch; margin:20px 0 0; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:25px; }
+    .hero-actions .action { min-width:180px; }
+    .orbit { min-height:310px; position:relative; display:grid; place-items:center; }
+    .orbit-core { width:120px; height:120px; display:grid; place-items:center; border-radius:50%; color:#090812; font-size:3.4rem; font-weight:950; background:linear-gradient(135deg,var(--green),var(--blue),var(--purple)); box-shadow:0 0 0 24px rgba(152,103,255,.07),0 0 0 48px rgba(69,183,255,.045); }
+    .orbit span { position:absolute; padding:9px 12px; border:1px solid var(--line); border-radius:999px; background:rgba(7,7,17,.78); font-size:.78rem; font-weight:760; }
+    .orbit .one { top:20px; left:50%; transform:translateX(-50%); }.orbit .two { right:0; top:50%; }.orbit .three { bottom:20px; left:50%; transform:translateX(-50%); }.orbit .four { left:0; top:50%; }
+    .network-map { margin-top:40px; }
+    .section-copy { max-width:760px; }
+    .section-copy h2 { font-size:clamp(2rem,5vw,3.7rem); letter-spacing:-.045em; margin-bottom:12px; }
+    .section-copy > p:last-child { color:var(--muted); line-height:1.65; }
+    .branch-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px; margin-top:21px; }
+    .branch { text-decoration:none; min-height:155px; padding:18px; border:1px solid var(--line); border-radius:22px; background:rgba(255,255,255,.04); transition:transform .18s ease,border-color .18s ease; }
+    .branch:hover { transform:translateY(-3px); border-color:rgba(69,183,255,.45); }
+    .branch span,.branch strong,.branch small { display:block; }.branch span { color:var(--green); font-weight:850; font-size:.72rem; letter-spacing:.12em; }.branch strong { margin-top:25px; }.branch small { color:var(--muted); line-height:1.45; margin-top:7px; }
+    .network-section { margin-top:36px; border-radius:32px; padding:clamp(21px,4vw,38px); }
+    .heading-row { display:flex; justify-content:space-between; align-items:end; gap:24px; }
+    .heading-row .section-copy { flex:1; }.heading-row .action { flex:none; }
+    .repo-jump { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+    .repo-jump a { text-decoration:none; padding:8px 11px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.035); font-size:.82rem; font-weight:720; }
+    .repo-group { margin-top:30px; scroll-margin-top:92px; }
+    .repo-group h3 { display:flex; align-items:center; gap:12px; font-size:1.25rem; }.repo-group h3::after { content:""; flex:1; height:1px; background:var(--line); }
+    .repo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:14px; }
+    .repo-card { display:flex; flex-direction:column; min-width:0; min-height:230px; padding:18px; border:1px solid var(--line); border-radius:21px; background:rgba(255,255,255,.04); }
+    .repo-top { display:flex; justify-content:space-between; gap:10px; align-items:start; }.repo-mark { width:46px;height:46px;display:grid;place-items:center;border-radius:14px;color:#090812;font-weight:950;background:linear-gradient(135deg,var(--purple),var(--blue)); }.repo-license { padding:6px 8px;border-radius:999px;background:rgba(255,255,255,.1);font-size:.68rem;font-weight:800; }
+    .repo-card h4 { margin:16px 0 8px; font-size:1.1rem; }.repo-card p { color:var(--muted);line-height:1.52;font-size:.86rem; }.repo-card .repo-links { display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:15px; }.repo-card a { text-decoration:none;padding:9px 11px;border:1px solid var(--line);border-radius:12px;font-size:.8rem;font-weight:730; }.repo-card a.primary-link { color:#090812;border-color:transparent;background:linear-gradient(135deg,#b38cff,#66c8ff); }
+    .media-grid,.game-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px; }
+    .media-card,.game-card { min-height:225px;padding:19px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(19,16,39,.72),rgba(13,25,46,.72)); }
+    .media-card .badge,.game-card .badge { display:inline-block;padding:6px 9px;border-radius:999px;background:rgba(88,230,169,.12);color:var(--green);font-size:.7rem;font-weight:850;text-transform:uppercase;letter-spacing:.09em; }
+    .media-card h3,.game-card h3 { margin:30px 0 9px; }.media-card p,.game-card p { color:var(--muted);font-size:.86rem;line-height:1.55; }
+    .media-card a,.game-card a { display:inline-block;margin-top:12px;text-decoration:none;font-weight:760;font-size:.84rem;color:#9edcff; }
+    .music-panel { margin-top:36px; display:grid;grid-template-columns:1fr 360px;gap:25px;align-items:center;border-radius:32px;padding:clamp(22px,4vw,38px); }
+    .music-panel h2 { font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.045em;margin-bottom:13px; }.music-panel p { color:var(--muted);line-height:1.65; }.music-card { padding:20px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,rgba(255,159,67,.18),rgba(152,103,255,.16)); }.music-card strong,.music-card small { display:block; }.music-card strong { font-size:1.25rem; }.music-card small { color:var(--muted);margin-top:6px; }.music-card .action { display:block;margin-top:17px; }
+    .soundtrack { position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:50;width:min(720px,calc(100% - 18px));border:1px solid var(--line-strong);border-radius:20px;background:rgba(8,8,19,.94);box-shadow:0 20px 60px rgba(0,0,0,.55);backdrop-filter:blur(18px);overflow:hidden; }
+    .soundtrack-bar { display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:10px 12px; }.sound-icon { width:40px;height:40px;display:grid;place-items:center;border-radius:12px;color:#090812;background:linear-gradient(135deg,var(--orange),var(--pink));font-weight:950; }.sound-title small,.sound-title strong { display:block; }.sound-title small { color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.09em; }.sound-title strong { margin-top:2px; }.sound-actions { display:flex;gap:7px; }.sound-actions button,.sound-actions a { border:1px solid var(--line);border-radius:11px;padding:8px 10px;color:var(--text);background:rgba(255,255,255,.05);text-decoration:none;cursor:pointer;font-size:.8rem;font-weight:730; }
+    .sound-player { padding:0 12px 12px; }.sound-note { margin:0 0 9px;color:var(--muted);font-size:.76rem;line-height:1.4; }.sound-player iframe { width:100%;height:340px;border:1px solid var(--line);border-radius:14px;background:#0b0b18; }
+    @media (max-width:900px){.network-hero{grid-template-columns:1fr}.orbit{min-height:260px}.branch-grid,.media-grid,.game-grid{grid-template-columns:repeat(2,1fr)}.repo-grid{grid-template-columns:repeat(2,1fr)}.music-panel{grid-template-columns:1fr}}
+    @media (max-width:620px){.network-bar{position:relative;align-items:flex-start}.network-nav{display:none}.network-hero{border-radius:25px}.orbit{min-height:220px}.orbit-core{width:95px;height:95px;font-size:2.8rem}.branch-grid,.repo-grid,.media-grid,.game-grid{grid-template-columns:1fr}.heading-row{align-items:flex-start;flex-direction:column}.soundtrack{bottom:7px}.sound-actions a{display:none}.sound-player iframe{height:390px}}
+  </style>
+</head>
+<body>
+  <header class="network-bar">
+    <a class="network-brand" href="../"><span class="network-brand-mark">P</span><span><strong>Parallax Network</strong><small>Michael W. Hughes</small></span></a>
+    <nav class="network-nav" aria-label="Network navigation"><a href="#builds">Free Builds</a><a href="#projects">Projects</a><a href="#media">Media</a><a href="#games">Games</a><a href="../">Contact</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="card network-hero">
+      <div>
+        <p class="eyebrow">Enter the field</p>
+        <h1>A connected universe of things being imagined, built, tested, played, and shared.</h1>
+        <p class="lede">The Parallax Network is the public view of Michael Hughes' work across collaborative intelligence, local-first software, evidence systems, physical inventions, human-benefit projects, research, music, games, and media.</p>
+        <div class="hero-actions"><a class="action primary" href="#builds">Explore the free builds</a><button class="action" id="open-soundtrack" type="button">Open the soundtrack</button></div>
+      </div>
+      <div class="orbit" aria-label="Parallax operating principles"><div class="orbit-core">P</div><span class="one">Human-led</span><span class="two">Evidence-backed</span><span class="three">Local-first</span><span class="four">Built to repair</span></div>
+    </section>
+
+    <section class="network-map">
+      <div class="section-copy"><p class="eyebrow">The network</p><h2>One philosophy. Many forms.</h2><p>Every branch has its own purpose, audience, and medium, but they share the same spine: human authority, visible evidence, honest boundaries, creativity, and practical usefulness.</p></div>
+      <div class="branch-grid"><a class="branch" href="#builds"><span>01</span><strong>Free Public Builds</strong><small>Code, tools, workbenches, and reusable systems.</small></a><a class="branch" href="#projects"><span>02</span><strong>Project Constellation</strong><small>The larger research, product, and systems portfolio.</small></a><a class="branch" href="#media"><span>03</span><strong>Parallax Media</strong><small>Shows, music, demonstrations, visual stories, and public channels.</small></a><a class="branch" href="#games"><span>04</span><strong>PixelForge & Worlds</strong><small>Open creation tools, cartridge games, and larger playable universes.</small></a></div>
+    </section>
+
+    <section class="card network-section" id="builds">
+      <div class="heading-row"><div class="section-copy"><p class="eyebrow">The free forge</p><h2>Featured public repositories</h2><p>Curated projects people can inspect, run, learn from, and build upon. Each repository remains the source of truth for its exact license and content boundaries.</p></div><a class="action" href="https://github.com/MichaelWave369?tab=repositories" target="_blank" rel="noopener">Browse all repositories</a></div>
+      <nav class="repo-jump" aria-label="Repository groups"><a href="#repo-core">Core systems</a><a href="#repo-create">Creative tools</a><a href="#repo-evidence">Evidence & public work</a><a href="#repo-builder">Builder tools</a></nav>
+
+      <div class="repo-group" id="repo-core"><h3>Core systems</h3><div class="repo-grid">
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">VB</span><span class="repo-license">Public repo</span></div><h4>Vibe</h4><p>An intent-first language and compiler where emitted artifacts must preserve the human-authored intent above a configured threshold.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/Vibe" target="_blank" rel="noopener">Open repository</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">AG</span><span class="repo-license">Public repo</span></div><h4>Agentora</h4><p>A local-first, private-by-default operating studio for memory-aware agents, team orchestration, approvals, actions, and workflows.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/Agentora" target="_blank" rel="noopener">Open repository</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">φ</span><span class="repo-license">Public repo</span></div><h4>PhiOS</h4><p>A sovereign operator shell designed around local control, explicit runtime boundaries, and deliberate human-approved migration.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/PhiOS" target="_blank" rel="noopener">Open repository</a><a href="https://enterthefield.org/phios" target="_blank" rel="noopener">Manifesto</a></div></article>
+      </div></div>
+
+      <div class="repo-group" id="repo-create"><h3>Creative tools & games</h3><div class="repo-grid">
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">AU</span><span class="repo-license">MIT alpha</span></div><h4>Auralith369</h4><p>A local-first visual workstation for image editing, poster forging, style cards, manifests, and auditable creative receipts.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/Auralith369" target="_blank" rel="noopener">Open repository</a><a href="https://michaelwave369.github.io/Auralith369/" target="_blank" rel="noopener">Live demo</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">PF</span><span class="repo-license">MIT engine</span></div><h4>Parallax PixelForge</h4><p>An open-source retro game creation studio for tiny cartridge-style games, sample adventures, and 369 PocketGames.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/parallax-pixelforge" target="_blank" rel="noopener">Open repository</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">ES</span><span class="repo-license">Public repo</span></div><h4>Element Spiral Atlas</h4><p>A public visual and computational atlas exploring element relationships through the PHI369 research framework.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/phi369-element-spiral-atlas" target="_blank" rel="noopener">Open repository</a></div></article>
+      </div></div>
+
+      <div class="repo-group" id="repo-evidence"><h3>Evidence, governance & public work</h3><div class="repo-grid">
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">DC</span><span class="repo-license">Public-safe</span></div><h4>DataCenterLedger Explorer</h4><p>A local-first public-data workbench for receipt-backed records, confidence, review, redaction, approvals, and public sharing.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/datacenter-ledger-explorer" target="_blank" rel="noopener">Open repository</a><a href="https://michaelwave369.github.io/datacenter-ledger-explorer/" target="_blank" rel="noopener">Live app</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">FC</span><span class="repo-license">v1.0</span></div><h4>Flow Covenant Runtime</h4><p>A local-first governance workbench that turns consent, alignment, repair, and renewal into a practical facilitated decision loop.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/flow-covenant-runtime" target="_blank" rel="noopener">Open repository</a><a href="https://michaelwave369.github.io/flow-covenant-runtime/" target="_blank" rel="noopener">Live app</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">FP</span><span class="repo-license">CC BY 4.0</span></div><h4>FrontPorchAI</h4><p>A plainspoken family education resource for understanding computational intelligence without fear, hype, or blind trust.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/FrontPorchAI" target="_blank" rel="noopener">Open repository</a></div></article>
+      </div></div>
+
+      <div class="repo-group" id="repo-builder"><h3>Builder tools</h3><div class="repo-grid">
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">RR</span><span class="repo-license">MIT</span></div><h4>RepoRider</h4><p>A mobile-first, voice-friendly assistant for capturing an idea, reviewing every starter artifact, and forging a safe repository with receipts.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/reporider" target="_blank" rel="noopener">Open repository</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">NV</span><span class="repo-license">Public repo</span></div><h4>Nevora Translator</h4><p>Natural-language prompts to starter code across multiple targets, with cloud providers and an offline-safe fallback that needs no API key.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/Nevora-Translator" target="_blank" rel="noopener">Open repository</a></div></article>
+        <article class="repo-card"><div class="repo-top"><span class="repo-mark">PB</span><span class="repo-license">Public repo</span></div><h4>PocketBrain</h4><p>A compact public build from the wider local-first intelligence ecosystem, designed for practical use and continued experimentation.</p><div class="repo-links"><a class="primary-link" href="https://github.com/MichaelWave369/PocketBrain" target="_blank" rel="noopener">Open repository</a></div></article>
+      </div></div>
+    </section>
+
+    <section class="portfolio-shell" id="projects" aria-labelledby="portfolio-title">
+      <header class="portfolio-hero"><div><p class="eyebrow">Project constellation</p><h2 id="portfolio-title">The wider body of work.</h2><p>Systems, products, hypotheses, public-benefit programs, and creative worlds—each shown with its current status, evidence boundary, and next direction.</p></div><div class="principles"><span>Working software</span><span>Master specifications</span><span>Public research</span><span>Playable worlds</span></div></header>
+      <div class="constellation-intro"><div><p class="kicker">Explore everything</p><h3>Search the constellation</h3><p>Open any project for its purpose, what exists now, and where it can go next.</p></div><label class="search-box" for="project-search"><span>Search projects</span><input id="project-search" type="search" placeholder="Try games, governance, food…" autocomplete="off" /></label></div>
+      <div class="filters" id="project-filters" aria-label="Project categories"></div><p class="result-count" id="result-count" aria-live="polite"></p><div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <section class="network-map" id="media">
+      <div class="section-copy"><p class="eyebrow">Parallax Media Network</p><h2>The work becomes something people can watch, hear, play, and join.</h2><p>This is the emerging media layer: distinct channels and studios, each with its own personality, all connected back to the same universe.</p></div>
+      <div class="media-grid">
+        <article class="media-card"><span class="badge">Network channel</span><h3>Parallax Network</h3><p>The main public channel for ideas, demonstrations, conversations, project journeys, and the people building the network.</p><a href="https://www.youtube.com/@ARCTower" target="_blank" rel="noopener">Current YouTube doorway ›</a></article>
+        <article class="media-card"><span class="badge">Build studio</span><h3>PHI369 Labs</h3><p>Technical builds, open repositories, research tools, governed systems, experiments, and the receipts behind the work.</p><a href="https://github.com/MichaelWave369" target="_blank" rel="noopener">Browse the public laboratory ›</a></article>
+        <article class="media-card"><span class="badge">Game studio</span><h3>PixelForge Studio</h3><p>Developer diaries, cartridge showcases, community creations, game worlds, and the 369 PocketGames label.</p><a href="https://github.com/MichaelWave369/parallax-pixelforge" target="_blank" rel="noopener">Enter PixelForge ›</a></article>
+        <article class="media-card"><span class="badge">Music network</span><h3>Mikey More Bounce / MicTek</h3><p>Hip-hop, funk, jungle, bass, rock, sampling culture, live experiments, and an enormous evolving music laboratory.</p><a href="https://suno.com/@michaelwave369" target="_blank" rel="noopener">Hear the Suno laboratory ›</a></article>
+      </div>
+    </section>
+
+    <section class="card network-section" id="games">
+      <div class="heading-row"><div class="section-copy"><p class="eyebrow">PixelForge Studio</p><h2>Tools, cartridges, pocket games, and full worlds.</h2><p>PixelForge is the free/open forge. Community cartridges grow the arcade. 369 PocketGames is the polished small-game label, while larger Parallax worlds can grow far beyond cartridges.</p></div><a class="action" href="https://github.com/MichaelWave369/parallax-pixelforge" target="_blank" rel="noopener">Open PixelForge</a></div>
+      <div class="game-grid">
+        <article class="game-card"><span class="badge">Open studio</span><h3>PixelForge Studio</h3><p>A free creation environment for learning the cartridge format, building tiny games, and growing a community arcade.</p><a href="https://github.com/MichaelWave369/parallax-pixelforge" target="_blank" rel="noopener">Forge a cartridge ›</a></article>
+        <article class="game-card"><span class="badge">Pocket label</span><h3>369 PocketGames</h3><p>Small complete games with no ads, subscriptions, loot boxes, energy timers, or predatory in-app purchases.</p><a href="https://github.com/MichaelWave369/parallax-pixelforge" target="_blank" rel="noopener">Read the promise ›</a></article>
+        <article class="game-card"><span class="badge">Civilization world</span><h3>Civillax</h3><p>A civilization simulator where ecology, culture, governance, trust, technology, and intelligence evolve together.</p><a href="#projects">Find it in the constellation ›</a></article>
+        <article class="game-card"><span class="badge">Narrative worlds</span><h3>Unmoored & The Last Modem</h3><p>From Vault 369 to a Tandy computer talking across time, these worlds turn Parallax principles into lived choices and stories.</p><a href="#projects">Explore the game concepts ›</a></article>
+      </div>
+    </section>
+
+    <section class="card music-panel">
+      <div><p class="eyebrow">Sound of the network</p><h2>Music is not decoration here. It is part of the architecture.</h2><p>Mikey More Bounce, MicTek, DJ culture, funk, jungle, bass music, rock, sampling, and strange new hybrids provide the living soundtrack behind the work.</p></div>
+      <div class="music-card"><strong>Digital Playground</strong><small>A 12-track Suno playlist selected as the first Parallax Network soundtrack.</small><a class="action primary" href="https://suno.com/playlist/79b730a5-58db-480d-84bf-b7fc2a357e8b" target="_blank" rel="noopener">Open playlist on Suno</a></div>
+    </section>
+
+    <section class="closing-card"><p class="eyebrow">A living network</p><h2>Nothing here has to stay frozen.</h2><p>New repositories, posters, builds, albums, shows, games, and research can be added as the network grows—without turning the business-card page into a maze.</p><div class="closing-actions"><a class="action primary" href="mailto:enterthefieldmichael@gmail.com?subject=Parallax%20Network%20Conversation">Start a Conversation</a><a class="action" href="../">Back to Contact</a></div></section>
+    <footer><strong>Michael W. Hughes</strong><br />Parallax Institute · Northern California</footer>
+  </main>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-art" id="dialog-art" aria-hidden="true"><span id="dialog-mark"></span></div><div class="dialog-body"><button class="dialog-close" id="dialog-close" type="button" aria-label="Close project">×</button><p class="dialog-category" id="dialog-category"></p><h2 id="dialog-title"></h2><p class="dialog-tagline" id="dialog-tagline"></p><p class="dialog-story" id="dialog-story"></p><div class="dialog-facts"><div><h3>What to see</h3><p id="dialog-see"></p></div><div><h3>What exists</h3><p id="dialog-proof"></p></div><div><h3>Where it goes next</h3><p id="dialog-next"></p></div></div><div class="dialog-links" id="dialog-links"></div></div></dialog>
+
+  <aside class="soundtrack" id="soundtrack" aria-label="Parallax soundtrack"><div class="soundtrack-bar"><span class="sound-icon">♫</span><span class="sound-title"><small>Parallax Radio</small><strong>Digital Playground</strong></span><span class="sound-actions"><a href="https://suno.com/playlist/79b730a5-58db-480d-84bf-b7fc2a357e8b" target="_blank" rel="noopener">Suno</a><button id="sound-toggle" type="button" aria-expanded="false">Play / Hide</button></span></div><div class="sound-player" id="sound-player" hidden><p class="sound-note">Press Play once inside the playlist. Browsers do not permit websites to start audio automatically. If Suno blocks the embedded view, use the Suno button above.</p><iframe title="Digital Playground playlist by Mikey More Bounce on Suno" src="https://suno.com/playlist/79b730a5-58db-480d-84bf-b7fc2a357e8b" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div></aside>
+
+  <script src="../gallery.js" defer></script>
+  <script>
+    const player=document.getElementById('sound-player');
+    const toggle=document.getElementById('sound-toggle');
+    function setPlayer(open){player.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'Hide player':'Play soundtrack';}
+    toggle.addEventListener('click',()=>setPlayer(player.hidden));
+    document.getElementById('open-soundtrack').addEventListener('click',()=>setPlayer(true));
+  </script>
+</body>
+</html>
