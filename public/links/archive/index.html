@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05070d" />
+  <meta name="description" content="Choose an entry point into the Parallax Archive: IBM 5100, SL1200 Origin, or the Parallax Archive Terminal Mk.1." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Parallax Archive Gateway" />
+  <meta property="og:description" content="One archive. Three entry points. Discovery, origin, and the field." />
+  <meta property="og:url" content="https://michaelwave369.github.io/inspection-closeout-pilot/links/archive/" />
+  <title>Parallax Archive Gateway</title>
+  <link rel="stylesheet" href="archive.css" />
+  <script src="archive.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#terminal-selector">Skip activation</a>
+
+  <main class="gateway-shell" id="top">
+    <header class="gateway-header">
+      <a class="gateway-brand" href="../" aria-label="Return to Michael Hughes contact page">
+        <span class="gateway-mark" aria-hidden="true">P</span>
+        <span><strong>Parallax Archive</strong><small>Michael W. Hughes</small></span>
+      </a>
+      <a class="quiet-link" href="../network/">Browse without terminal</a>
+    </header>
+
+    <section class="activation" id="activation" aria-labelledby="activation-title">
+      <div class="activation-grid" aria-hidden="true"></div>
+      <div class="activation-copy">
+        <p class="system-label">PARALLAX NETWORK / ARCHIVE CORE</p>
+        <h1 id="activation-title">Archive node detected.</h1>
+        <p id="activation-status" role="status" aria-live="polite">Establishing a local presentation layer…</p>
+        <div class="activation-meter" aria-hidden="true"><span id="activation-meter-fill"></span></div>
+        <button class="button button-quiet" id="skip-activation" type="button">Skip activation</button>
+      </div>
+    </section>
+
+    <section class="selector" id="terminal-selector" aria-labelledby="selector-title" hidden>
+      <div class="selector-heading">
+        <p class="system-label">ARCHIVE CORE ONLINE</p>
+        <h2 id="selector-title">Choose your terminal.</h2>
+        <p>Each machine opens the same canonical body of work through a different emotional and visual entry point.</p>
+      </div>
+
+      <div class="terminal-grid">
+        <article class="terminal-card terminal-ibm">
+          <div class="terminal-visual" aria-hidden="true">
+            <span class="terminal-screen"><i>IBM 5100<br />ARCHIVE NODE</i></span>
+            <span class="terminal-deck"></span>
+          </div>
+          <p class="terminal-state">PREVIEW NODE</p>
+          <h3>IBM 5100 Edition</h3>
+          <p class="terminal-tagline">Discover the archive.</p>
+          <p>Rare research-terminal atmosphere, tape catalogs, and museum-grade mystery.</p>
+          <button class="button terminal-preview" type="button" data-preview="ibm">View preview</button>
+        </article>
+
+        <article class="terminal-card terminal-sl active-terminal">
+          <div class="terminal-visual" aria-hidden="true">
+            <span class="terminal-screen"><i>C:\&gt; ARCHIVE<span class="cursor">_</span></i></span>
+            <span class="terminal-deck"></span>
+          </div>
+          <p class="terminal-state available">AVAILABLE NOW</p>
+          <h3>SL1200 Origin Edition</h3>
+          <p class="terminal-tagline">Return to the beginning.</p>
+          <p>A warm home-computing doorway where the first machine gradually reveals the whole Parallax universe.</p>
+          <a class="button button-primary" href="sl1200/">Enter the Origin</a>
+        </article>
+
+        <article class="terminal-card terminal-pat">
+          <div class="terminal-visual" aria-hidden="true">
+            <span class="terminal-screen fieldglass"><i>FIELD / GRAPH / LEDGER</i></span>
+            <span class="terminal-deck"></span>
+          </div>
+          <p class="terminal-state">FUTURE NODE</p>
+          <h3>PAT Mk.1</h3>
+          <p class="terminal-tagline">Enter the field.</p>
+          <p>Parallax’s own future-retro machine: Fieldglass, Ledger Dial, Office Keys, and Graph Cinema.</p>
+          <button class="button terminal-preview" type="button" data-preview="pat">View preview</button>
+        </article>
+      </div>
+
+      <div class="selector-actions">
+        <a class="button button-secondary" href="../network/">Browse the Network Without a Terminal</a>
+        <a class="quiet-link" href="../">Return to contact page</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="preview-title">
+    <button class="dialog-close" id="preview-close" type="button" aria-label="Close preview">×</button>
+    <p class="system-label" id="preview-state"></p>
+    <h2 id="preview-title"></h2>
+    <p id="preview-copy"></p>
+    <div class="preview-screen" id="preview-screen" aria-hidden="true"></div>
+    <p class="preview-note">This edition is intentionally presented as a preview until its interactive shell is ready.</p>
+  </dialog>
+
+  <noscript>
+    <div class="noscript-panel">
+      JavaScript is not required to browse the archive. <a href="../network/">Open the standard Parallax Network page.</a>
+    </div>
+  </noscript>
+</body>
+</html>
