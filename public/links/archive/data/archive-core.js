@@ -42,7 +42,7 @@
   async function load({ refresh = false } = {}) {
     if (cache && !refresh) return cache
 
-    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute] = await Promise.all([
+    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge] = await Promise.all([
       fetchJson('projects.json'),
       fetchJson('flagship-pack.json'),
       fetchJson('terminal-system-pack.json'),
@@ -51,15 +51,16 @@
       fetchJson('carbon-loop-publication-pack.json'),
       fetchJson('alpha-ledger-omega-publication-pack.json'),
       fetchJson('parallax-institute-publication-pack.json'),
+      fetchJson('coherence-bridge-publication-pack.json'),
     ])
 
-    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute])
+    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge])
       .sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || a.title.localeCompare(b.title))
 
     cache = {
       ...base,
-      schemaVersion: '0.8.0',
-      updated: parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
+      schemaVersion: '0.9.0',
+      updated: coherenceBridge.updated || parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
       projects,
       packs: [
         packRecord('flagship-wave-1', flagship),
@@ -69,6 +70,7 @@
         packRecord('carbon-loop-publication-1', carbonLoop),
         packRecord('alpha-ledger-omega-publication-1', alphaLedgerOmega),
         packRecord('parallax-institute-publication-1', parallaxInstitute),
+        packRecord('coherence-bridge-publication-1', coherenceBridge),
       ],
     }
 
