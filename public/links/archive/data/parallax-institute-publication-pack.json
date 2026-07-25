@@ -1,0 +1,156 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Parallax Institute — Publication Pack 1",
+  "description": "A public institutional architecture, regenerative-sector covenant, status boundary, and live Archive Core field map.",
+  "projects": [
+    {
+      "id": "parallax-institute",
+      "title": "Parallax Institute",
+      "aliases": ["PI", "INSTITUTE", "PARALLAX INSTITUTE", "FIELD INSTITUTE"],
+      "mark": "PI",
+      "category": "foundation",
+      "categoryLabel": "Institutional stewardship",
+      "status": "Published institutional framework",
+      "tone": "green",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": -1,
+      "tagline": "The stewardship and teaching framework connecting Parallax research, prototypes, public evidence, creative work, and regenerative benefit.",
+      "story": "Parallax Institute gives the body of work a coherent institutional home without pretending that every project is the same kind of object. It connects stewardship, research, prototyping, public explanation, culture, and public benefit through visible evidence, consent, repair, and human authority. EnterTheField.org is the intended public doorway; the Archive preserves projects and receipts; PHI369 Labs names the experimental builder lane; and the future Mt. Shasta / Pilgrim Creek Institute remains a planned physical vision rather than a present facility.",
+      "summary": "A public institutional identity and architectural framework for moving ideas from imagination through bounded research, prototypes, evidence, repair, teaching, and public benefit. The Institute is not represented by this package as incorporated, accredited, tax-exempt, grantmaking, regulatory, or physically operational.",
+      "see": "The Institute cover, public ecosystem map, Regenerative Sector Covenant, architecture and status briefs, live Institute Field Map, project relationships, current evidence state, and the explicit boundary between the active public identity and future legal or physical ambitions.",
+      "proof": "Seven public artifacts are connected, including a live Field Map that reads the canonical Archive Core and groups current projects by curatorial role. The map proves synchronized public presentation, not a legal organization, ownership structure, staff roster, operating campus, or measured sector impact.",
+      "next": "Freeze a concise public charter, founding-authority statement, role and mandate registry, amendment process, partnership boundary, and project-admission protocol. Separately develop a documented feasibility path for the Mt. Shasta / Pilgrim Creek physical vision without implying secured land, permits, financing, facilities, or operating authority.",
+      "claimBoundary": "Parallax Institute is currently an active public identity and architectural stewardship framework. This package does not establish incorporation, nonprofit or tax-exempt status, tax-deductible contributions, accreditation, degrees, licensure, clinical services, governmental authority, grantmaking power, physical-campus readiness, ownership of land or facilities, measured regenerative impact, or shared ownership. Collaboration does not automatically confer authority or the right to redirect the founding vision.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/parallax-institute/institute-cover.svg",
+        "label": "Parallax Institute",
+        "caption": "Stewardship, research, prototyping, and public benefit held inside visible evidence, consent, repair, and human authority."
+      },
+      "signals": [
+        { "label": "Current state", "value": "Public institutional framework" },
+        { "label": "Public doorway", "value": "EnterTheField.org" },
+        { "label": "Core covenant", "value": "Return more verified value than consumed" },
+        { "label": "Physical Institute", "value": "Planned Mt. Shasta / Pilgrim Creek vision" }
+      ],
+      "links": [
+        { "label": "Enter The Field", "url": "https://enterthefield.org/" }
+      ],
+      "artifacts": [
+        {
+          "id": "parallax-institute-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Parallax Institute Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-institute/institute-cover.svg",
+          "description": "The four institutional functions—stewardship, research, prototyping, and public benefit—inside the Institute's evidence and authority boundary.",
+          "url": "../artifacts/parallax-institute/institute-cover.svg",
+          "linkLabel": "Open Institute cover →"
+        },
+        {
+          "id": "parallax-institute-ecosystem-map",
+          "type": "Visual artifact",
+          "role": "ecosystem map",
+          "title": "Parallax Public Ecosystem Map",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-institute/ecosystem-map.svg",
+          "description": "EnterTheField.org as the public doorway into the Archive, Institute, PHI369 Labs, creative worlds, and public-benefit systems. Explicitly curatorial rather than legal.",
+          "url": "../artifacts/parallax-institute/ecosystem-map.svg",
+          "linkLabel": "Open ecosystem map →"
+        },
+        {
+          "id": "parallax-regenerative-sector-covenant",
+          "type": "Governance visual",
+          "role": "covenant",
+          "title": "Parallax Regenerative Sector Covenant",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/parallax-institute/regenerative-sector-covenant.svg",
+          "description": "Every active sector should return more verified human, ecological, knowledge, resilience, or livelihood value than it consumes, without hiding harm.",
+          "url": "../artifacts/parallax-institute/regenerative-sector-covenant.svg",
+          "linkLabel": "Open covenant visual →"
+        },
+        {
+          "id": "parallax-institute-architecture-brief",
+          "type": "Public document brief",
+          "title": "Parallax Institute Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Curated public brief defining institutional functions, ecosystem roles, regenerative covenant, founding authority, and the planned physical vision.",
+          "url": "../artifacts/parallax-institute/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "parallax-institute-status-boundary",
+          "type": "Public status disclosure",
+          "title": "Parallax Institute Status and Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Separates active public identity and design canon from future incorporation, accreditation, charitable status, land, facilities, and operational ambitions.",
+          "url": "../artifacts/parallax-institute/status-boundary-brief.html",
+          "linkLabel": "Read status boundary →"
+        },
+        {
+          "id": "parallax-institute-field-map",
+          "type": "Interactive institutional map",
+          "title": "Parallax Institute Field Map",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A live Archive Core explorer grouping canonical projects into stewardship, research, prototyping, and public-benefit curatorial roles.",
+          "url": "../artifacts/parallax-institute/field-map/",
+          "linkLabel": "Open live Field Map →"
+        },
+        {
+          "id": "parallax-institute-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Institute Field View",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The Parallax-native terminal presentation for the Institute record, relationships, evidence states, and claim boundary.",
+          "url": "../patmk1/?project=parallax-institute&mode=field",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "parallax-institute-source-canon",
+          "type": "Canonical source set",
+          "title": "Parallax Institute and Regenerative Sector Canon",
+          "status": "known-locate",
+          "description": "Retained source materials covering the Institute, public-benefit stack, regenerative sectors, future physical vision, and EnterTheField.org ecosystem.",
+          "action": "Inventory and review the full source set before any complete public-document release."
+        },
+        {
+          "id": "parallax-institute-public-charter",
+          "type": "Governance artifact",
+          "title": "Public Charter and Authority Registry",
+          "status": "planned",
+          "description": "A concise public charter defining purpose, founding authority, mandates, amendment rules, partnership boundaries, project admission, dissent, and exit rights.",
+          "action": "Freeze a versioned charter and publish its approval receipt without creating shared ownership by implication."
+        },
+        {
+          "id": "parallax-institute-physical-feasibility",
+          "type": "Physical-program evidence",
+          "title": "Mt. Shasta / Pilgrim Creek Institute Feasibility Path",
+          "status": "planned",
+          "description": "A future evidence package for land, water, access, permitting, ecology, utilities, finance, governance, regional impact, and phased operations.",
+          "action": "Develop only from verified site, legal, ecological, financial, and infrastructure evidence; do not present the campus as secured or operational beforehand."
+        }
+      ],
+      "relationships": [
+        { "projectId": "alpha-ledger-omega", "type": "evidence backbone", "note": "ALO preserves project claims, custody, authority, uncertainty, repair, and institutional continuity." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public archive surface", "note": "The terminal family makes Institute projects and artifacts inspectable through multiple public experiences." },
+        { "projectId": "carbon-loop", "type": "human authority and consent", "note": "Carbon Loop supplies human-centered continuity, consent, voluntary exit, and anti-dependency boundaries." },
+        { "projectId": "graph-cinema", "type": "governed research runtime", "note": "Graph Cinema shows how trajectories, dissent, authority, and receipts can remain visible through change." },
+        { "projectId": "parallax-mendala", "type": "regenerative physical prototype", "note": "MENDALA is a practical test of whether Institute systems can return ecological, knowledge, and resilience value." },
+        { "projectId": "roomlight-data-spine", "type": "local sensing and field evidence", "note": "RoomLight provides a path for transparent environmental measurements and physical receipts." }
+      ]
+    }
+  ]
+}
