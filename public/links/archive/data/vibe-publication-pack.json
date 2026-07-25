@@ -1,0 +1,177 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-26",
+  "title": "Vibe — Publication Pack 1",
+  "description": "Intent-first language and local-first compiler architecture with preservation-gated emission, public proof boundaries, and a fixed-data Intent Preservation Workbench.",
+  "projects": [
+    {
+      "id": "vibe",
+      "title": "Vibe",
+      "aliases": ["VB", "VIBEC", "SIGL ENGINE", "INTENT COMPILER", "INTENT-FIRST LANGUAGE"],
+      "mark": "VB",
+      "category": "software",
+      "categoryLabel": "Intent-first compiler and toolchain",
+      "status": "Published compiler architecture + intent workbench",
+      "tone": "pink",
+      "featured": true,
+      "tier": "B",
+      "wave": 3,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 11,
+      "tagline": "A local-first intent-first language and compiler where preservation obligations gate whether generated artifacts may be emitted.",
+      "story": "Vibe makes human intent the source object rather than a disposable prompt. A .vibe specification is parsed and lowered into typed intermediate representation, converted into preservation and constraint obligations, evaluated by configured verifier backends, and reported through machine-checkable proof metadata. Emission occurs only when the implemented bridge and preservation gate passes.",
+      "summary": "A working prototype compiler and toolchain with bounded language and domain slices, deterministic-by-default local workflows, proof artifacts, snapshots, package and registry operations, LSP and CI surfaces, semantic intent diff, versioning, negotiation, interchange artifacts, standard-library intent contracts, and PhiPython as a guided Python layer inside Vibe.",
+      "see": "The Vibe cover, compiler pipeline, preservation gate, architecture and command-boundary briefs, fixed-data Intent Preservation Workbench, PAT Compiler Mode, verified public repository, canonical payment-router example, and planned command-atlas and safe-mode artifacts.",
+      "proof": "Eight public artifacts are connected. The Workbench deterministically evaluates six bundled synthetic intent fixtures and produces non-canonical proof/report previews while accepting no visitor source, invoking no real compiler, executing no code, applying no patch, making no network or model call, persisting no state, and emitting no production target.",
+      "next": "Publish VIBE_COMMAND_ATLAS.md and the safe-mode policy in the Vibe repository, freeze a public deterministic fixture and proof bundle, then connect SIGLStudio as a consumer of Vibe’s canonical intent and proof surfaces without duplicating the verification logic.",
+      "claimBoundary": "Vibe is a working prototype compiler with implemented bounded language and domain slices. This package demonstrates public architecture and deterministic teaching fixtures; it does not establish complete language coverage, universal intent understanding, full formal verification of arbitrary program semantics, complete theorem proving, guaranteed correctness, safety certification, legal approval, deployment authority, human authorization, preservation of unstated expectations, or permission to modify code, data, systems, money, accounts, contracts, or people. Current Vibe proof means machine-checkable metadata produced by the implemented verifier and proof pipeline. PhiPython explanations, doctor checks, generated tests, candidate fixes, repair receipts, and review bundles remain bounded guidance and local review artifacts rather than formal correctness proofs.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/vibe/vibe-cover.svg",
+        "label": "Vibe",
+        "caption": "Intent becomes typed obligations; preservation verification decides whether emission may proceed."
+      },
+      "signals": [
+        { "label": "Mission", "value": "Intent is source code" },
+        { "label": "Pipeline", "value": ".vibe → typed IR → proof → emit" },
+        { "label": "Runtime posture", "value": "Local-first · deterministic-by-default" },
+        { "label": "Current truth", "value": "Prototype · bounded slices" }
+      ],
+      "links": [
+        { "label": "Open verified repository", "url": "https://github.com/MichaelWave369/Vibe" }
+      ],
+      "artifacts": [
+        {
+          "id": "vibe-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Vibe Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/vibe/vibe-cover.svg",
+          "description": "Intent specification through parse, typed IR, verification, proof/report, and gated emission.",
+          "url": "../artifacts/vibe/vibe-cover.svg",
+          "linkLabel": "Open Vibe cover →"
+        },
+        {
+          "id": "vibe-compiler-pipeline",
+          "type": "Architecture visual",
+          "role": "compiler pipeline",
+          "title": "Vibe Compiler Pipeline",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/vibe/compiler-pipeline.svg",
+          "description": "The implemented source, typed-IR, obligation, backend, proof, and emit-or-block spine with truthful proof scope.",
+          "url": "../artifacts/vibe/compiler-pipeline.svg",
+          "linkLabel": "Open compiler pipeline →"
+        },
+        {
+          "id": "vibe-preservation-gate",
+          "type": "Governance visual",
+          "role": "preservation gate",
+          "title": "Vibe Preservation Gate",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/vibe/preservation-gate.svg",
+          "description": "Goal, constraints, authority, side effects, bridge conditions, evidence, and reversibility determine emit or block.",
+          "url": "../artifacts/vibe/preservation-gate.svg",
+          "linkLabel": "Open preservation gate →"
+        },
+        {
+          "id": "vibe-architecture-brief",
+          "type": "Public document brief",
+          "title": "Vibe Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public explanation of the intent-first source model, compiler spine, implemented range, proof meaning, local provenance, PhiPython, and upstream role.",
+          "url": "../artifacts/vibe/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "vibe-command-boundary",
+          "type": "Public boundary brief",
+          "title": "Vibe Command and Safe-Mode Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Separates inspection, artifact writing, code modification, preview, apply, authority, and proof claims across Vibe and PhiPython commands.",
+          "url": "../artifacts/vibe/command-boundary-brief.html",
+          "linkLabel": "Read command boundary →"
+        },
+        {
+          "id": "vibe-intent-workbench",
+          "type": "Interactive compiler demonstration",
+          "title": "Vibe Intent Preservation Workbench",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data deterministic review of six synthetic intent specifications with typed-IR summaries, obligation results, emission blocking, and non-canonical proof previews.",
+          "url": "../artifacts/vibe/intent-workbench/",
+          "linkLabel": "Open Intent Workbench →"
+        },
+        {
+          "id": "vibe-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Compiler Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Parallax-native terminal presentation for Vibe architecture, artifacts, repository evidence, relationships, and claim boundaries.",
+          "url": "../patmk1/?project=vibe&mode=compiler",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "vibe-public-repository",
+          "type": "Source repository",
+          "title": "MichaelWave369/Vibe",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Verified public repository containing the implemented compiler, documentation, examples, tests, package and registry tooling, language server, CI surfaces, PhiPython, and bounded domain slices.",
+          "url": "https://github.com/MichaelWave369/Vibe",
+          "linkLabel": "Open Vibe repository →"
+        },
+        {
+          "id": "vibe-payment-router-example",
+          "type": "Canonical source example",
+          "title": "Payment Router .vibe Example",
+          "status": "ready",
+          "mediaType": "text/plain",
+          "description": "Canonical example declaring goal, typed inputs and outputs, preservation properties, constraints, strict bridge settings, and a Python emit target.",
+          "url": "https://github.com/MichaelWave369/Vibe/blob/main/vibe/examples/payment_router.vibe",
+          "linkLabel": "Open canonical example →"
+        },
+        {
+          "id": "vibe-command-atlas",
+          "type": "Policy artifact",
+          "title": "VIBE_COMMAND_ATLAS.md",
+          "status": "planned",
+          "description": "A canonical classification of read-only, verification, artifact-writing, registry, scaffold, patch-preview, patch-apply, and future execution commands.",
+          "action": "Publish the command atlas in the Vibe repository with side-effect class, input authority, output paths, receipt requirements, and prohibited claims."
+        },
+        {
+          "id": "vibe-safe-mode-policy",
+          "type": "Policy artifact",
+          "title": "Vibe Safe-Mode Policy",
+          "status": "planned",
+          "description": "A repository-level policy for preview-first modification, explicit apply, no hidden overwrite, local receipts, external-provider controls, and interface consumers such as SIGLStudio.",
+          "action": "Freeze safe defaults and require tests proving that modification and emission paths cannot bypass their gates."
+        },
+        {
+          "id": "vibe-public-proof-fixtures",
+          "type": "Compiler evidence",
+          "title": "Vibe Public Preservation Fixture Suite",
+          "status": "planned",
+          "description": "A frozen real-compiler fixture set containing passing, blocked, semantic-diff, merge, negotiation, snapshot, package, registry, and preview-first repair cases with reproducible proof artifacts.",
+          "action": "Run the fixtures against a tagged Vibe release and publish commands, environment, source hashes, proof hashes, pass/fail results, and rejected claims."
+        }
+      ],
+      "relationships": [
+        { "projectId": "alpha-ledger-omega", "type": "proof and repair receipts", "note": "ALO preserves source identity, verifier results, emission decisions, patch review, exceptions, rollback, and repair continuity." },
+        { "projectId": "sovereign-office-architecture", "type": "authority and independent review", "note": "SOSA can govern who may approve intent changes, accept proof boundaries, authorize emission, operate targets, dissent, and repair failures." },
+        { "projectId": "agentora", "type": "structured intent contracts for computational collaboration", "note": "Agentora can consume Vibe contracts so multiple Computational Collaborators work from explicit goals, constraints, authorities, and proof surfaces." },
+        { "projectId": "signalbridge", "type": "governed handoff consumer", "note": "SignalBridge can package Vibe intent and proof briefs into bounded handoff candidates without converting preservation into production authority." },
+        { "projectId": "parallax-census", "type": "source and release registry", "note": "Census tracks Vibe releases, examples, proof fixtures, policy artifacts, aliases, custody, and public publication states." },
+        { "projectId": "double-c", "type": "public collaboration language", "note": "Double C clarifies that Vibe structures human-led collaboration with Computational Collaborators rather than replacing human intent or authority." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public evidence host", "note": "Archive Core presents the compiler architecture and fixed teaching fixtures while linking to the verified public source repository." }
+      ]
+    }
+  ]
+}

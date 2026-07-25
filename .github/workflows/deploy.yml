@@ -72,6 +72,9 @@ jobs:
       - name: Check SignalBridge boundaries
         run: npm run check:signalbridge
 
+      - name: Check Vibe compiler boundaries
+        run: npm run check:vibe
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
