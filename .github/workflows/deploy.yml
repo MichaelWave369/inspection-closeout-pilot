@@ -45,6 +45,9 @@ jobs:
           path: archive-validation.log
           if-no-files-found: ignore
 
+      - name: Check LumenBridge boundaries
+        run: npm run check:lumenbridge
+
       - name: Check public JavaScript
         run: npm run check:public-js
 

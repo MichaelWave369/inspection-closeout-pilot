@@ -1,0 +1,159 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Carbon Loop — Publication Pack 1",
+  "description": "Boundary-led public architecture, human-centered visuals, and a local-only LumenBridge reflection prototype.",
+  "projects": [
+    {
+      "id": "carbon-loop",
+      "title": "Carbon Loop",
+      "aliases": ["CL", "CARBON", "CARBON LOOP", "LUMENBRIDGE", "HUMAN EXPERIENCE OS", "HXOS"],
+      "mark": "CL",
+      "category": "foundation",
+      "categoryLabel": "Human Experience OS",
+      "status": "Published architecture + local prototype",
+      "tone": "pink",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 3,
+      "tagline": "A consent-based reflection layer for clarity, continuity, meaningful next action, and real-world human reconnection.",
+      "story": "Carbon Loop is the canonical project. Human Experience OS names its architectural lineage. LumenBridge is the public-facing reflection experience. Coherence Bridge provides safety, continuity, drift-awareness, protected dissent, and human-handoff principles within the larger system. Publication Pack 1 makes the lineage, consent boundary, local-first posture, and first fixed-prompt reflection proof inspectable without presenting the system as clinical care or simulated companionship.",
+      "summary": "Carbon Loop helps a person name what is happening, notice what matters, choose one manageable next action, and decide whether to involve a real person. Its success condition is a useful exit into life—not increased screen time, emotional dependence, or silent accumulation of vulnerable personal data.",
+      "see": "The Carbon Loop cover, Human Experience Loop, Consent and Continuity Map, architecture brief, safety and claim-boundary brief, local-only LumenBridge prototype, and PAT Mk.1 Field view.",
+      "proof": "Seven public artifacts are connected: three reviewed SVG visuals, two boundary-led HTML briefs, one fixed-prompt local-only reflection prototype, and the existing PAT Mk.1 project view. After its static files load, the LumenBridge prototype makes no runtime network requests. It makes no model calls, uses no account or analytics, stores no history, assigns no score, and makes no diagnosis.",
+      "next": "Run a bounded non-clinical usability evaluation focused on comprehension, voluntary exit, privacy expectations, handoff clarity, accessibility, and failure language—not mental-health outcomes. Then freeze an optional local continuity fixture with explicit import, inspect, export, revoke, and delete operations before any persistent personalization is considered.",
+      "claimBoundary": "Carbon Loop and LumenBridge are reflection and orientation tools, not therapy, diagnosis, treatment, crisis care, emergency monitoring, or a substitute for human relationships. The published prototype does not establish clinical benefit, crisis effectiveness, long-term behavior change, privacy certification, safe use with vulnerable populations, or suitability for medical decision-making. No one is monitored or notified by the prototype.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/carbon-loop/carbon-loop-cover.svg",
+        "label": "Carbon Loop",
+        "caption": "Nested human-centered loops moving from arrival and reflection toward action, reconnection, and consent-controlled continuity."
+      },
+      "signals": [
+        { "label": "Canonical project", "value": "Carbon Loop" },
+        { "label": "Architecture lineage", "value": "Human Experience OS" },
+        { "label": "Public experience", "value": "LumenBridge" },
+        { "label": "Default continuity", "value": "Temporary · unsaved" }
+      ],
+      "artifacts": [
+        {
+          "id": "carbon-loop-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Carbon Loop Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/carbon-loop/carbon-loop-cover.svg",
+          "description": "A human-centered nested-loop visual placing consent, exit, override, and real-world reconnection at the center of the system.",
+          "url": "../artifacts/carbon-loop/carbon-loop-cover.svg",
+          "linkLabel": "Open cover visual →"
+        },
+        {
+          "id": "human-experience-loop",
+          "type": "Experience diagram",
+          "role": "process",
+          "title": "The Human Experience Loop",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/carbon-loop/human-experience-loop.svg",
+          "description": "Arrive, name, notice what matters, choose, act, reconnect, and continue only with consent.",
+          "url": "../artifacts/carbon-loop/human-experience-loop.svg",
+          "linkLabel": "Open experience loop →"
+        },
+        {
+          "id": "consent-continuity-map",
+          "type": "Governance diagram",
+          "role": "diagram",
+          "title": "Consent and Continuity Boundaries",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/carbon-loop/consent-continuity-map.svg",
+          "description": "Nested boundaries for temporary reflection, optional continuity, human handoff, and the clinical and crisis functions that remain outside the product.",
+          "url": "../artifacts/carbon-loop/consent-continuity-map.svg",
+          "linkLabel": "Open boundary map →"
+        },
+        {
+          "id": "carbon-loop-architecture-brief",
+          "type": "Public document brief",
+          "title": "Carbon Loop Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Archive synthesis defining Carbon Loop, Human Experience OS lineage, LumenBridge, Coherence Bridge, local-first continuity, human authority, and the first public proof.",
+          "url": "../artifacts/carbon-loop/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "carbon-loop-safety-boundary",
+          "type": "Safety and claim-boundary brief",
+          "title": "Carbon Loop Safety and Claim Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Permitted and prohibited roles, urgent-situation language, dependency resistance, continuity rules, and evaluation boundaries.",
+          "url": "../artifacts/carbon-loop/safety-boundary-brief.html",
+          "linkLabel": "Read safety brief →"
+        },
+        {
+          "id": "lumenbridge-local-prototype",
+          "type": "Interactive proof",
+          "title": "LumenBridge Local Reflection Prototype",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A five-step fixed-prompt reflection flow with temporary in-page state, copyable summary, explicit urgent-help boundary, and no model calls, runtime network requests after static load, tracking, scoring, persistence, or simulated relationship.",
+          "url": "../artifacts/carbon-loop/lumenbridge/",
+          "linkLabel": "Open LumenBridge prototype →"
+        },
+        {
+          "id": "pat-mk1-carbon-loop-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Carbon Loop Field View",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The existing Parallax-native terminal view for the canonical Carbon Loop record, evidence state, relationships, and claim boundary.",
+          "url": "../patmk1/?project=carbon-loop&mode=field",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "carbon-loop-source-canon",
+          "type": "Canonical source set",
+          "title": "Carbon Loop / Human Experience OS retained architecture canon",
+          "status": "known-locate",
+          "description": "The retained architecture and lineage source set is known but not mounted in this repository. The public brief is an Archive synthesis, not a silent replacement.",
+          "action": "Inventory, version, and review the retained source set before any full-source publication."
+        },
+        {
+          "id": "coherence-bridge-codex-source",
+          "type": "Canonical source set",
+          "title": "The Coherence Bridge Codex",
+          "status": "known-locate",
+          "description": "The retained safety, continuity, drift, calibration, protected-dissent, and human-council source set associated with Carbon Loop.",
+          "action": "Publish a separately bounded Coherence Bridge package without duplicating the Carbon Loop product identity."
+        },
+        {
+          "id": "optional-local-continuity-fixture",
+          "type": "Runtime evidence",
+          "title": "Optional Local Continuity Fixture",
+          "status": "planned",
+          "description": "A user-controlled continuity proof with explicit consent, visible scope, local storage boundaries, export, correction, revocation, deletion, and no silent mandate extension.",
+          "action": "Freeze the schema and test every consent and deletion transition before persistent personalization."
+        },
+        {
+          "id": "bounded-usability-study",
+          "type": "Evaluation evidence",
+          "title": "Bounded Non-Clinical Usability Evaluation",
+          "status": "planned",
+          "description": "An evaluation limited to comprehension, accessibility, privacy expectations, exit behavior, and handoff clarity. It must not be reported as evidence of therapeutic or mental-health benefit.",
+          "action": "Define participant protections, exclusion criteria, failure handling, and reporting limits before recruitment."
+        }
+      ],
+      "relationships": [
+        { "projectId": "coherence-bridge", "type": "safety and continuity subsystem", "note": "Coherence Bridge supplies calibration, drift awareness, protected dissent, and human-handoff governance without becoming a duplicate public product." },
+        { "projectId": "double-c", "type": "public collaboration language", "note": "Double C supplies the Computational Collaborator language and reinforces collaboration without unsupported consciousness claims." },
+        { "projectId": "alpha-ledger-omega", "type": "consent and continuity receipts", "note": "ALO can preserve explicit consent, correction, export, deletion, and mandate-renewal receipts for future continuity features." },
+        { "projectId": "parallax-institute", "type": "public-benefit home", "note": "The Institute supplies stewardship, accountability, research boundaries, and a human institution beyond the interface." }
+      ]
+    }
+  ]
+}
