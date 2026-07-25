@@ -45,6 +45,9 @@ jobs:
           path: archive-validation.log
           if-no-files-found: ignore
 
+      - name: Check external collaborator ownership boundaries
+        run: npm run check:ownership
+
       - name: Check LumenBridge boundaries
         run: npm run check:lumenbridge
 
