@@ -71,13 +71,29 @@ function createText(tag, className, text) {
   return element
 }
 
+function visualArtifact(project) {
+  const imagePattern = /\.(svg|png|jpe?g|webp)(?:[?#].*)?$/i
+  const rolePriority = { poster: 6, cover: 5, hero: 4, visual: 3, diagram: 2, process: 1 }
+
+  return (project.artifacts || [])
+    .filter(artifact => artifact.status === 'ready')
+    .filter(artifact => artifact.thumbnailUrl || artifact.mediaType?.startsWith('image/') || imagePattern.test(artifact.url || ''))
+    .sort((a, b) => (rolePriority[b.role] || 0) - (rolePriority[a.role] || 0))[0] || null
+}
+
 function artifactState(project) {
   const artifacts = project.artifacts || []
   if (!artifacts.length) return { label: 'Archive record', note: 'No connected visual package yet' }
+
+  const visual = visualArtifact(project)
+  if (visual) return { label: 'Published artifact', note: visual.title }
+
   const ready = artifacts.find(artifact => artifact.status === 'ready')
   if (ready) return { label: 'Published artifact', note: ready.title }
+
   const known = artifacts.find(artifact => artifact.status === 'known-locate')
   if (known) return { label: 'Known · locate', note: known.title }
+
   return { label: 'Design-stage', note: artifacts[0].title }
 }
 
@@ -88,7 +104,7 @@ function collectionProjects(collection) {
     case 'creative':
       return projects.filter(project => project.category === 'creative')
     case 'visual':
-      return projects.filter(project => project.archiveFeatured || project.featured || (project.artifacts || []).some(artifact => artifact.type?.toLowerCase().includes('visual')))
+      return projects.filter(project => project.archiveFeatured || project.featured || visualArtifact(project) || (project.artifacts || []).some(artifact => artifact.type?.toLowerCase().includes('visual')))
     default:
       return projects
   }
@@ -106,7 +122,7 @@ function renderArtGrid(query = '') {
   const needle = query.trim().toLowerCase()
   visibleProjects = collectionProjects(currentCollection)
     .filter(project => [project.id, project.title, project.mark, project.categoryLabel, project.status, project.tagline, ...(project.aliases || [])].join(' ').toLowerCase().includes(needle))
-    .sort((a, b) => Number(a.archiveOrder || 999) - Number(b.archiveOrder || 999) || Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
+    .sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
 
   visibleProjects.forEach(project => {
     const button = document.createElement('button')
@@ -116,12 +132,28 @@ function renderArtGrid(query = '') {
     button.setAttribute('role', 'option')
     button.setAttribute('aria-selected', String(selectedProject?.id === project.id))
 
+    const publishedVisual = visualArtifact(project)
     const poster = document.createElement('span')
-    poster.className = 'art-poster'
+    poster.className = `art-poster${publishedVisual ? ' has-artifact' : ''}`
     poster.dataset.tone = project.tone || 'blue'
+
+    if (publishedVisual) {
+      const image = document.createElement('img')
+      image.className = 'art-poster-image'
+      image.src = publishedVisual.thumbnailUrl || publishedVisual.url
+      image.alt = ''
+      image.loading = 'lazy'
+      image.decoding = 'async'
+      image.addEventListener('error', () => {
+        image.remove()
+        poster.classList.remove('has-artifact')
+      }, { once: true })
+      poster.appendChild(image)
+    }
+
     poster.append(
       createText('span', 'art-mark', project.mark || 'P'),
-      createText('span', 'art-placeholder', artifactState(project).label.toUpperCase()),
+      createText('span', 'art-placeholder', publishedVisual ? 'PUBLISHED ARTIFACT' : artifactState(project).label.toUpperCase()),
     )
 
     button.append(
@@ -143,6 +175,23 @@ function renderInspector(project, { updateUrl = false } = {}) {
   inspector.replaceChildren()
 
   const state = artifactState(project)
+  const publishedVisual = visualArtifact(project)
+
+  if (publishedVisual) {
+    const preview = document.createElement('a')
+    preview.className = 'inspector-preview'
+    preview.href = publishedVisual.url || publishedVisual.thumbnailUrl
+    preview.setAttribute('aria-label', `Open ${publishedVisual.title}`)
+
+    const image = document.createElement('img')
+    image.src = publishedVisual.thumbnailUrl || publishedVisual.url
+    image.alt = `${publishedVisual.title} preview`
+    image.loading = 'lazy'
+    image.decoding = 'async'
+    preview.appendChild(image)
+    inspector.appendChild(preview)
+  }
+
   const meta = createText('p', 'inspector-meta', `${project.categoryLabel} · ${project.status} · ${state.label}`)
   const label = createText('p', 'inspector-label', project.archiveFeatured ? 'FEATURED EXHIBITION' : 'ARCHIVE EXHIBITION')
   const title = createText('h2', '', project.title)
@@ -164,6 +213,13 @@ function renderInspector(project, { updateUrl = false } = {}) {
 
   const actions = document.createElement('div')
   actions.className = 'inspector-actions'
+
+  if (publishedVisual) {
+    const visualLink = createText('a', '', 'OPEN PUBLISHED VISUAL')
+    visualLink.href = publishedVisual.url || publishedVisual.thumbnailUrl
+    actions.appendChild(visualLink)
+  }
+
   const record = createText('a', '', 'OPEN ARCHIVE RECORD')
   record.href = `../project/?id=${encodeURIComponent(project.id)}`
   const network = createText('a', '', 'STANDARD NETWORK')
