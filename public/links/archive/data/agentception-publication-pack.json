@@ -1,0 +1,165 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-26",
+  "title": "AgentCeption — Publication Pack 1",
+  "description": "Governed software-execution architecture with isolated worktrees, evidence-rich delivery packets, human-reviewed pull-request candidacy, and a fixed-data Delivery Workbench.",
+  "projects": [
+    {
+      "id": "agentception",
+      "title": "AgentCeption",
+      "aliases": ["AC", "AGENT CEPTION", "SOFTWARE EXECUTION WORKER", "DELIVERY WORKER"],
+      "mark": "AC",
+      "category": "software",
+      "categoryLabel": "Governed software execution",
+      "status": "Published execution architecture + delivery workbench",
+      "tone": "orange",
+      "featured": true,
+      "tier": "B",
+      "wave": 3,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 14,
+      "tagline": "A governed software-execution layer for isolated worktrees, bounded implementation, delivery evidence, and human-reviewed pull-request candidates.",
+      "story": "AgentCeption receives a bounded software mission contract, validates repository and capability preconditions, performs work in an isolated worktree or equivalent workspace, preserves commands, patches, checks, failures, issues, and artifacts, and returns a delivery packet that may become a pull-request candidate. It never converts execution evidence into automatic merge or deployment authority.",
+      "summary": "The software-execution role assigned by the PhiOS–Agentora integration lineage. The current public Archive package is an architecture and teaching proof grounded in Agentora v1.0.0 documentation; no standalone public AgentCeption repository or tagged reference runtime is claimed yet.",
+      "see": "The AgentCeption cover, software delivery lifecycle, review and merge gate, architecture and delivery-boundary briefs, fixed-data Delivery Workbench, PAT Delivery Mode, Agentora integration source lineage, and planned execution contract, reference runtime, and public proof run.",
+      "proof": "Seven public artifacts are connected. The Workbench deterministically reviews six bundled synthetic delivery records while accepting no repository, code, file, credential, command, package, URL, or patch and performing no worktree, shell, test, model, network, pull-request, merge, deployment, persistence, or Archive mutation activity.",
+      "next": "Freeze a portable AgentCeption Execution Contract and Delivery Receipt schema, publish a minimal local-first reference runtime or standalone repository, then conduct Public Delivery Proof 001 against a disposable owner-approved repository with explicit no-merge authority. Publish the base SHA, scope, commands, patch, checks, failures, pull-request state, human decision, and cleanup receipt.",
+      "claimBoundary": "This package demonstrates AgentCeption public architecture, Agentora integration lineage, and fixed synthetic delivery decisions. It does not establish a public AgentCeption implementation, secure sandboxing, correct worktree or repository isolation, reliable code generation, successful or complete testing, secret protection, supply-chain safety, vulnerability absence, mergeability, deployability, production suitability, organizational permission, human review, completed delivery, or verified software outcomes. Isolation is not security proof, checks are evidence rather than correctness proof, a pull request is a review object rather than merge authority, merge is not deployment, and deployment is not verified success.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/agentception/agentception-cover.svg",
+        "label": "AgentCeption",
+        "caption": "A bounded execution contract may produce an evidence-rich pull-request candidate; human review retains admission authority."
+      },
+      "signals": [
+        { "label": "Verified public role", "value": "Dispatch · job · worktree · PR path" },
+        { "label": "Reference runtime", "value": "Not yet publicly verified" },
+        { "label": "Delivery authority", "value": "PR candidate only" },
+        { "label": "Merge / deploy", "value": "Separate human gates" }
+      ],
+      "links": [
+        { "label": "Open Agentora integration source", "url": "https://github.com/MichaelWave369/Agentora#phios--agentception-integration-phase-1" }
+      ],
+      "artifacts": [
+        {
+          "id": "agentception-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "AgentCeption Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/agentception/agentception-cover.svg",
+          "description": "Mission contract through dispatch, isolated worktree, checks, delivery packet, pull-request candidacy, and human review.",
+          "url": "../artifacts/agentception/agentception-cover.svg",
+          "linkLabel": "Open AgentCeption cover →"
+        },
+        {
+          "id": "agentception-execution-lifecycle",
+          "type": "Architecture visual",
+          "role": "delivery lifecycle",
+          "title": "AgentCeption Software Delivery Lifecycle",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/agentception/execution-lifecycle.svg",
+          "description": "Contract, preflight, worktree, implementation, checks, delivery packet, block-and-repair, and human review states.",
+          "url": "../artifacts/agentception/execution-lifecycle.svg",
+          "linkLabel": "Open delivery lifecycle →"
+        },
+        {
+          "id": "agentception-review-merge-gate",
+          "type": "Governance visual",
+          "role": "admission gate",
+          "title": "Review, Merge, and Deployment Gates",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/agentception/review-merge-gate.svg",
+          "description": "Separates pull-request evidence, human review, merge authority, deployment authority, and verified outcome.",
+          "url": "../artifacts/agentception/review-merge-gate.svg",
+          "linkLabel": "Open review and merge gate →"
+        },
+        {
+          "id": "agentception-architecture-brief",
+          "type": "Public document brief",
+          "title": "AgentCeption Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public explanation of source lineage, execution contracts, isolation, delivery packets, review gates, and failure receipts.",
+          "url": "../artifacts/agentception/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "agentception-delivery-boundary",
+          "type": "Public boundary brief",
+          "title": "AgentCeption Delivery Authority Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Defines preflight, sandbox, command, network, secret, dependency, test, pull-request, merge, deployment, cleanup, and outcome boundaries.",
+          "url": "../artifacts/agentception/delivery-boundary-brief.html",
+          "linkLabel": "Read delivery boundary →"
+        },
+        {
+          "id": "agentception-delivery-workbench",
+          "type": "Interactive delivery demonstration",
+          "title": "AgentCeption Delivery Workbench",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data deterministic review of six synthetic software-delivery records with unsigned non-operational delivery receipts.",
+          "url": "../artifacts/agentception/delivery-workbench/",
+          "linkLabel": "Open Delivery Workbench →"
+        },
+        {
+          "id": "agentception-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Delivery Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Parallax-native terminal presentation for AgentCeption architecture, evidence states, relationships, planned runtime, and claim boundaries.",
+          "url": "../patmk1/?project=agentception&mode=delivery",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "agentception-agentora-lineage",
+          "type": "Canonical source lineage",
+          "title": "Agentora PhiOS + AgentCeption Integration Contract",
+          "status": "known-locate",
+          "description": "Agentora v1.0.0 README assigns AgentCeption software execution through dispatch, job, worktree, branch, pull-request, issue, and artifact paths while noting thin endpoint contracts may require final schema alignment.",
+          "action": "Checksum and cite the relevant Agentora release or commit when freezing the portable execution contract."
+        },
+        {
+          "id": "agentception-execution-schema",
+          "type": "Protocol artifact",
+          "title": "Portable AgentCeption Execution Contract and Delivery Receipt",
+          "status": "planned",
+          "description": "Versioned schemas for repository/base identity, scope, authorities, capabilities, resource limits, commands, network and secret policy, worktree, checks, artifacts, failures, PR candidacy, cleanup, and human decisions.",
+          "action": "Freeze deterministic validation, transition rules, and passing and blocked fixtures before implementing a live bridge."
+        },
+        {
+          "id": "agentception-reference-runtime",
+          "type": "Reference implementation",
+          "title": "AgentCeption Local-First Reference Runtime",
+          "status": "planned",
+          "description": "A minimal standalone service or public repository implementing mock-first dispatch, isolated disposable workspaces, bounded commands, receipt capture, and no automatic merge or deployment.",
+          "action": "Publish the repository or tagged runtime with setup instructions, threat model, safe defaults, tests, and explicit unsupported claims."
+        },
+        {
+          "id": "agentception-public-proof-001",
+          "type": "Operational evidence",
+          "title": "AgentCeption Public Delivery Proof 001",
+          "status": "planned",
+          "description": "A no-merge execution against a disposable owner-approved repository publishing source commit, contract, worktree identity, commands, patch, checks, failures, artifacts, PR candidate state, human decision, and cleanup receipt.",
+          "action": "Run only after the portable schema and reference runtime are frozen and reviewed."
+        }
+      ],
+      "relationships": [
+        { "projectId": "vibe", "type": "intent and preservation contract", "note": "Vibe can supply explicit goals, constraints, prohibited effects, and proof surfaces without granting execution, merge, or deployment authority." },
+        { "projectId": "phios", "type": "bounded mission context and writeback", "note": "PhiOS supplies scoped context and receives proposed continuity writeback; it does not authorize repository actions by itself." },
+        { "projectId": "agentora", "type": "operator workflow and observability", "note": "Agentora prepares, launches, refreshes, compares, and reviews software missions while AgentCeption owns the execution path." },
+        { "projectId": "sovereign-office-architecture", "type": "independent review and authority separation", "note": "SOSA can separate request, security dissent, authorization, operation, review, merge, deployment, and repair judgments." },
+        { "projectId": "alpha-ledger-omega", "type": "execution and delivery receipts", "note": "ALO preserves contracts, commands, patches, checks, failures, decisions, cleanup, merge, deployment, rollback, and outcome continuity." },
+        { "projectId": "parallax-census", "type": "source, artifact, and release registry", "note": "Census tracks runtime versions, schemas, proof runs, branches, artifacts, receipts, aliases, and publication states." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public evidence host", "note": "Archive Core publishes the architecture and synthetic workbench without implying a verified standalone implementation."
+      ]
+    }
+  ]
+}
