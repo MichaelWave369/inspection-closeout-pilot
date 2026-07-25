@@ -1,0 +1,130 @@
+:root {
+  color-scheme: dark;
+  --room: #19130c;
+  --desk: #4b2f16;
+  --case: #c9bfa6;
+  --case-dark: #8f846d;
+  --screen: #151b12;
+  --phosphor: #b5f4a6;
+  --phosphor-soft: #7ecf76;
+  --amber: #e7b66b;
+  --ink: #241c12;
+  --line: rgba(255,255,255,.18);
+  font-family: "Courier New", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; background: var(--room); }
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #f5ead8;
+  background:
+    radial-gradient(circle at 16% 22%, rgba(231,182,107,.20), transparent 24rem),
+    linear-gradient(155deg, #251b10, #110d09 60%, #070604);
+}
+a { color: inherit; }
+button, input { font: inherit; }
+
+.skip-link { position: fixed; top: -90px; left: 12px; z-index: 100; padding: 10px 14px; color: #10200d; background: var(--phosphor); border-radius: 8px; text-decoration: none; font-weight: 700; }
+.skip-link:focus { top: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+.room { width: min(1220px, calc(100% - 24px)); margin: 0 auto; padding: 12px 0 30px; }
+.room-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px; padding: 8px 4px 18px; color: #c9bda8; font-size: .75rem; letter-spacing: .09em; }
+.room-header .room-link:last-child { justify-self: end; }
+.room-link { color: #d6c7af; text-decoration: none; font-weight: 700; }
+.room-link:hover, .room-link:focus-visible { color: #fff5e7; }
+
+.desk-scene {
+  position: relative;
+  min-height: calc(100vh - 78px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 30px;
+  background:
+    linear-gradient(to bottom, transparent 0 72%, rgba(56,32,13,.92) 72% 100%),
+    radial-gradient(circle at 20% 15%, rgba(230,174,95,.16), transparent 32%),
+    linear-gradient(145deg, #23180e, #0c0906 68%);
+  box-shadow: inset 0 -80px 100px rgba(0,0,0,.42), 0 30px 90px rgba(0,0,0,.4);
+}
+.lamp-glow { position: absolute; left: -8%; top: -18%; width: 52%; height: 70%; background: radial-gradient(circle, rgba(255,195,108,.22), transparent 67%); pointer-events: none; }
+
+.computer-shell { position: relative; z-index: 2; width: min(760px, 78vw); filter: drop-shadow(0 30px 26px rgba(0,0,0,.48)); }
+.monitor-bezel { position: relative; padding: 30px 30px 38px; border-radius: 24px 24px 12px 12px; background: linear-gradient(145deg, #d7ceb8, #a99e84 62%, #807560); box-shadow: inset 0 2px 0 rgba(255,255,255,.35), inset 0 -7px 12px rgba(67,56,38,.22); }
+.monitor-label { display:flex; justify-content:space-between; align-items:center; margin:0 2px 14px; color:#3c3324; font-family:Arial,sans-serif; letter-spacing:.08em; }
+.monitor-label strong { font-size: 1.2rem; }
+.monitor-label span { font-size: .63rem; font-weight: 800; }
+.screen { position: relative; min-height: 430px; overflow: hidden; border: 14px solid #3a342a; border-radius: 14px; color: var(--phosphor); background: radial-gradient(circle at 50% 45%, #24331f 0%, #12190f 50%, #060905 100%); box-shadow: inset 0 0 56px rgba(126,207,118,.16), inset 0 0 0 2px #090b08, 0 8px 15px rgba(0,0,0,.32); text-shadow: 0 0 7px rgba(181,244,166,.55); }
+.screen-glass { position:absolute; inset:0; z-index:20; pointer-events:none; background: repeating-linear-gradient(to bottom, rgba(255,255,255,.025) 0 1px, transparent 2px 5px), radial-gradient(circle at 30% 8%, rgba(255,255,255,.055), transparent 34%); mix-blend-mode: screen; }
+
+.boot-panel, .dos-panel, .archive-desktop { position:relative; z-index:2; min-height: 402px; padding: 24px; }
+.boot-panel { display:flex; flex-direction:column; }
+.boot-panel pre { flex:1; margin:0; white-space:pre-wrap; font:700 1rem/1.55 "Courier New",monospace; }
+.screen-button { align-self:flex-start; min-height:40px; border:1px solid rgba(181,244,166,.55); border-radius:4px; padding:8px 11px; color:var(--phosphor); background:rgba(181,244,166,.05); cursor:pointer; text-shadow:inherit; }
+.screen-button:hover, .screen-button:focus-visible { background:rgba(181,244,166,.14); outline:none; }
+
+.dos-panel { display:grid; grid-template-rows:auto 1fr auto auto; gap:10px; }
+.dos-titlebar, .desktop-menu { display:flex; align-items:center; gap:10px; color:#122010; background:var(--phosphor-soft); text-shadow:none; font-weight:900; }
+.dos-titlebar { justify-content:space-between; padding:6px 8px; }
+.dos-titlebar button, .desktop-menu button { border:1px solid #22391d; color:#122010; background:rgba(255,255,255,.2); font:inherit; font-weight:900; cursor:pointer; }
+.dos-history { min-height:0; overflow:auto; padding:6px 0; white-space:pre-wrap; line-height:1.48; }
+.command-line { display:flex; align-items:center; gap:8px; }
+.command-line label { font-weight:900; }
+.command-line input { min-width:0; flex:1; padding:4px 2px; border:0; border-bottom:1px solid rgba(181,244,166,.35); outline:none; color:var(--phosphor); background:transparent; text-transform:uppercase; text-shadow:inherit; }
+.command-help { margin:0; color:#8ccf82; font-size:.75rem; line-height:1.45; }
+
+.archive-desktop { display:grid; grid-template-rows:auto 1fr auto; padding:0; color:#111b0f; background:#87b681; text-shadow:none; }
+.desktop-menu { justify-content:flex-start; min-height:32px; padding:4px 8px; background:#d4dcc4; border-bottom:2px solid #31482d; }
+.desktop-menu span { flex:1; text-align:center; font-size:.8rem; }
+.desktop-workspace { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px 12px; align-content:start; padding:25px; background:linear-gradient(135deg,#7da778,#95bd88); }
+.desktop-icon { min-height:94px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; border:0; color:#10220e; background:transparent; font:inherit; text-decoration:none; text-align:center; cursor:pointer; }
+.desktop-icon span { width:48px; height:42px; display:grid; place-items:center; border:3px double #183016; color:#e9f2d9; background:#365e31; box-shadow:3px 3px 0 rgba(21,43,18,.42); font-size:1.35rem; font-weight:900; }
+.desktop-icon strong { font-size:.76rem; line-height:1.15; }
+.desktop-icon:hover, .desktop-icon:focus-visible { outline:2px dotted #1d3519; outline-offset:4px; }
+.desktop-status { display:flex; justify-content:space-between; gap:12px; padding:6px 8px; border-top:2px solid #31482d; background:#d4dcc4; font-size:.67rem; font-weight:800; }
+
+.origin-dialog { width:min(610px,calc(100% - 28px)); padding:27px; border:4px double #30512c; border-radius:3px; color:#162213; background:#d7ddc8; font-family:Georgia,serif; box-shadow:0 24px 80px rgba(0,0,0,.55); text-shadow:none; }
+.origin-dialog::backdrop { background:rgba(0,0,0,.72); }
+.origin-dialog h2 { margin:.3rem 0 1rem; font-size:clamp(1.8rem,5vw,2.8rem); }
+.origin-dialog p { line-height:1.65; }
+.dialog-kicker { color:#31552d; font:800 .7rem/1 "Courier New",monospace; letter-spacing:.13em; }
+.dialog-close { position:absolute; right:10px; top:9px; width:38px; height:38px; border:2px solid #31552d; color:#183016; background:transparent; cursor:pointer; font-size:1.4rem; }
+
+.computer-base { position:relative; height:124px; border-radius:0 0 22px 22px; background:linear-gradient(150deg,#c7bca4,#94896f); box-shadow:inset 0 -7px 10px rgba(49,40,27,.28); }
+.drive { position:absolute; right:44px; top:22px; width:168px; height:44px; border:4px solid #554d40; border-radius:4px; background:#25231f; }
+.drive span { position:absolute; left:20px; right:20px; top:14px; height:6px; background:#050504; }
+.power-light { position:absolute; right:25px; bottom:24px; width:9px; height:9px; border-radius:50%; background:#78ee70; box-shadow:0 0 10px #78ee70; }
+.keyboard-lines { position:absolute; left:35px; right:245px; top:26px; height:68px; border-radius:7px; background:repeating-linear-gradient(90deg,#4d493e 0 18px,transparent 18px 23px),repeating-linear-gradient(#4d493e 0 13px,transparent 13px 18px); opacity:.75; transform:perspective(320px) rotateX(48deg); }
+.desk-note { position:absolute; z-index:3; right:6%; bottom:9%; width:150px; min-height:116px; padding:15px; transform:rotate(3deg); color:#2c1d0d; background:#d8b96f; box-shadow:6px 9px 18px rgba(0,0,0,.3); font-family:Arial,sans-serif; }
+.desk-note p { margin:0 0 8px; font-size:.62rem; letter-spacing:.12em; font-weight:900; }
+.desk-note strong { font-size:1.1rem; line-height:1.05; }
+.desk-note span { display:block; margin-top:12px; font-size:.72rem; }
+.noscript { width:min(900px,calc(100% - 24px)); margin:18px auto; padding:15px; border:1px solid var(--line); }
+
+@media (max-width: 850px) {
+  .computer-shell { width:min(690px,92vw); }
+  .desk-note { display:none; }
+}
+@media (max-width: 620px) {
+  .room { width:100%; padding:0; }
+  .room-header { grid-template-columns:1fr 1fr; padding:10px 12px; }
+  .room-header > span { display:none; }
+  .desk-scene { min-height:calc(100vh - 44px); border:0; border-radius:0; align-items:start; padding-top:12px; }
+  .computer-shell { width:calc(100% - 14px); }
+  .monitor-bezel { padding:15px 12px 19px; border-radius:15px 15px 7px 7px; }
+  .monitor-label { margin-bottom:8px; }
+  .screen { min-height:445px; border-width:8px; }
+  .boot-panel,.dos-panel { min-height:427px; padding:16px; }
+  .desktop-workspace { grid-template-columns:repeat(2,minmax(0,1fr)); padding:18px 12px; }
+  .computer-base { height:92px; }
+  .drive { right:25px; width:130px; height:36px; }
+  .keyboard-lines { left:20px; right:180px; height:53px; }
+  .desktop-status span:last-child { display:none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; scroll-behavior:auto!important; }
+}
