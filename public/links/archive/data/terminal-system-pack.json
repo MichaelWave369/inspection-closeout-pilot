@@ -1,0 +1,150 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Archive Terminal System — Publication Pack 1",
+  "description": "The first fully published Archive Core record, containing reviewed vector visuals and browser-readable public briefs derived from canonical design documents.",
+  "projects": [
+    {
+      "id": "parallax-archive-terminal-system",
+      "aliases": ["ATS", "ARCHIVE TERMINALS", "TERMINAL SYSTEM", "SIX SHELLS"],
+      "title": "Parallax Archive Terminal System",
+      "mark": "ATS",
+      "category": "software",
+      "categoryLabel": "Archive infrastructure",
+      "status": "Live public system",
+      "tone": "blue",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 0,
+      "tagline": "One canonical archive expressed through six distinct terminal experiences: Discovery, Origin, Creation, Play, Gallery, and Deployment.",
+      "story": "The Parallax Archive Terminal System turns a conventional portfolio into an explorable place. Six machine shells share the same Archive Core project truth while translating it into different emotional and operational languages. The system begins with a physical business card, passes through a professional contact page and Archive Gateway, and opens into terminal experiences that remain directly linkable and accessible without simulation layers.",
+      "summary": "The Archive Terminal System is the working public infrastructure beneath the Parallax gallery. It proves the central architectural ruling: author project truth once, publish it once, and let every machine inherit it without creating six competing copies.",
+      "see": "The six live terminals, shared Archive Core records, stable deep links, published artifact cards, direct project routes, accessible Network fallback, and the first source-led publication pack.",
+      "proof": "Six interactive terminal shells are live over one shared manifest. The repository includes syntax-gated public JavaScript, direct project records, responsive fallbacks, three reviewed vector visuals, and six public briefs derived from canonical design documents.",
+      "next": "Apply the same publication workflow to Parallax Mendala, Graph Cinema, Carbon Loop, games, music, and field-system records while connecting full canonical source files only after public-safety and layout review.",
+      "claimBoundary": "This is a working public archive and presentation system, not a complete digital-preservation platform, legacy-computer emulator, or substitute for the canonical offline source library. Public briefs summarize retained DOCX sources; they do not silently replace them.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/archive-terminal-system/terminal-system-cover.svg",
+        "label": "Parallax Archive Terminal System",
+        "caption": "Six distinct machine roles connected to one canonical Archive Core."
+      },
+      "signals": [
+        { "label": "Current state", "value": "Live public system" },
+        { "label": "Terminal shells", "value": "6 available" },
+        { "label": "Artifact pack", "value": "9 published" },
+        { "label": "Source discipline", "value": "Canonical retained" }
+      ],
+      "artifacts": [
+        {
+          "id": "terminal-system-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Archive Terminal System Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/archive-terminal-system/terminal-system-cover.svg",
+          "description": "The six terminal roles arranged around the shared Archive Core.",
+          "url": "../artifacts/archive-terminal-system/terminal-system-cover.svg",
+          "linkLabel": "Open full visual →"
+        },
+        {
+          "id": "six-shell-role-map",
+          "type": "Visual artifact",
+          "role": "diagram",
+          "title": "Six-Shell Role Map",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/archive-terminal-system/six-shell-role-map.svg",
+          "description": "The emotional and operational purpose of Discovery, Origin, Creation, Play, Gallery, and Deployment.",
+          "url": "../artifacts/archive-terminal-system/six-shell-role-map.svg",
+          "linkLabel": "Open role map →"
+        },
+        {
+          "id": "artifact-publication-flow",
+          "type": "Visual artifact",
+          "role": "process",
+          "title": "Artifact Publication Flow",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/archive-terminal-system/artifact-publication-flow.svg",
+          "description": "The source-to-continuity workflow used to publish approved artifacts once into every terminal.",
+          "url": "../artifacts/archive-terminal-system/artifact-publication-flow.svg",
+          "linkLabel": "Open workflow →"
+        },
+        {
+          "id": "archive-core-brief",
+          "type": "Public document brief",
+          "title": "Archive Core Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Curated browser-readable brief derived from the canonical Archive Core architecture and build roadmap DOCX.",
+          "url": "../artifacts/archive-terminal-system/archive-core-brief.html",
+          "linkLabel": "Read public brief →"
+        },
+        {
+          "id": "gateway-integration-brief",
+          "type": "Public document brief",
+          "title": "Archive Gateway Integration",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public brief covering the business-card route, activation state, terminal selection, accessibility, and fallback contract.",
+          "url": "../artifacts/archive-terminal-system/gateway-integration-brief.html",
+          "linkLabel": "Read public brief →"
+        },
+        {
+          "id": "multi-style-expansion-brief",
+          "type": "Public document brief",
+          "title": "Multi-Style Terminal Expansion",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public brief defining the shell-adapter rule and the six distinct archive roles.",
+          "url": "../artifacts/archive-terminal-system/multi-style-expansion-brief.html",
+          "linkLabel": "Read public brief →"
+        },
+        {
+          "id": "ibm5100-edition-brief",
+          "type": "Terminal design brief",
+          "title": "IBM 5100 Archive Edition",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public brief for the Discovery shell, command language, engineer mode, and historical boundary.",
+          "url": "../artifacts/archive-terminal-system/ibm5100-edition-brief.html",
+          "linkLabel": "Read IBM brief →"
+        },
+        {
+          "id": "sl1200-origin-brief",
+          "type": "Terminal design brief",
+          "title": "SL1200 Origin Edition",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public brief for the Origin shell, DOS and DeskMate interaction, autobiographical role, and memory boundary.",
+          "url": "../artifacts/archive-terminal-system/sl1200-origin-brief.html",
+          "linkLabel": "Read SL1200 brief →"
+        },
+        {
+          "id": "pat-mk1-brief",
+          "type": "Terminal design brief",
+          "title": "PAT Mk.1",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public brief for the original Parallax-native Creation shell and its Field, Graph, Ledger, Dissent, and Witness systems.",
+          "url": "../artifacts/archive-terminal-system/pat-mk1-brief.html",
+          "linkLabel": "Read PAT brief →"
+        }
+      ],
+      "relationships": [
+        { "projectId": "parallax-census", "type": "curation and provenance source", "note": "Census is the intended local-first registry for locating, reviewing, and preparing future archive artifacts." },
+        { "projectId": "graph-cinema", "type": "trajectory runtime", "note": "Graph Cinema provides the motion and relationship model used by PAT and future archive history views." },
+        { "projectId": "alpha-ledger-omega", "type": "receipt and continuity layer", "note": "AlphaLedgerOmega supplies the evidence discipline behind artifact status, publication boundaries, and repair." },
+        { "projectId": "parallax-institute", "type": "institutional home", "note": "The Institute provides the public identity and long-term stewardship context for the archive." }
+      ],
+      "links": [
+        { "label": "Open the Archive Gateway", "url": "https://michaelwave369.github.io/inspection-closeout-pilot/links/archive/" }
+      ]
+    }
+  ]
+}
