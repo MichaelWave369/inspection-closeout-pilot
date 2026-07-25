@@ -1,1 +1,84 @@
-import fs from 'node:fs';import path from 'node:path';const root=process.cwd(),base=path.join(root,'public/links/archive/artifacts/parallax-institute');const files={architecture:fs.readFileSync(path.join(base,'architecture-brief.html'),'utf8'),status:fs.readFileSync(path.join(base,'status-boundary-brief.html'),'utf8'),map:fs.readFileSync(path.join(base,'field-map/index.html'),'utf8'),mapJs:fs.readFileSync(path.join(base,'field-map/field-map.js'),'utf8'),pack:fs.readFileSync(path.join(root,'public/links/archive/data/parallax-institute-publication-pack.json'),'utf8')};const required={architecture:['not presently represented here as an incorporated entity','not presently represented here as an incorporated entity, accredited school, tax-exempt charity','planned physical vision rather than a present facility','participation does not automatically confer ownership'],status:['Not claimed by this package','tax-deductible contributions','Accreditation, degrees','does not create an automatic ownership interest','planned Mt. Shasta / Pilgrim Creek Institute'],map:['not a legal organization chart','Regenerative covenant'],pack:['Published institutional framework','Collaboration does not automatically confer authority','Planned Mt. Shasta / Pilgrim Creek vision']};const errors=[];for(const [name,phrases] of Object.entries(required)){for(const phrase of phrases){if(!files[name].includes(phrase))errors.push(`${name} is missing required boundary phrase: ${phrase}`)}}if(!files.mapJs.includes('ParallaxArchiveCore.load'))errors.push('Field Map must load canonical Archive Core data.');for(const forbidden of ['localStorage','sessionStorage','document.cookie','sendBeacon','WebSocket']){if(files.mapJs.includes(forbidden))errors.push(`Field Map contains forbidden persistence or transport API: ${forbidden}`)}let pack;try{pack=JSON.parse(files.pack)}catch(error){errors.push(`Institute pack JSON failed to parse: ${error.message}`)}const project=pack?.projects?.find(item=>item.id==='parallax-institute');if(!project)errors.push('Institute pack must contain parallax-institute.');if(project&&project.status!=='Published institutional framework')errors.push('Institute status must remain Published institutional framework.');if(project&&!String(project.claimBoundary||'').includes('does not establish incorporation'))errors.push('Institute claim boundary must deny implied incorporation.');if(project&&!String(project.claimBoundary||'').includes('shared ownership'))errors.push('Institute claim boundary must deny implied shared ownership.');if(errors.length){console.error('Parallax Institute boundary validation failed:');errors.forEach(error=>console.error(`- ${error}`));process.exit(1)}console.log('Parallax Institute boundary validation passed.');
+import fs from 'node:fs'
+import path from 'node:path'
+
+const root = process.cwd()
+const base = path.join(root, 'public/links/archive/artifacts/parallax-institute')
+const files = {
+  architecture: fs.readFileSync(path.join(base, 'architecture-brief.html'), 'utf8'),
+  status: fs.readFileSync(path.join(base, 'status-boundary-brief.html'), 'utf8'),
+  map: fs.readFileSync(path.join(base, 'field-map/index.html'), 'utf8'),
+  mapJs: fs.readFileSync(path.join(base, 'field-map/field-map.js'), 'utf8'),
+  pack: fs.readFileSync(path.join(root, 'public/links/archive/data/parallax-institute-publication-pack.json'), 'utf8'),
+}
+
+const required = {
+  architecture: [
+    'not presently represented here as an incorporated entity',
+    'accredited school, tax-exempt charity',
+    'remains a future physical vision',
+    'does not state that land, facilities, permits, financing, staffing, or operational capacity have been secured',
+    'participation does not automatically confer ownership',
+  ],
+  status: [
+    'Not claimed by this package',
+    'tax-deductible contributions',
+    'Accreditation, degrees',
+    'does not create an automatic ownership interest',
+    'planned Mt. Shasta / Pilgrim Creek Institute',
+  ],
+  map: [
+    'not a legal organization chart',
+    'Regenerative covenant',
+  ],
+  pack: [
+    'Published institutional framework',
+    'Collaboration does not automatically confer authority',
+    'Planned Mt. Shasta / Pilgrim Creek vision',
+  ],
+}
+
+const errors = []
+for (const [name, phrases] of Object.entries(required)) {
+  for (const phrase of phrases) {
+    if (!files[name].includes(phrase)) {
+      errors.push(`${name} is missing required boundary phrase: ${phrase}`)
+    }
+  }
+}
+
+if (!files.mapJs.includes('ParallaxArchiveCore.load')) {
+  errors.push('Field Map must load canonical Archive Core data.')
+}
+
+for (const forbidden of ['localStorage', 'sessionStorage', 'document.cookie', 'sendBeacon', 'WebSocket']) {
+  if (files.mapJs.includes(forbidden)) {
+    errors.push(`Field Map contains forbidden persistence or transport API: ${forbidden}`)
+  }
+}
+
+let pack
+try {
+  pack = JSON.parse(files.pack)
+} catch (error) {
+  errors.push(`Institute pack JSON failed to parse: ${error.message}`)
+}
+
+const project = pack?.projects?.find(item => item.id === 'parallax-institute')
+if (!project) errors.push('Institute pack must contain parallax-institute.')
+if (project && project.status !== 'Published institutional framework') {
+  errors.push('Institute status must remain Published institutional framework.')
+}
+if (project && !String(project.claimBoundary || '').includes('does not establish incorporation')) {
+  errors.push('Institute claim boundary must deny implied incorporation.')
+}
+if (project && !String(project.claimBoundary || '').includes('shared ownership')) {
+  errors.push('Institute claim boundary must deny implied shared ownership.')
+}
+
+if (errors.length) {
+  console.error('Parallax Institute boundary validation failed:')
+  errors.forEach(error => console.error(`- ${error}`))
+  process.exit(1)
+}
+
+console.log('Parallax Institute boundary validation passed.')
