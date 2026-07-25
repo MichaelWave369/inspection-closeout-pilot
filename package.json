@@ -8,9 +8,10 @@
     "check:archive-data": "node scripts/check-archive-data.mjs",
     "check:lumenbridge": "node scripts/check-lumenbridge-boundaries.mjs",
     "check:alo": "node scripts/check-alo-fixtures.mjs",
+    "check:institute": "node scripts/check-institute-boundaries.mjs",
     "check:public-js": "node scripts/check-public-js.mjs",
     "build:site": "vite build",
-    "build": "npm run check:archive-data && npm run check:lumenbridge && npm run check:alo && npm run check:public-js && npm run build:site",
+    "build": "npm run check:archive-data && npm run check:lumenbridge && npm run check:alo && npm run check:institute && npm run check:public-js && npm run build:site",
     "preview": "vite preview"
   },
   "dependencies": {
