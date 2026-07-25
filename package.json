@@ -13,9 +13,10 @@
     "check:roomlight": "node scripts/check-roomlight-boundaries.mjs",
     "check:double-c": "node scripts/check-double-c-boundaries.mjs",
     "check:sosa": "node scripts/check-sosa-boundaries.mjs",
+    "check:census": "node scripts/check-census-boundaries.mjs",
     "check:public-js": "node scripts/check-public-js.mjs",
     "build:site": "vite build",
-    "build": "npm run check:archive-data && npm run check:lumenbridge && npm run check:alo && npm run check:institute && npm run check:coherence && npm run check:roomlight && npm run check:double-c && npm run check:sosa && npm run check:public-js && npm run build:site",
+    "build": "npm run check:archive-data && npm run check:lumenbridge && npm run check:alo && npm run check:institute && npm run check:coherence && npm run check:roomlight && npm run check:double-c && npm run check:sosa && npm run check:census && npm run check:public-js && npm run build:site",
     "preview": "vite preview"
   },
   "dependencies": {
