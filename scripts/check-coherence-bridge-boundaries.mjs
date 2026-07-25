@@ -17,7 +17,7 @@ const required = {
     'does not diagnose people',
     'does not diagnose people, provide therapy or crisis care',
     'Success is measured by agency and connection—not retention.',
-    'pause or leave',
+    'pause, leave, delete, export, disagree',
   ],
   safety: [
     'Secret mood, vulnerability, dependency, or risk scoring.',
