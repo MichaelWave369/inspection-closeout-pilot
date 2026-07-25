@@ -60,6 +60,9 @@ jobs:
       - name: Check RoomLight field-safety boundaries
         run: npm run check:roomlight
 
+      - name: Check Double C language boundaries
+        run: npm run check:double-c
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
