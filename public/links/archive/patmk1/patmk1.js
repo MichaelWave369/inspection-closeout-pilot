@@ -113,7 +113,7 @@ function revealRuntime({ focus = false } = {}) {
   wakeTimers.forEach(window.clearTimeout)
   wakeScreen.hidden = true
   runtime.hidden = false
-  if (focus) runtimeTitle.focus?.()
+  if (focus) runtimeTitle.focus()
 }
 
 function runWake() {
@@ -142,10 +142,9 @@ function resolveInitialState() {
   const requestedMode = params.get('mode')
   if (requestedMode && panels[requestedMode]) currentMode = requestedMode
 
+  const fallback = projects.find(project => project.archiveFeatured) || projects.find(project => project.featured) || projects[0]
   const requestedProject = params.get('project')
-  selectedProject = requestedProject
-    ? window.ParallaxArchiveCore.findProject(projects, requestedProject)
-    : projects.find(project => project.archiveFeatured) || projects.find(project => project.featured) || projects[0]
+  selectedProject = (requestedProject && window.ParallaxArchiveCore.findProject(projects, requestedProject)) || fallback
 }
 
 async function loadArchiveCore() {
@@ -163,6 +162,7 @@ async function loadArchiveCore() {
     renderProjectList()
     selectProject(selectedProject, { updateUrl: false })
     setMode(currentMode, { updateUrl: false })
+    writeRuntimeUrl({ replace: true })
   } catch (error) {
     console.error('PAT Mk.1 could not load Archive Core', error)
     coreStatus.textContent = 'ARCHIVE CORE OFFLINE'
@@ -268,6 +268,7 @@ function updateDial(index) {
   const percent = projects.length > 1 ? (safeIndex / (projects.length - 1)) * 100 : 0
   dialIndicator.style.left = `${percent}%`
   dialLabel.textContent = `RECORD ${String(safeIndex + 1).padStart(2, '0')}`
+  ledgerDial.setAttribute('aria-valuetext', projects[safeIndex]?.title || `Record ${safeIndex + 1}`)
 }
 
 function renderArtifacts(project) {
@@ -345,6 +346,7 @@ function renderGraph(project) {
   active.style.left = `${center.x}%`
   active.style.top = `${center.y}%`
   active.title = project.title
+  active.setAttribute('aria-label', `Current project: ${project.title}. Return to Field mode.`)
   active.addEventListener('click', () => setMode('field'))
   graphStage.appendChild(active)
 
@@ -417,7 +419,10 @@ projectList.addEventListener('keydown', event => {
 ledgerDial.addEventListener('input', () => {
   const index = Number(ledgerDial.value)
   updateDial(index)
-  if (projects[index]) selectProject(projects[index], { updateUrl: true })
+  if (projects[index]) {
+    selectProject(projects[index], { updateUrl: false })
+    writeRuntimeUrl({ replace: true })
+  }
 })
 
 railOpen.addEventListener('click', () => setMode('dissent'))
