@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05070d" />
+  <meta name="description" content="Enter the Parallax Archive through the original PAT Mk.1 Fieldglass terminal." />
+  <title>PAT Mk.1 | Parallax Archive</title>
+  <link rel="stylesheet" href="patmk1.css" />
+  <link rel="stylesheet" href="patmk1-compat.css" />
+  <script src="../data/archive-core.js" defer></script>
+  <script src="patmk1.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#fieldglass">Skip wake sequence</a>
+
+  <main class="chamber">
+    <header class="chamber-header">
+      <a href="../" class="quiet-link">← Choose terminal</a>
+      <span>PAT MK.1 / PARALLAX NATIVE ARCHIVE INSTRUMENT</span>
+      <a href="../../network/" class="quiet-link">Standard Network</a>
+    </header>
+
+    <section class="machine" aria-label="Parallax Archive Terminal Mk.1">
+      <div class="machine-rail top-rail" aria-hidden="true"></div>
+
+      <header class="machine-header">
+        <div class="machine-identity">
+          <span class="machine-mark" aria-hidden="true">P</span>
+          <span><strong>PAT Mk.1</strong><small>FIELD / GRAPH / LEDGER</small></span>
+        </div>
+
+        <div class="witness-cluster" aria-label="Witness Light status">
+          <span class="witness-light" id="witness-light" aria-hidden="true"></span>
+          <span><strong id="witness-state">WITNESS ACTIVE</strong><small id="privacy-state">NO ACCOUNT · NO TRACKING</small></span>
+        </div>
+      </header>
+
+      <section class="fieldglass" id="fieldglass" aria-labelledby="fieldglass-title">
+        <div class="fieldglass-grid" aria-hidden="true"></div>
+        <div class="fieldglass-glow" aria-hidden="true"></div>
+
+        <section class="wake-screen" id="wake-screen">
+          <div class="wake-core" aria-hidden="true"><span></span><i></i></div>
+          <p class="system-label">PARALLAX NATIVE SYSTEM</p>
+          <h1 id="fieldglass-title">Archive continuity detected.</h1>
+          <p id="wake-status" role="status" aria-live="polite">Aligning Fieldglass…</p>
+          <div class="wake-meter" aria-hidden="true"><span id="wake-meter-fill"></span></div>
+          <button class="glass-button quiet" id="skip-wake" type="button">Skip wake</button>
+        </section>
+
+        <section class="runtime" id="runtime" hidden>
+          <header class="runtime-bar">
+            <div>
+              <p class="system-label" id="mode-label">FIELD MODE</p>
+              <h1 id="runtime-title" tabindex="-1">One archive. Many trajectories.</h1>
+            </div>
+            <div class="runtime-status">
+              <span id="core-status">ARCHIVE CORE CONNECTING</span>
+              <span id="record-status">-- RECORDS</span>
+            </div>
+          </header>
+
+          <div class="runtime-layout">
+            <aside class="project-spine" aria-label="Archive project spine">
+              <label for="project-search">Find a project</label>
+              <input id="project-search" type="search" autocomplete="off" placeholder="MENDALA, ALO, CINEMA…" />
+              <div class="project-list" id="project-list" role="listbox" aria-label="Canonical project records"></div>
+            </aside>
+
+            <section class="mode-stage" id="mode-stage" aria-live="polite">
+              <section class="mode-panel field-panel" id="field-panel">
+                <div class="project-hero">
+                  <div class="project-orbit" id="project-orbit" aria-hidden="true">
+                    <span class="orbit-ring ring-one"></span>
+                    <span class="orbit-ring ring-two"></span>
+                    <span class="orbit-ring ring-three"></span>
+                    <span class="orbit-core" id="orbit-core">P</span>
+                  </div>
+                  <div class="project-intro">
+                    <p class="project-meta" id="project-meta"></p>
+                    <h2 id="project-title">Reading Archive Core…</h2>
+                    <p class="project-tagline" id="project-tagline"></p>
+                    <p class="project-story" id="project-story"></p>
+                    <div class="project-actions">
+                      <a class="glass-button primary" id="open-record" href="../project/">Open Archive Record</a>
+                      <a class="glass-button" id="open-network" href="../../network/#projects">Standard Network</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-facts">
+                  <article><span>WHAT EXISTS</span><p id="field-proof"></p></article>
+                  <article><span>NEXT TRAJECTORY</span><p id="field-next"></p></article>
+                </div>
+              </section>
+
+              <section class="mode-panel graph-panel" id="graph-panel" hidden>
+                <div class="panel-heading">
+                  <div><p class="system-label">GRAPH CINEMA</p><h2>Relationships in motion</h2></div>
+                  <button class="glass-button quiet" id="play-trajectory" type="button" aria-pressed="false">Play trajectory</button>
+                </div>
+                <div class="graph-stage" id="graph-stage" aria-label="Project relationship graph"></div>
+                <p class="graph-caption" id="graph-caption"></p>
+              </section>
+
+              <section class="mode-panel ledger-panel" id="ledger-panel" hidden>
+                <div class="panel-heading"><div><p class="system-label">LEDGER VIEW</p><h2>Receipts before claims</h2></div></div>
+                <div class="ledger-grid">
+                  <article><span>CURRENT STATE</span><strong id="ledger-state"></strong><p id="ledger-proof"></p></article>
+                  <article><span>WHAT TO INSPECT</span><strong>Visible evidence</strong><p id="ledger-see"></p></article>
+                  <article><span>NEXT PROOF</span><strong>Trajectory gate</strong><p id="ledger-next"></p></article>
+                  <article><span>ARCHIVE POSITION</span><strong id="ledger-position"></strong><p id="ledger-pack"></p></article>
+                </div>
+                <div class="artifact-strip" id="artifact-strip"></div>
+              </section>
+
+              <section class="mode-panel dissent-panel" id="dissent-panel" hidden>
+                <div class="panel-heading"><div><p class="system-label dissent-label">PROTECTED DISSENT</p><h2>What remains unproven</h2></div></div>
+                <blockquote id="dissent-boundary"></blockquote>
+                <div class="dissent-grid">
+                  <article><span>COUNTERPRESSURE</span><p id="dissent-counter"></p></article>
+                  <article><span>REPAIR CONDITION</span><p id="dissent-repair"></p></article>
+                </div>
+              </section>
+
+              <section class="mode-panel home-panel" id="home-panel" hidden>
+                <div class="home-symbol" aria-hidden="true"><span>P</span></div>
+                <p class="system-label">PAT MK.1</p>
+                <h2>The machine Parallax deliberately builds.</h2>
+                <p>This shell does not borrow its identity from a historical computer. Fieldglass, Office Keys, the Ledger Dial, Witness Light, Graph Cinema, and visible dissent form an original archive instrument built around continuity and human authority.</p>
+                <div class="home-links">
+                  <a class="glass-button primary" href="../ibm5100/">Discover through IBM 5100</a>
+                  <a class="glass-button" href="../sl1200/">Return through SL1200</a>
+                  <a class="glass-button" href="../../network/">Browse without terminal</a>
+                </div>
+              </section>
+            </section>
+
+            <aside class="dissent-rail" aria-label="Visible dissent rail">
+              <p>VISIBLE DISSENT</p>
+              <strong id="rail-project">NO RECORD</strong>
+              <span id="rail-boundary">No project selected.</span>
+              <button id="rail-open" type="button">OPEN DISSENT</button>
+            </aside>
+          </div>
+        </section>
+      </section>
+
+      <section class="control-deck" aria-label="PAT Mk.1 controls">
+        <div class="office-keys" role="group" aria-label="Office Keys">
+          <button class="office-key active" type="button" data-mode="field"><span>01</span>FIELD</button>
+          <button class="office-key" type="button" data-mode="graph"><span>02</span>GRAPH</button>
+          <button class="office-key" type="button" data-mode="ledger"><span>03</span>LEDGER</button>
+          <button class="office-key dissent" type="button" data-mode="dissent"><span>04</span>DISSENT</button>
+          <button class="office-key" type="button" data-mode="home"><span>05</span>HOME</button>
+        </div>
+
+        <div class="ledger-dial-wrap">
+          <label for="ledger-dial"><span>LEDGER DIAL</span><strong id="dial-label">RECORD 00</strong></label>
+          <input id="ledger-dial" type="range" min="0" max="0" value="0" step="1" />
+          <div class="dial-track" aria-hidden="true"><i id="dial-indicator"></i></div>
+        </div>
+      </section>
+
+      <footer class="machine-footer">
+        <span>WITNESS LIGHT: PUBLIC PRESENTATION ONLY</span>
+        <span>HUMAN AUTHORITY: PRESENT</span>
+        <span id="footer-mode">FIELD</span>
+      </footer>
+    </section>
+  </main>
+
+  <noscript><p class="noscript">JavaScript is not required to access the work. <a href="../../network/">Open the standard Parallax Network.</a></p></noscript>
+</body>
+</html>
