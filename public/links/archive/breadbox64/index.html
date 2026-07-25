@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2e2b75" />
+  <meta name="description" content="Explore the playful music, games, and creative projects of the Parallax Archive through a breadbox home-computer inspired shell." />
+  <title>Breadbox 64 Creative Edition | Parallax Archive</title>
+  <link rel="stylesheet" href="breadbox64.css" />
+  <script src="../data/archive-core.js" defer></script>
+  <script src="breadbox64.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#creative-runtime">Skip startup</a>
+
+  <main class="studio">
+    <header class="studio-header">
+      <a href="../">← Choose terminal</a>
+      <span>BREADBOX 64 / CREATIVE EDITION</span>
+      <a href="../../network/">Standard Network</a>
+    </header>
+
+    <section class="desk-scene" aria-label="Breadbox 64 inspired creative archive terminal">
+      <div class="poster-wall" aria-hidden="true"><span>PLAY</span><span>MAKE</span><span>REMIX</span></div>
+
+      <div class="monitor">
+        <div class="monitor-label">PARALLAX COLOR DISPLAY</div>
+        <div class="screen">
+          <div class="scanlines" aria-hidden="true"></div>
+
+          <section class="boot-screen" id="boot-screen">
+            <pre id="boot-output" aria-live="polite"></pre>
+            <button id="skip-boot" type="button">SKIP STARTUP</button>
+          </section>
+
+          <section class="creative-runtime" id="creative-runtime" hidden>
+            <div class="runtime-output" id="runtime-output" aria-live="polite"></div>
+            <form id="command-form" class="command-form">
+              <label for="command-input">READY.<br /><span>▉</span></label>
+              <input id="command-input" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="command-help" />
+            </form>
+            <p id="command-help">Try HELP, LOAD "$",8, LIST, LOAD "CIVILLAX",8, RUN, MUSIC, GAMES, or LAB.</p>
+          </section>
+        </div>
+      </div>
+
+      <section class="breadbox" aria-label="Creative Edition control deck">
+        <div class="breadbox-brand"><strong>PARALLAX 64</strong><span>CREATIVE COMPUTER</span></div>
+        <div class="keyboard" aria-hidden="true"></div>
+        <div class="function-row" role="group" aria-label="Creative function keys">
+          <button type="button" data-action="catalog"><span>F1</span>PROGRAMS</button>
+          <button type="button" data-action="games"><span>F3</span>GAMES</button>
+          <button type="button" data-action="music"><span>F5</span>MUSIC</button>
+          <button type="button" data-action="lab"><span>F7</span>CREATIVE LAB</button>
+        </div>
+      </section>
+
+      <aside class="disk-rack" aria-label="Featured creative project disks">
+        <p>FEATURED DISKS</p>
+        <button class="disk" type="button" data-project="civillax"><strong>CIVILLAX</strong><span>SIM WORLD</span></button>
+        <button class="disk" type="button" data-project="parallax-unmoored"><strong>UNMOORED</strong><span>RPG WORLD</span></button>
+        <button class="disk" type="button" data-project="the-last-modem"><strong>LAST MODEM</strong><span>RETRO STORY</span></button>
+      </aside>
+    </section>
+  </main>
+
+  <dialog class="program-dialog" id="program-dialog" aria-labelledby="program-title">
+    <header><strong id="program-title">CREATIVE PROGRAM DIRECTORY</strong><button id="program-close" type="button" aria-label="Close directory">×</button></header>
+    <div class="program-tools"><label for="program-filter">SEARCH:</label><input id="program-filter" type="search" autocomplete="off" /></div>
+    <div class="program-layout">
+      <div class="program-list" id="program-list" role="listbox" aria-label="Creative project programs"></div>
+      <article class="program-detail" id="program-detail">
+        <p class="pixel-label">PARALLAX ARCHIVE CORE</p>
+        <h2>Select a program disk.</h2>
+        <p>Creative projects are mounted from the same canonical Archive Core used by every other terminal.</p>
+      </article>
+    </div>
+    <footer id="program-status">Loading creative programs…</footer>
+  </dialog>
+
+  <noscript><p class="noscript">JavaScript is optional. <a href="../../network/#games">Open games and creative work in the standard Network.</a></p></noscript>
+</body>
+</html>
