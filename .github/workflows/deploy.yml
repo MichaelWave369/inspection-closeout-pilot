@@ -81,6 +81,9 @@ jobs:
       - name: Check PhiOS context sovereignty boundaries
         run: npm run check:phios
 
+      - name: Check AgentCeption delivery boundaries
+        run: npm run check:agentception
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
