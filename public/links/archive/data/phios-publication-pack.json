@@ -1,0 +1,169 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-26",
+  "title": "PhiOS — Publication Pack 1",
+  "description": "Sovereign operator-shell architecture, context and memory boundaries, manual kernel-adapter promotion, and a fixed-data Context Sovereignty Workbench.",
+  "projects": [
+    {
+      "id": "phios",
+      "title": "PhiOS",
+      "aliases": ["PHI OS", "PHI SHELL", "SOVEREIGN SHELL", "CONTEXT SOVEREIGNTY"],
+      "mark": "φOS",
+      "category": "software",
+      "categoryLabel": "Sovereign operator shell",
+      "status": "Published shell architecture + context workbench",
+      "tone": "green",
+      "featured": true,
+      "tier": "B",
+      "wave": 3,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 13,
+      "tagline": "A sovereign operator shell above PhiKernel for local context, bounded interfaces, reviewable continuity, and deliberate runtime control.",
+      "story": "PhiOS sits above PhiKernel without duplicating the runtime core. It renders operator-friendly state, composes local workflows, prepares bounded identity, persona, and memory-context packets, exposes capability-gated interfaces, organizes reviewable observatory and archive artifacts, and preserves manual control over writeback, adapter promotion, validation, and rollback.",
+      "summary": "A verified public repository implementing a local sovereign shell, stable CLI and normalized-runtime integration, optional default-off kernel adapters, primary and shadow comparison, advisory rollout review, additive MCP resources and tools, local observatory and archive surfaces, sessions, curation artifacts, and the context/writeback role used by Agentora mission integration.",
+      "see": "The PhiOS cover, context-sovereignty lifecycle, kernel adapter promotion gate, architecture and context-boundary briefs, fixed-data Context Sovereignty Workbench, PAT Context Mode, verified public repository, and planned context schema and proof fixtures.",
+      "proof": "Eight public artifacts are connected. The Workbench deterministically evaluates six bundled synthetic context and rollout scenarios while accepting no personal data, verifying no identity, applying no persona, reading or writing no memory, contacting no PhiOS, PhiKernel, Agentora, MCP, model, filesystem, network, pulse, collaborator, or adapter, and changing no runtime or Archive state.",
+      "next": "Freeze a portable versioned Context Packet and Writeback Receipt schema, publish a context-sovereignty and capability policy in the PhiOS repository, and run a real local proof suite covering conflict surfacing, privacy exclusion, persona overreach, dissent-preserving writeback, compare-mode isolation, manual promotion, reverse-shadow validation, and rollback.",
+      "claimBoundary": "PhiOS is a working sovereign operator shell above PhiKernel. This package demonstrates verified architecture and fixed synthetic teaching fixtures; it does not establish operating-system security, privacy certification, legal identity, biological identity, personhood, sentience, consciousness, psychological accuracy, mental-health assessment, medical validity, biological measurement, established physical law, complete or truthful memory, correct persona inference, objective coherence, reliable adapter promotion, correct kernel behavior, production suitability, organizational permission, or successful integration with Agentora, MCP clients, models, workers, or external services. PhiKernel is authoritative only inside its declared software runtime contract. Identity labels and persona settings remain human-declared collaboration context; memory remains sourced and contestable; observatory outputs remain interpretive; writeback and runtime promotion require explicit human review.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/phios/phios-cover.svg",
+        "label": "PhiOS",
+        "caption": "A sovereign shell preserves context, capability boundaries, runtime lineage, and operator control without claiming authority over the human."
+      },
+      "signals": [
+        { "label": "Runtime relationship", "value": "PhiOS shell above PhiKernel" },
+        { "label": "Integration posture", "value": "Loose-coupled · default-off" },
+        { "label": "Compare mode", "value": "Shadow advisory only" },
+        { "label": "Promotion authority", "value": "Deliberate human action" }
+      ],
+      "links": [
+        { "label": "Open verified repository", "url": "https://github.com/MichaelWave369/PhiOS" },
+        { "label": "Read PhiOS manifesto", "url": "https://enterthefield.org/phios" }
+      ],
+      "artifacts": [
+        {
+          "id": "phios-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "PhiOS Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/phios/phios-cover.svg",
+          "description": "Human-declared context through sovereignty gates, PhiOS shell, PhiKernel runtime, and reviewable receipts.",
+          "url": "../artifacts/phios/phios-cover.svg",
+          "linkLabel": "Open PhiOS cover →"
+        },
+        {
+          "id": "phios-context-lifecycle",
+          "type": "Architecture visual",
+          "role": "context lifecycle",
+          "title": "PhiOS Context Sovereignty Lifecycle",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/phios/context-lifecycle.svg",
+          "description": "Declared labels and persona settings, sourced memory, conflict and privacy review, bounded context, mission use, and corrected writeback.",
+          "url": "../artifacts/phios/context-lifecycle.svg",
+          "linkLabel": "Open context lifecycle →"
+        },
+        {
+          "id": "phios-runtime-promotion-gate",
+          "type": "Governance visual",
+          "role": "runtime promotion",
+          "title": "PhiOS Kernel Adapter Promotion Gate",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/phios/runtime-promotion-gate.svg",
+          "description": "Primary and shadow comparison, normalized local deltas, advisory review, deliberate promotion, reverse-shadow validation, hold, and rollback.",
+          "url": "../artifacts/phios/runtime-promotion-gate.svg",
+          "linkLabel": "Open promotion gate →"
+        },
+        {
+          "id": "phios-architecture-brief",
+          "type": "Public document brief",
+          "title": "PhiOS Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public explanation of the PhiOS and PhiKernel relationship, context role, MCP capability surfaces, observatory layers, scientific boundaries, and integration position.",
+          "url": "../artifacts/phios/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "phios-context-boundary",
+          "type": "Public boundary brief",
+          "title": "PhiOS Context Sovereignty Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Defines identity, persona, memory, writeback, capability, kernel-comparison, health, science, and public-demo boundaries.",
+          "url": "../artifacts/phios/context-boundary-brief.html",
+          "linkLabel": "Read context boundary →"
+        },
+        {
+          "id": "phios-context-workbench",
+          "type": "Interactive context demonstration",
+          "title": "PhiOS Context Sovereignty Workbench",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data deterministic review of six synthetic context, persona, memory, writeback, and adapter-promotion scenarios with non-operational receipt previews.",
+          "url": "../artifacts/phios/context-workbench/",
+          "linkLabel": "Open Context Sovereignty Workbench →"
+        },
+        {
+          "id": "phios-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Context Mode",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Parallax-native terminal presentation for PhiOS architecture, context boundaries, repository evidence, relationships, and planned proof work.",
+          "url": "../patmk1/?project=phios&mode=context",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "phios-public-repository",
+          "type": "Source repository",
+          "title": "MichaelWave369/PhiOS",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Verified public repository for the sovereign shell, PhiKernel adapter integration, compare-mode review, MCP surfaces, observatory, archives, sessions, and local operator workflows.",
+          "url": "https://github.com/MichaelWave369/PhiOS",
+          "linkLabel": "Open PhiOS repository →"
+        },
+        {
+          "id": "phios-context-schema",
+          "type": "Schema artifact",
+          "title": "Portable PhiOS Context Packet and Writeback Receipt",
+          "status": "planned",
+          "description": "A versioned schema for declared labels, persona settings, memory sources, scope, privacy, relevance, uncertainty, conflicts, expiry, authority, mission use, and reviewable continuity events.",
+          "action": "Freeze schemas, deterministic fixtures, migration rules, rejection reasons, deletion and supersession events, and public/private export profiles."
+        },
+        {
+          "id": "phios-context-policy",
+          "type": "Policy artifact",
+          "title": "PhiOS Context Sovereignty and Capability Policy",
+          "status": "planned",
+          "description": "Repository-level rules for identity and persona declarations, private memory, conflict handling, capability profiles, pulse and dispatch authority, writeback, adapter comparison, promotion, and rollback.",
+          "action": "Publish safe defaults and tests proving that persona, memory, MCP, pulse, dispatch, writeback, and promotion cannot bypass their operator gates."
+        },
+        {
+          "id": "phios-public-proof-suite",
+          "type": "Operational evidence",
+          "title": "PhiOS Public Context and Rollout Proof Suite",
+          "status": "planned",
+          "description": "A tagged local fixture suite demonstrating context inclusion and exclusion, conflict surfacing, dissent-preserving writeback, compare isolation, deliberate promotion, reverse-shadow validation, and rollback.",
+          "action": "Publish commands, environment, frozen inputs, source hashes, outputs, receipts, pass/fail results, operator decisions, and rejected claims."
+        }
+      ],
+      "relationships": [
+        { "projectId": "agentora", "type": "context and writeback provider", "note": "PhiOS prepares bounded identity, persona, and memory context for Agentora missions and receives proposed outcome writeback for human review." },
+        { "projectId": "vibe", "type": "intent contract source", "note": "Vibe can provide explicit goals, constraints, preservation obligations, and authority fields for PhiOS context packets." },
+        { "projectId": "alpha-ledger-omega", "type": "context and rollout receipts", "note": "ALO can preserve sources, conflicts, inclusion decisions, writeback, adapter comparison, promotion, validation, and rollback continuity." },
+        { "projectId": "sovereign-office-architecture", "type": "independent context governance", "note": "SOSA separates observation, protected dissent, authorization, operation, and repair around context and runtime decisions." },
+        { "projectId": "parallax-census", "type": "source and artifact registry", "note": "Census tracks PhiOS releases, policies, context schemas, proof fixtures, reports, permissions, and public artifact states." },
+        { "projectId": "double-c", "type": "human-led collaboration language", "note": "Double C keeps persona and identity fields framed as collaboration context rather than claims of human replacement or hidden personhood." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public evidence host", "note": "Archive Core presents PhiOS architecture and synthetic context lessons while linking to the verified source repository."
+        }
+      ]
+    }
+  ]
+}

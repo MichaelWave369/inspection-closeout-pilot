@@ -78,6 +78,9 @@ jobs:
       - name: Check Agentora operator boundaries
         run: npm run check:agentora
 
+      - name: Check PhiOS context sovereignty boundaries
+        run: npm run check:phios
+
       - name: Check public JavaScript
         run: npm run check:public-js
 

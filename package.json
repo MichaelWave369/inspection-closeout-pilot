@@ -17,9 +17,10 @@
     "check:signalbridge": "node scripts/check-signalbridge-boundaries.mjs",
     "check:vibe": "node scripts/check-vibe-boundaries.mjs",
     "check:agentora": "node scripts/check-agentora-boundaries.mjs",
+    "check:phios": "node scripts/check-phios-boundaries.mjs",
     "check:public-js": "node scripts/check-public-js.mjs",
     "build:site": "vite build",
-    "build": "npm run check:archive-data && npm run check:lumenbridge && npm run check:alo && npm run check:institute && npm run check:coherence && npm run check:roomlight && npm run check:double-c && npm run check:sosa && npm run check:census && npm run check:signalbridge && npm run check:vibe && npm run check:agentora && npm run check:public-js && npm run build:site",
+    "build": "npm run check:archive-data && npm run check:lumenbridge && npm run check:alo && npm run check:institute && npm run check:coherence && npm run check:roomlight && npm run check:double-c && npm run check:sosa && npm run check:census && npm run check:signalbridge && npm run check:vibe && npm run check:agentora && npm run check:phios && npm run check:public-js && npm run build:site",
     "preview": "vite preview"
   },
   "dependencies": {
