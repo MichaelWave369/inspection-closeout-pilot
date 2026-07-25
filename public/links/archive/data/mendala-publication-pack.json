@@ -6,6 +6,7 @@
   "projects": [
     {
       "id": "parallax-mendala",
+      "title": "Parallax MENDALA",
       "aliases": ["PM", "MENDALA", "GROWER", "FOODWHEEL", "GO-18", "MENDALA-108"],
       "status": "Published design package",
       "flagship": true,
