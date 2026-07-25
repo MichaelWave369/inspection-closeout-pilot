@@ -59,6 +59,9 @@ jobs:
           path: ownership-validation.log
           if-no-files-found: ignore
 
+      - name: Check Full Constellation boundaries
+        run: npm run check:constellation
+
       - name: Check LumenBridge boundaries
         run: npm run check:lumenbridge
 
