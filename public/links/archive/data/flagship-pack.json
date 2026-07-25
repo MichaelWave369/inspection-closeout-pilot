@@ -1,0 +1,236 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-24",
+  "title": "Flagship Archive Records — Wave 1",
+  "description": "The first richer Archive Record packages. Artifact states remain explicit until canonical files are located and published.",
+  "projects": [
+    {
+      "id": "parallax-mendala",
+      "aliases": ["PM", "MENDALA", "GROWER"],
+      "title": "Parallax Mendala",
+      "mark": "PM",
+      "category": "physical",
+      "categoryLabel": "Food resilience",
+      "status": "Design spec",
+      "tone": "green",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "archiveFeatured": true,
+      "archiveOrder": 1,
+      "tagline": "A modular automated growing system for portable, household, and community-scale food production.",
+      "story": "Mendala demonstrates that Parallax can move beyond screens into practical physical systems supporting resilience, local production, education, and community use. The architecture combines modular growing chambers, rotation, water and nutrient circulation, environmental sensing, and a clear operator layer without pretending a design-stage system has already been field validated.",
+      "see": "The full-size and portable model families, circular operating cycle, automation stack, model comparisons, projected production, and the path toward a testable smallest prototype.",
+      "proof": "Master design specifications, a portable-edition specification, brochure-style product artwork, component and cost work, and production projections are known from the project archive. Their canonical public files still need to be located, reviewed, and packaged.",
+      "next": "Locate and publish the canonical design artifacts, then build and instrument the smallest portable prototype before making larger production claims.",
+      "summary": "Mendala is the clearest first example of Parallax becoming a physical product system. It begins with food resilience, but its deeper pattern is a governed, observable growing platform that can scale from a portable learning unit to a household or community installation.",
+      "claimBoundary": "Mendala is currently a design-stage product family. Production, yield, cost, durability, and automation figures remain projections until a physical prototype is built and measured under stated conditions.",
+      "visual": {
+        "kind": "mendala",
+        "label": "Circular modular growing architecture",
+        "caption": "A living system organized as observable cycles rather than a sealed black box."
+      },
+      "signals": [
+        { "label": "Current state", "value": "Design package" },
+        { "label": "Launch tier", "value": "A — Showcase" },
+        { "label": "First proof", "value": "Portable prototype" },
+        { "label": "Primary domain", "value": "Food resilience" }
+      ],
+      "artifacts": [
+        {
+          "id": "mendala-master-spec",
+          "type": "Master specification",
+          "title": "Parallax Mendala Master Design Specification",
+          "status": "known-locate",
+          "description": "Canonical full-size architecture, operating cycle, system modules, controls, maintenance, and scale assumptions.",
+          "action": "Locate, verify, and publish the public-safe canonical file."
+        },
+        {
+          "id": "mendala-portable-spec",
+          "type": "Companion specification",
+          "title": "Portable / Raspberry Pi Mendala Edition",
+          "status": "known-locate",
+          "description": "Smaller portable model designed around accessible computing, sensing, and demonstration-scale growing.",
+          "action": "Locate the standalone portable-edition document and connect it as a versioned artifact."
+        },
+        {
+          "id": "mendala-brochure",
+          "type": "Visual artifact",
+          "title": "Mendala Product Brochure Poster",
+          "status": "known-locate",
+          "description": "The visual product introduction showing the form, operating idea, and intended model family.",
+          "action": "Locate the final high-resolution image and write concrete alt text."
+        },
+        {
+          "id": "mendala-projections",
+          "type": "Analysis",
+          "title": "Cost, Time, and Production Projections",
+          "status": "known-locate",
+          "description": "Early model-by-model estimates for build cost, growing cycle, and expected output.",
+          "action": "Publish only with assumptions, ranges, date, and an explicit projection boundary."
+        },
+        {
+          "id": "mendala-prototype",
+          "type": "Physical evidence",
+          "title": "Instrumented Portable Prototype",
+          "status": "planned",
+          "description": "The first build intended to generate real receipts for reliability, resource use, and output.",
+          "action": "Build, test, photograph, and publish measured results."
+        }
+      ],
+      "relationships": [
+        { "projectId": "roomlight-data-spine", "type": "sensor-and-control spine", "note": "RoomLight provides a natural local-first sensing and environmental evidence layer." },
+        { "projectId": "carbon-loop", "type": "human-use layer", "note": "Carbon Loop frames the operator experience, reflection, and long-term usefulness." },
+        { "projectId": "parallax-institute", "type": "institutional home", "note": "The Institute provides the public-benefit and governance context for a physical product program." }
+      ],
+      "links": []
+    },
+    {
+      "id": "graph-cinema",
+      "aliases": ["GC", "CINEMA", "TRAJECTORY"],
+      "title": "Graph Cinema",
+      "mark": "GC",
+      "category": "research",
+      "categoryLabel": "Runtime & trajectories",
+      "status": "Architecture",
+      "tone": "blue",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "archiveFeatured": true,
+      "archiveOrder": 2,
+      "tagline": "A runtime model that treats changing graphs, admissible motion, trajectories, and continuity as the real system—not a single frozen diagram.",
+      "story": "Graph Cinema begins from a simple correction: a graph is one frame, while a graphfield is the world capable of producing many frames. A trajectory is the motion picture through those states, and a ledger is the continuity record explaining what moved, why it was allowed, what challenged it, and what changed. This makes history, alternatives, and repair first-class runtime objects.",
+      "see": "Graphframes, graphfields, typed transitions, trajectory comparison, sealed office judgments, protected dissent, continuity receipts, and replayable decision motion.",
+      "proof": "The core vocabulary, trajectory-first runtime concept, Agent Office separation, ledger integration, design critiques, and implementation direction have been established. A canonical visual and shell-neutral interactive demo are not yet packaged.",
+      "next": "Build a small deterministic viewer that can play, pause, compare, and inspect two governed trajectories over the same underlying graphfield.",
+      "summary": "Graph Cinema is how the Parallax Archive eventually stops behaving like a pile of pages. It lets projects be understood through movement: versions, decisions, disputes, repairs, and relationships unfolding through time.",
+      "claimBoundary": "Graph Cinema is an architecture and runtime design, not yet a validated general solution for graph reasoning or multi-agent governance. Demonstrations must distinguish deterministic visualization from model-generated interpretation.",
+      "visual": {
+        "kind": "graph-cinema",
+        "label": "Trajectories moving through a graphfield",
+        "caption": "The current graph is a frame. Continuity lives in the admissible motion between frames."
+      },
+      "signals": [
+        { "label": "Current state", "value": "Runtime architecture" },
+        { "label": "Launch tier", "value": "A — Showcase" },
+        { "label": "First proof", "value": "Deterministic trajectory viewer" },
+        { "label": "Primary domain", "value": "Graph systems" }
+      ],
+      "artifacts": [
+        {
+          "id": "graph-cinema-runtime",
+          "type": "Architecture",
+          "title": "Graph Cinema Runtime Model",
+          "status": "design",
+          "description": "The frame, graphfield, trajectory, admissibility, office, and ledger model that defines the system.",
+          "action": "Freeze the vocabulary and publish the canonical architecture brief."
+        },
+        {
+          "id": "graph-cinema-visual",
+          "type": "Visual artifact",
+          "title": "Trajectory and Graphfield Map",
+          "status": "planned",
+          "description": "A public visual showing multiple trajectories through a shared changing graphfield.",
+          "action": "Create the first hero diagram with a readable legend and alt text."
+        },
+        {
+          "id": "graph-cinema-demo",
+          "type": "Interactive proof",
+          "title": "Deterministic Graph Cinema Viewer",
+          "status": "planned",
+          "description": "A small browser demonstration with play, pause, scrub, compare, dissent, and ledger inspection.",
+          "action": "Implement a bounded hand-authored scenario before adding generated content."
+        },
+        {
+          "id": "graph-cinema-offices",
+          "type": "Governance integration",
+          "title": "Agent Office Judgment Track",
+          "status": "design",
+          "description": "Separate sealed observations, maps, dissent, governance decisions, operations, and repair receipts along a trajectory.",
+          "action": "Map the SOSA office envelope format into the viewer."
+        }
+      ],
+      "relationships": [
+        { "projectId": "alpha-ledger-omega", "type": "continuity ledger", "note": "ALO supplies the receipt and custody model behind trajectory replay." },
+        { "projectId": "sovereign-office-architecture", "type": "independent judgments", "note": "SOSA supplies separated offices and protected dissent along the runtime path." },
+        { "projectId": "parallax-census", "type": "archive source", "note": "Census can eventually supply versioned project states and approved artifacts for replay." }
+      ],
+      "links": []
+    },
+    {
+      "id": "carbon-loop",
+      "aliases": ["CL", "CARBON", "HUMAN EXPERIENCE OS", "LUMENBRIDGE"],
+      "title": "Carbon Loop",
+      "mark": "CL",
+      "category": "foundation",
+      "categoryLabel": "Human Experience OS",
+      "status": "Architecture",
+      "tone": "pink",
+      "featured": true,
+      "tier": "A",
+      "wave": 1,
+      "archiveFeatured": true,
+      "archiveOrder": 3,
+      "tagline": "A consent-based, local-first reflection and continuity system designed to strengthen human agency rather than replace it.",
+      "story": "Carbon Loop is the human-experience spine beneath Parallax. Its public face, LumenBridge, is intended to help a person reflect, remember, notice patterns, renew mandates, and connect computational collaboration back to real life. The system is deliberately bounded: it should support human understanding and action without claiming diagnosis, authority, consciousness, or ownership over the person using it.",
+      "see": "Consent and mandate renewal, local-first memory, reflective conversations, continuity records, exit rights, human councils, relationship bridges, and the boundary between support and substitution.",
+      "proof": "The core doctrine, Human Experience OS framing, LumenBridge public identity, consent-first architecture, local-first direction, and relationship to Parallax governance systems are established. A single canonical public introduction and demonstrable reflection loop still need packaging.",
+      "next": "Publish the public doctrine and claim boundary, then build a small local-first reflection loop with explicit consent, export, deletion, and no hidden authority escalation.",
+      "summary": "Carbon Loop is where Parallax answers the question: what is all this intelligence and infrastructure actually for? Its answer is not model autonomy. It is helping human beings retain continuity, choice, connection, and the ability to leave.",
+      "claimBoundary": "Carbon Loop is a design program for reflective and continuity tools. It is not therapy, diagnosis, crisis care, a substitute for relationships, or evidence that a computational system understands a person in the human sense.",
+      "visual": {
+        "kind": "carbon-loop",
+        "label": "Human continuity held inside renewable consent loops",
+        "caption": "Memory and assistance remain useful only while human authority, exit rights, and real-world connection remain intact."
+      },
+      "signals": [
+        { "label": "Current state", "value": "System architecture" },
+        { "label": "Launch tier", "value": "A — Showcase" },
+        { "label": "First proof", "value": "Local reflection loop" },
+        { "label": "Primary domain", "value": "Human agency" }
+      ],
+      "artifacts": [
+        {
+          "id": "carbon-loop-doctrine",
+          "type": "Foundation document",
+          "title": "Carbon Loop / Human Experience OS Doctrine",
+          "status": "known-locate",
+          "description": "The core intent, consent, local-first, continuity, and human-authority principles.",
+          "action": "Locate the canonical doctrine set and condense it into a public introduction."
+        },
+        {
+          "id": "lumenbridge-identity",
+          "type": "Public identity",
+          "title": "LumenBridge Public Experience",
+          "status": "design",
+          "description": "The approachable public-facing expression of Carbon Loop for reflection, continuity, and reconnection.",
+          "action": "Define the smallest public journey and its no-substitution boundaries."
+        },
+        {
+          "id": "carbon-loop-governance",
+          "type": "Governance artifact",
+          "title": "Consent, Mandate Renewal, and Exit Rights",
+          "status": "known-locate",
+          "description": "Rules governing what may be remembered, inferred, surfaced, exported, deleted, or acted upon.",
+          "action": "Package the existing governance language as a readable public contract."
+        },
+        {
+          "id": "carbon-loop-prototype",
+          "type": "Interactive proof",
+          "title": "Local-First Reflection Loop",
+          "status": "planned",
+          "description": "A bounded demonstration of consent, reflection, memory review, export, deletion, and mandate expiry.",
+          "action": "Build without clinical claims, hidden profiling, or dependency-oriented engagement loops."
+        }
+      ],
+      "relationships": [
+        { "projectId": "coherence-bridge", "type": "relationship bridge", "note": "Coherence Bridge focuses the system on reconnecting people to themselves and real human relationships." },
+        { "projectId": "double-c", "type": "public language", "note": "Double C supplies the human-led collaboration language used to describe the relationship." },
+        { "projectId": "alpha-ledger-omega", "type": "continuity receipts", "note": "ALO can record consent, mandate changes, exports, deletions, and repair without turning memory into unquestioned truth." },
+        { "projectId": "parallax-institute", "type": "institutional home", "note": "The Institute provides the public-benefit and accountability frame for the program." }
+      ],
+      "links": []
+    }
+  ]
+}
