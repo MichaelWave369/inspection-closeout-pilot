@@ -30,7 +30,6 @@ const engineerPacks = document.getElementById('engineer-packs')
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 const MAX_COLUMNS = 64
 const MAX_OUTPUT_LINES = 13
-
 const bootLines = [
   'IBM 5100 PORTABLE COMPUTER',
   'PARALLAX ARCHIVE ADAPTER PX-5100',
@@ -57,7 +56,6 @@ let powered = true
 function wrapLine(value, width = MAX_COLUMNS) {
   const source = String(value ?? '')
   if (!source) return ['']
-
   const lines = []
   let remaining = source
   while (remaining.length > width) {
@@ -148,7 +146,7 @@ async function loadArchiveCore() {
     engineerCount.textContent = '--'
     engineerPacks.textContent = '--'
     catalogStatus.textContent = 'Archive Core unavailable · Standard Network remains available'
-    throw error
+    return null
   }
 }
 
@@ -175,7 +173,7 @@ function createText(tag, className, text) {
 }
 
 function mountTape(project, { announce = true } = {}) {
-  if (!project || !powered) return
+  if (!project || !powered) return false
   mountedProject = project
   selectedProject = project
   mountedTape.textContent = `${projectTapeCode(project)} / ${project.title.toUpperCase()}`
@@ -184,7 +182,6 @@ function mountTape(project, { announce = true } = {}) {
   tapeSlot.classList.add('mounted')
   driveLight.classList.add('active')
   window.setTimeout(() => driveLight.classList.remove('active'), reducedMotion ? 10 : 900)
-
   showTerminal({ focus: false })
   if (announce) {
     appendOutput(`TAPE ${projectTapeCode(project)} MOUNTED.`)
@@ -192,6 +189,7 @@ function mountTape(project, { announce = true } = {}) {
     appendOutput(project.tagline)
     appendOutput('TYPE READ TO INSPECT OR RUN TO OPEN RECORD.')
   }
+  return true
 }
 
 function ejectTape() {
@@ -221,21 +219,19 @@ function openMountedRecord() {
     appendOutput('NO TAPE MOUNTED. USE LOAD "NAME" FIRST.')
     return
   }
-  appendOutput(`OPENING ${mountedProject.title.toUpperCase()} RECORD...`)
+  const project = mountedProject
+  appendOutput(`OPENING ${project.title.toUpperCase()} RECORD...`)
   window.setTimeout(() => {
-    window.location.href = recordUrl(mountedProject)
+    window.location.href = recordUrl(project)
   }, reducedMotion ? 0 : 280)
 }
 
 function formatCatalogLines() {
-  const featured = projects
-    .slice()
-    .sort((a, b) => Number(b.flagship) - Number(a.flagship) || Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
-
+  const ordered = projects.slice().sort((a, b) => Number(b.flagship) - Number(a.flagship) || Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title))
   return [
-    `PARALLAX TAPE CATALOG / ${featured.length} RECORDS`,
-    ...featured.slice(0, 10).map(project => `${projectTapeCode(project).padEnd(8)} ${project.title.toUpperCase().slice(0, 45)}`),
-    featured.length > 10 ? `... ${featured.length - 10} MORE RECORDS. OPEN CATALOG.` : '',
+    `PARALLAX TAPE CATALOG / ${ordered.length} RECORDS`,
+    ...ordered.slice(0, 10).map(project => `${projectTapeCode(project).padEnd(8)} ${project.title.toUpperCase().slice(0, 45)}`),
+    ordered.length > 10 ? `... ${ordered.length - 10} MORE RECORDS. OPEN CATALOG.` : '',
   ].filter(Boolean).join('\n')
 }
 
@@ -253,13 +249,9 @@ function renderCatalog(query = '') {
     button.dataset.projectId = project.id
     button.setAttribute('role', 'option')
     button.setAttribute('aria-selected', String(selectedProject?.id === project.id))
-
     const mark = createText('span', 'catalog-mark', projectTapeCode(project))
     const copy = document.createElement('span')
-    copy.append(
-      createText('strong', '', project.title),
-      createText('small', '', `${project.categoryLabel} · ${project.status}`),
-    )
+    copy.append(createText('strong', '', project.title), createText('small', '', `${project.categoryLabel} · ${project.status}`))
     button.append(mark, copy)
     button.addEventListener('click', () => renderCatalogDetail(project))
     catalogList.appendChild(button)
@@ -272,13 +264,11 @@ function renderCatalog(query = '') {
 function renderCatalogDetail(project) {
   selectedProject = project
   catalogDetail.replaceChildren()
-
   const meta = createText('p', 'catalog-meta', `${projectTapeCode(project)} · ${project.categoryLabel} · ${project.status}${project.flagship ? ' · FLAGSHIP' : ''}`)
   const title = createText('h2', '', project.title)
   const tagline = createText('p', '', project.tagline)
   tagline.style.fontWeight = '800'
   const story = createText('p', '', project.story)
-
   const facts = document.createElement('div')
   facts.className = 'catalog-facts'
   ;[
@@ -293,7 +283,6 @@ function renderCatalogDetail(project) {
 
   const actions = document.createElement('div')
   actions.className = 'catalog-actions'
-
   const mount = document.createElement('button')
   mount.type = 'button'
   mount.className = 'catalog-action'
@@ -302,17 +291,13 @@ function renderCatalogDetail(project) {
     mountTape(project)
     closeCatalog()
   })
-
   const record = createText('a', 'catalog-action', 'OPEN ARCHIVE RECORD')
   record.href = recordUrl(project)
-
   const network = createText('a', 'catalog-action secondary', 'STANDARD NETWORK')
   network.href = networkUrl(project)
-
   actions.append(mount, record, network)
   catalogDetail.append(meta, title, tagline, story, facts, actions)
   catalogStatus.textContent = `${projectTapeCode(project)} · ${project.id}`
-
   catalogList.querySelectorAll('.catalog-item').forEach(button => {
     button.setAttribute('aria-selected', String(button.dataset.projectId === project.id))
   })
@@ -320,17 +305,14 @@ function renderCatalogDetail(project) {
 
 async function showCatalog(project = null) {
   if (!powered) return
-  try {
-    await archiveReady
-  } catch {
+  const loaded = await archiveReady
+  if (!loaded) {
     window.location.href = '../../network/#projects'
     return
   }
-
   catalogFilter.value = ''
   renderCatalog()
   if (project) renderCatalogDetail(project)
-
   if (!catalogDialog.open) {
     if (typeof catalogDialog.showModal === 'function') catalogDialog.showModal()
     else catalogDialog.setAttribute('open', '')
@@ -344,33 +326,32 @@ function closeCatalog() {
 }
 
 async function findAndMount(reference) {
-  try {
-    await archiveReady
-  } catch {
+  const loaded = await archiveReady
+  if (!loaded) {
     appendOutput('ARCHIVE CORE OFFLINE. OPENING STANDARD NETWORK.')
     window.location.href = '../../network/#projects'
-    return
+    return null
   }
 
-  const normalized = String(reference || '').trim().replace(/^['"]|['"]$/g, '')
+  const normalized = String(reference || '').trim().replace(/^["']|["']$/g, '')
   if (['PARALLAX', 'ARCHIVE', '*'].includes(normalized.toUpperCase())) {
     showCatalog()
-    return
+    return null
   }
 
   const project = window.ParallaxArchiveCore.findProject(projects, normalized)
   if (!project) {
     appendOutput(`TAPE NOT FOUND OR REFERENCE AMBIGUOUS: ${normalized}`)
     appendOutput('TYPE CATALOG TO SEARCH ALL RECORDS.')
-    return
+    return null
   }
   mountTape(project)
+  return project
 }
 
 async function executeCommand(raw) {
   const command = String(raw || '').trim().replace(/\s+/g, ' ')
   if (!command || !powered) return
-
   appendOutput(`>${command.toUpperCase()}`)
   const upper = command.toUpperCase()
 
@@ -382,8 +363,8 @@ async function executeCommand(raw) {
 
   const openMatch = command.match(/^OPEN\s+(.+)$/i)
   if (openMatch) {
-    await findAndMount(openMatch[1])
-    openMountedRecord()
+    const project = await findAndMount(openMatch[1])
+    if (project) openMountedRecord()
     return
   }
 
@@ -411,14 +392,11 @@ async function executeCommand(raw) {
       showCatalog()
       break
     case 'LIST':
-    case 'LIST TAPES':
-      try {
-        await archiveReady
-        appendOutput(formatCatalogLines())
-      } catch {
-        appendOutput('ARCHIVE CATALOG UNAVAILABLE.')
-      }
+    case 'LIST TAPES': {
+      const loaded = await archiveReady
+      appendOutput(loaded ? formatCatalogLines() : 'ARCHIVE CATALOG UNAVAILABLE.')
       break
+    }
     case 'READ':
     case 'LIST TAPE':
       readMountedTape()
@@ -431,7 +409,7 @@ async function executeCommand(raw) {
       ejectTape()
       break
     case 'STATUS':
-      appendOutput(`ARCHIVE CORE: ${manifest ? `ONLINE ${manifest.schemaVersion}` : 'CONNECTING'}`)
+      appendOutput(`ARCHIVE CORE: ${manifest ? `ONLINE ${manifest.schemaVersion}` : 'OFFLINE'}`)
       appendOutput(`PROJECT RECORDS: ${projects.length || '--'}`)
       appendOutput(`MOUNTED TAPE: ${mountedProject ? projectTapeCode(mountedProject) : 'NONE'}`)
       appendOutput('SHELL MODE: HISTORICALLY INSPIRED SIMULATION')
@@ -484,7 +462,6 @@ engineerKey.addEventListener('click', showEngineer)
 engineerClose.addEventListener('click', () => showTerminal())
 catalogKey.addEventListener('click', () => showCatalog(selectedProject))
 clearKey.addEventListener('click', () => { clearOutput(); showTerminal() })
-
 terminalForm.addEventListener('submit', async event => {
   event.preventDefault()
   const value = terminalInput.value
@@ -494,13 +471,13 @@ terminalForm.addEventListener('submit', async event => {
 
 document.querySelectorAll('.tape').forEach(button => {
   button.addEventListener('click', async () => {
-    try {
-      await archiveReady
-      const project = window.ParallaxArchiveCore.findProject(projects, button.dataset.project)
-      mountTape(project)
-    } catch {
+    const loaded = await archiveReady
+    if (!loaded) {
       window.location.href = '../../network/#projects'
+      return
     }
+    const project = window.ParallaxArchiveCore.findProject(projects, button.dataset.project)
+    mountTape(project)
   })
 })
 
