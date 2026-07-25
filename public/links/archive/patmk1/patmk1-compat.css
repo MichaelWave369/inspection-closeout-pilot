@@ -1,0 +1,7 @@
+[hidden] { display: none !important; }
+
+#runtime-title:focus {
+  outline: 2px solid var(--cyan);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
