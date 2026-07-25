@@ -48,6 +48,9 @@ jobs:
       - name: Check LumenBridge boundaries
         run: npm run check:lumenbridge
 
+      - name: Check ALO receipt fixtures
+        run: npm run check:alo
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
