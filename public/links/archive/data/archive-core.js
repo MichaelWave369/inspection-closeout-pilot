@@ -30,29 +30,35 @@
     return response.json()
   }
 
+  function packRecord(id, pack) {
+    return {
+      id,
+      title: pack.title,
+      version: pack.packVersion,
+      projectIds: (pack.projects || []).map(project => project.id),
+    }
+  }
+
   async function load({ refresh = false } = {}) {
     if (cache && !refresh) return cache
 
-    const [base, flagship] = await Promise.all([
+    const [base, flagship, terminalSystem] = await Promise.all([
       fetchJson('projects.json'),
       fetchJson('flagship-pack.json'),
+      fetchJson('terminal-system-pack.json'),
     ])
 
-    const projects = mergeProjects(base.projects, [flagship])
-      .sort((a, b) => Number(a.archiveOrder || 999) - Number(b.archiveOrder || 999) || a.title.localeCompare(b.title))
+    const projects = mergeProjects(base.projects, [flagship, terminalSystem])
+      .sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || a.title.localeCompare(b.title))
 
     cache = {
       ...base,
-      schemaVersion: '0.2.0',
-      updated: flagship.updated || base.updated,
+      schemaVersion: '0.3.0',
+      updated: terminalSystem.updated || flagship.updated || base.updated,
       projects,
       packs: [
-        {
-          id: 'flagship-wave-1',
-          title: flagship.title,
-          version: flagship.packVersion,
-          projectIds: (flagship.projects || []).map(project => project.id),
-        },
+        packRecord('flagship-wave-1', flagship),
+        packRecord('terminal-system-publication-1', terminalSystem),
       ],
     }
 

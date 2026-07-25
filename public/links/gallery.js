@@ -64,7 +64,7 @@ function renderProjects() {
   const query = search.value.trim().toLowerCase()
   const visible = projects
     .filter(project => projectMatches(project, query))
-    .sort((a, b) => Number(b.featured) - Number(a.featured) || Number(a.archiveOrder || 999) - Number(b.archiveOrder || 999) || a.title.localeCompare(b.title))
+    .sort((a, b) => Number(b.featured) - Number(a.featured) || Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || a.title.localeCompare(b.title))
 
   grid.replaceChildren()
   resultCount.textContent = `${visible.length} project${visible.length === 1 ? '' : 's'} shown · Archive Core ${projects.length} records`

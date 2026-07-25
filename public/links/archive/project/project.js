@@ -123,6 +123,21 @@ function renderDefaultVisual(stage, project) {
   stage.appendChild(visual)
 }
 
+function renderAssetVisual(stage, project) {
+  const wrapper = createElement('div', 'asset-visual')
+  const image = document.createElement('img')
+  image.src = project.visual.assetUrl
+  image.alt = ''
+  image.loading = 'eager'
+  image.decoding = 'async'
+  image.addEventListener('error', () => {
+    wrapper.remove()
+    renderDefaultVisual(stage, project)
+  }, { once: true })
+  wrapper.appendChild(image)
+  stage.appendChild(wrapper)
+}
+
 function renderVisual(project) {
   const stage = document.getElementById('visual-stage')
   stage.replaceChildren()
@@ -130,6 +145,10 @@ function renderVisual(project) {
   document.getElementById('visual-caption').textContent = project.visual?.caption || 'A shell-neutral visual placeholder generated from the canonical project record.'
 
   switch (project.visual?.kind) {
+    case 'asset':
+      if (project.visual.assetUrl) renderAssetVisual(stage, project)
+      else renderDefaultVisual(stage, project)
+      break
     case 'mendala':
       renderMendalaVisual(stage)
       break
@@ -175,6 +194,12 @@ function renderActions(project) {
   })
 }
 
+function artifactPreviewUrl(artifact) {
+  if (artifact.thumbnailUrl) return artifact.thumbnailUrl
+  if (artifact.mediaType?.startsWith('image/') && artifact.url) return artifact.url
+  return null
+}
+
 function renderArtifacts(project) {
   const container = document.getElementById('artifact-grid')
   container.replaceChildren()
@@ -189,7 +214,22 @@ function renderArtifacts(project) {
   ]
 
   artifacts.forEach(artifact => {
-    const card = createElement('article', 'artifact-card')
+    const previewUrl = artifactPreviewUrl(artifact)
+    const card = createElement('article', `artifact-card${previewUrl ? ' has-preview' : ''}`)
+
+    if (previewUrl) {
+      const preview = createElement('a', 'artifact-preview')
+      preview.href = artifact.url || previewUrl
+      preview.setAttribute('aria-label', `Open ${artifact.title}`)
+      const image = document.createElement('img')
+      image.src = previewUrl
+      image.alt = `${artifact.title} preview`
+      image.loading = 'lazy'
+      image.decoding = 'async'
+      preview.appendChild(image)
+      card.appendChild(preview)
+    }
+
     const top = createElement('div', 'artifact-top')
     top.append(
       createElement('span', 'artifact-type', artifact.type),
@@ -246,7 +286,7 @@ function renderRelationships(project, projects) {
 function renderPagination(project, projects) {
   const container = document.getElementById('record-pagination')
   container.replaceChildren()
-  const flagship = projects.filter(item => item.archiveFeatured).sort((a, b) => Number(a.archiveOrder || 999) - Number(b.archiveOrder || 999))
+  const flagship = projects.filter(item => item.archiveFeatured).sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999))
   const pool = project.archiveFeatured && flagship.length > 1 ? flagship : projects.slice().sort((a, b) => a.title.localeCompare(b.title))
   const index = pool.findIndex(item => item.id === project.id)
   if (index < 0 || pool.length < 2) return
