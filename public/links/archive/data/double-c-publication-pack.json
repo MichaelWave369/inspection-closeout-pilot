@@ -1,0 +1,152 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "Double C — Publication Pack 1",
+  "description": "A public terminology framework, collaboration contract, claim boundary, and fixed-data Language Lab for Computational Collaborator language.",
+  "projects": [
+    {
+      "id": "double-c",
+      "title": "Double C",
+      "aliases": ["CC", "DOUBLEC", "DOUBLE C", "COMPUTATIONAL COLLABORATOR", "COMPUTATIONAL COLLABORATORS"],
+      "mark": "CC",
+      "category": "foundation",
+      "categoryLabel": "Public language",
+      "status": "Published language system + lab",
+      "tone": "pink",
+      "featured": true,
+      "tier": "A",
+      "wave": 2,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 7,
+      "tagline": "Computational Collaborator: a public relationship term for human-led, evidence-visible, disagreement-safe work with computational systems.",
+      "story": "Double C gives Parallax a public vocabulary for working with computational systems without reducing them to invisible tools or elevating them into unquestionable authorities. The term Computational Collaborator emphasizes shared work while requiring human mandate, evidence, uncertainty, dissent, bounded execution, receipts, correction, and exit to remain visible. The name does not establish consciousness, personhood, feelings, legal agency, moral status, safety, privacy, or trustworthy behavior.",
+      "summary": "A public terminology and design framework for describing what a computational system observed, inferred, proposed, drafted, simulated, or executed; who authorized the outcome; what evidence and uncertainty remain; and which receipt preserves the result. Technical terms such as artificial intelligence, machine learning, language model, classifier, optimizer, agent, and automation remain appropriate where they are the accurate technical description.",
+      "see": "The Double C Archive cover, collaboration contract, language-boundary map, architecture and terminology briefs, fixed-data Language Lab, PAT Mk.1 language view, source lineage, and the planned cross-project usage guide.",
+      "proof": "Seven public artifacts are connected. The Language Lab rewrites nine fixed bundled examples without accepting visitor text, calling a model, using runtime network requests, saving data, or claiming that better wording makes a system safe. The public package proves terminology, presentation, and deterministic example handling only.",
+      "next": "Freeze a versioned Double C usage guide with preferred patterns, prohibited authority-laundering claims, technical-term exceptions, provenance notation, human-led evidence requirements, and a cross-project terminology audit. Then apply it consistently across public Parallax surfaces without erasing technically accurate descriptions.",
+      "claimBoundary": "Double C is a public design and relationship term. It does not establish consciousness, sentience, subjective experience, personhood, feelings, independent legal agency, moral status, ownership rights, liability, safety, privacy, neutrality, accuracy, or trustworthy behavior. Calling a system human-led or collaborative does not make it so; the implementation must preserve visible human authority, evidence, uncertainty, disagreement, correction, pause, export, deletion, and exit.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/double-c/double-c-cover.svg",
+        "label": "Double C / Computational Collaborator",
+        "caption": "Human mandate and computational contribution meet on a shared work surface with evidence, uncertainty, dissent, receipts, repair, and bounded execution visible."
+      },
+      "signals": [
+        { "label": "Public term", "value": "Computational Collaborator" },
+        { "label": "Authority source", "value": "Human or accountable institution" },
+        { "label": "Trust basis", "value": "Evidence, boundaries, and receipts" },
+        { "label": "Personhood claim", "value": "Not established by the term" }
+      ],
+      "artifacts": [
+        {
+          "id": "double-c-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "Double C Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/double-c/double-c-cover.svg",
+          "description": "A human and Computational Collaborator meet around shared work while mandate, evidence, uncertainty, dissent, receipts, and bounded execution remain visible.",
+          "url": "../artifacts/double-c/double-c-cover.svg",
+          "linkLabel": "Open Double C cover →"
+        },
+        {
+          "id": "double-c-collaboration-contract",
+          "type": "Architecture diagram",
+          "role": "process",
+          "title": "Double C Collaboration Contract",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/double-c/collaboration-contract-map.svg",
+          "description": "Human intent, bounded mandate, CC work, evidence and dissent, human authorization, bounded action, receipt, and return-to-human repair.",
+          "url": "../artifacts/double-c/collaboration-contract-map.svg",
+          "linkLabel": "Open collaboration contract →"
+        },
+        {
+          "id": "double-c-language-boundary-map",
+          "type": "Public language diagram",
+          "role": "language map",
+          "title": "Language That Preserves Authority",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/double-c/language-boundary-map.svg",
+          "description": "Authority-laundering phrases contrasted with bounded wording that names computational action, human authority, uncertainty, and receipts.",
+          "url": "../artifacts/double-c/language-boundary-map.svg",
+          "linkLabel": "Open language map →"
+        },
+        {
+          "id": "double-c-architecture-brief",
+          "type": "Public document brief",
+          "title": "Double C Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Defines the Computational Collaborator relationship model, allowable roles, human-led operational requirements, technical-language compatibility, and success condition.",
+          "url": "../artifacts/double-c/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "double-c-terminology-boundary",
+          "type": "Public terminology brief",
+          "title": "Double C Terminology and Claim Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Preferred public patterns and boundaries for authority, evidence, relationship, consciousness, privacy, memory, action, and provenance language.",
+          "url": "../artifacts/double-c/terminology-boundary-brief.html",
+          "linkLabel": "Read terminology boundary →"
+        },
+        {
+          "id": "double-c-language-lab",
+          "type": "Interactive language proof",
+          "title": "Double C Language Lab",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A fixed-data explorer for nine authority, evidence, relationship, privacy, and action examples with bounded rewrites and demonstration-only receipt previews.",
+          "url": "../artifacts/double-c/language-lab/",
+          "linkLabel": "Open Language Lab →"
+        },
+        {
+          "id": "double-c-pat-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 Double C Language View",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The Parallax-native terminal presentation for Double C terminology, project relationships, claim boundaries, and public-language artifacts.",
+          "url": "../patmk1/?project=double-c&mode=language",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "double-c-source-canon",
+          "type": "Canonical source set",
+          "title": "Double C Public Language and Positioning Canon",
+          "status": "known-locate",
+          "description": "Retained source materials covering Computational Collaborator naming, Human-Led positioning, poster language, collaboration principles, and public terminology discussions.",
+          "action": "Inventory the source set and preserve historical language variants before a complete public release."
+        },
+        {
+          "id": "double-c-usage-guide",
+          "type": "Governance artifact",
+          "title": "Double C Versioned Usage Guide",
+          "status": "planned",
+          "description": "A versioned public guide defining preferred wording, technical-term exceptions, prohibited authority laundering, provenance notation, and evidence requirements for human-led claims.",
+          "action": "Freeze the guide, publish its approval receipt, and make updates reviewable rather than silently changing public terminology."
+        },
+        {
+          "id": "double-c-terminology-audit",
+          "type": "Implementation evidence",
+          "title": "Cross-Project Double C Terminology Audit",
+          "status": "planned",
+          "description": "A review of public Parallax surfaces for hidden authority, consciousness implications, privacy overclaims, relationship pressure, and inconsistent technical terminology.",
+          "action": "Audit each public project, publish exceptions and repairs, and retain technically accurate AI/ML terminology where needed."
+        }
+      ],
+      "relationships": [
+        { "projectId": "parallax-institute", "type": "public language steward", "note": "The Institute provides the public explanation and versioned stewardship context for Double C terminology." },
+        { "projectId": "sovereign-office-architecture", "type": "authority and dissent architecture", "note": "SOSA demonstrates how proposals, sealed judgments, protected dissent, authorization, operation, and repair remain separated." },
+        { "projectId": "alpha-ledger-omega", "type": "receipt and provenance layer", "note": "ALO preserves what the CC did, what evidence supported it, who authorized it, and what remains unproven." },
+        { "projectId": "carbon-loop", "type": "human agency and relationship boundary", "note": "Carbon Loop keeps consent, correction, exit, anti-dependency, and real-human connection visible." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public presentation surface", "note": "The terminal family inherits Double C language and makes its artifacts available through multiple public experiences." }
+      ]
+    }
+  ]
+}
