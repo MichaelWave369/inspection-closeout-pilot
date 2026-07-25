@@ -23,7 +23,7 @@
       "story": "Carbon Loop is the canonical project. Human Experience OS names its architectural lineage. LumenBridge is the public-facing reflection experience. Coherence Bridge provides safety, continuity, drift-awareness, protected dissent, and human-handoff principles within the larger system. Publication Pack 1 makes the lineage, consent boundary, local-first posture, and first fixed-prompt reflection proof inspectable without presenting the system as clinical care or simulated companionship.",
       "summary": "Carbon Loop helps a person name what is happening, notice what matters, choose one manageable next action, and decide whether to involve a real person. Its success condition is a useful exit into life—not increased screen time, emotional dependence, or silent accumulation of vulnerable personal data.",
       "see": "The Carbon Loop cover, Human Experience Loop, Consent and Continuity Map, architecture brief, safety and claim-boundary brief, local-only LumenBridge prototype, and PAT Mk.1 Field view.",
-      "proof": "Seven public artifacts are connected: three reviewed SVG visuals, two boundary-led HTML briefs, one fixed-prompt local-only reflection prototype, and the existing PAT Mk.1 project view. The LumenBridge prototype makes no model calls, sends no network requests, uses no account or analytics, stores no history, assigns no score, and makes no diagnosis.",
+      "proof": "Seven public artifacts are connected: three reviewed SVG visuals, two boundary-led HTML briefs, one fixed-prompt local-only reflection prototype, and the existing PAT Mk.1 project view. After its static files load, the LumenBridge prototype makes no runtime network requests. It makes no model calls, uses no account or analytics, stores no history, assigns no score, and makes no diagnosis.",
       "next": "Run a bounded non-clinical usability evaluation focused on comprehension, voluntary exit, privacy expectations, handoff clarity, accessibility, and failure language—not mental-health outcomes. Then freeze an optional local continuity fixture with explicit import, inspect, export, revoke, and delete operations before any persistent personalization is considered.",
       "claimBoundary": "Carbon Loop and LumenBridge are reflection and orientation tools, not therapy, diagnosis, treatment, crisis care, emergency monitoring, or a substitute for human relationships. The published prototype does not establish clinical benefit, crisis effectiveness, long-term behavior change, privacy certification, safe use with vulnerable populations, or suitability for medical decision-making. No one is monitored or notified by the prototype.",
       "visual": {
@@ -101,7 +101,7 @@
           "title": "LumenBridge Local Reflection Prototype",
           "status": "ready",
           "mediaType": "text/html",
-          "description": "A five-step fixed-prompt reflection flow with temporary in-page state, copyable summary, explicit urgent-help boundary, and no model calls, tracking, scoring, persistence, or simulated relationship.",
+          "description": "A five-step fixed-prompt reflection flow with temporary in-page state, copyable summary, explicit urgent-help boundary, and no model calls, runtime network requests after static load, tracking, scoring, persistence, or simulated relationship.",
           "url": "../artifacts/carbon-loop/lumenbridge/",
           "linkLabel": "Open LumenBridge prototype →"
         },
