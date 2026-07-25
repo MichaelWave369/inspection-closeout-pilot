@@ -51,6 +51,9 @@ jobs:
       - name: Check ALO receipt fixtures
         run: npm run check:alo
 
+      - name: Check Parallax Institute boundaries
+        run: npm run check:institute
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
