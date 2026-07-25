@@ -4,13 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#05070d" />
-  <meta name="description" content="Choose an entry point into the Parallax Archive: IBM 5100, SL1200 Origin, or the Parallax Archive Terminal Mk.1." />
+  <meta name="description" content="Choose one of six presentation terminals for the shared Parallax Archive Core." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Parallax Archive Gateway" />
-  <meta property="og:description" content="One archive. Three entry points. Discovery, origin, and the field." />
+  <meta property="og:description" content="One archive. Six entry points: discovery, origin, creation, play, gallery, and deployment." />
   <meta property="og:url" content="https://michaelwave369.github.io/inspection-closeout-pilot/links/archive/" />
   <title>Parallax Archive Gateway</title>
   <link rel="stylesheet" href="archive.css" />
+  <link rel="stylesheet" href="archive-expansion.css" />
   <script src="archive.js" defer></script>
 </head>
 <body>
@@ -38,46 +39,64 @@
 
     <section class="selector" id="terminal-selector" aria-labelledby="selector-title" hidden>
       <div class="selector-heading">
-        <p class="system-label">ARCHIVE CORE ONLINE</p>
+        <p class="system-label">ARCHIVE CORE ONLINE / SIX SHELLS AVAILABLE</p>
         <h2 id="selector-title">Choose your terminal.</h2>
-        <p>Each machine opens the same canonical body of work through a different emotional and visual entry point.</p>
+        <p>Each machine presents the same canonical body of work through a different role. Project truth stays shared; atmosphere, navigation, and emphasis belong to the shell.</p>
       </div>
 
       <div class="terminal-grid">
         <article class="terminal-card terminal-ibm active-terminal">
-          <div class="terminal-visual" aria-hidden="true">
-            <span class="terminal-screen"><i>IBM 5100<br />READY<br />&gt; CATALOG</i></span>
-            <span class="terminal-deck"></span>
-          </div>
-          <p class="terminal-state available">AVAILABLE NOW</p>
+          <div class="terminal-visual" aria-hidden="true"><span class="terminal-screen"><i>IBM 5100<br />READY<br />&gt; CATALOG</i></span><span class="terminal-deck"></span></div>
+          <p class="terminal-state available">AVAILABLE NOW · DISCOVERY</p>
           <h3>IBM 5100 Edition</h3>
           <p class="terminal-tagline">Discover the archive.</p>
-          <p>A compact research-terminal simulation with tape catalogs, engineer diagnostics, restrained CRT behavior, and museum-like mystery.</p>
+          <p>Research-terminal atmosphere, tape catalogs, engineer diagnostics, and museum-like mystery.</p>
           <a class="button button-primary" href="ibm5100/">Discover the Archive</a>
         </article>
 
         <article class="terminal-card terminal-sl active-terminal">
-          <div class="terminal-visual" aria-hidden="true">
-            <span class="terminal-screen"><i>C:\&gt; ARCHIVE<span class="cursor">_</span></i></span>
-            <span class="terminal-deck"></span>
-          </div>
-          <p class="terminal-state available">AVAILABLE NOW</p>
+          <div class="terminal-visual" aria-hidden="true"><span class="terminal-screen"><i>C:\&gt; ARCHIVE<span class="cursor">_</span></i></span><span class="terminal-deck"></span></div>
+          <p class="terminal-state available">AVAILABLE NOW · ORIGIN</p>
           <h3>SL1200 Origin Edition</h3>
           <p class="terminal-tagline">Return to the beginning.</p>
-          <p>A warm home-computing doorway where the first machine gradually reveals the whole Parallax universe.</p>
+          <p>A warm home-computing doorway where the first machine reveals the wider Parallax universe.</p>
           <a class="button button-primary" href="sl1200/">Enter the Origin</a>
         </article>
 
         <article class="terminal-card terminal-pat active-terminal">
-          <div class="terminal-visual" aria-hidden="true">
-            <span class="terminal-screen fieldglass"><i>FIELD / GRAPH / LEDGER<br />WITNESS ACTIVE</i></span>
-            <span class="terminal-deck"></span>
-          </div>
-          <p class="terminal-state available">AVAILABLE NOW</p>
+          <div class="terminal-visual" aria-hidden="true"><span class="terminal-screen fieldglass"><i>FIELD / GRAPH / LEDGER<br />WITNESS ACTIVE</i></span><span class="terminal-deck"></span></div>
+          <p class="terminal-state available">AVAILABLE NOW · CREATION</p>
           <h3>PAT Mk.1</h3>
           <p class="terminal-tagline">Enter the field.</p>
-          <p>Parallax’s original future-retro archive instrument: Fieldglass, Ledger Dial, Office Keys, Graph Cinema, Witness Light, and visible dissent.</p>
+          <p>Parallax’s native instrument with Fieldglass, Ledger Dial, Graph Cinema, and visible dissent.</p>
           <a class="button button-primary" href="patmk1/">Enter the Field</a>
+        </article>
+
+        <article class="terminal-card terminal-breadbox active-terminal">
+          <div class="terminal-visual" aria-hidden="true"><span class="terminal-screen"><i>**** PARALLAX 64 ****<br />READY.<br />LOAD "$",8</i></span><span class="terminal-deck"></span></div>
+          <p class="terminal-state available">AVAILABLE NOW · PLAY</p>
+          <h3>Breadbox 64 Edition</h3>
+          <p class="terminal-tagline">Load the creative lab.</p>
+          <p>Demoscene energy, project disks, game worlds, experiments, and a direct Parallax Radio launcher.</p>
+          <a class="button button-primary" href="breadbox64/">Load Creative Edition</a>
+        </article>
+
+        <article class="terminal-card terminal-gallery active-terminal">
+          <div class="terminal-visual" aria-hidden="true"><span class="terminal-screen"><i>File · Exhibits · Gallery<br /><br />POSTER GALLERY</i></span><span class="terminal-deck"></span></div>
+          <p class="terminal-state available">AVAILABLE NOW · GALLERY</p>
+          <h3>Gallery 128 Edition</h3>
+          <p class="terminal-tagline">Open the exhibition.</p>
+          <p>A compact monochrome curator for posters, visual work, flagship exhibits, and honest artifact placeholders.</p>
+          <a class="button button-primary" href="gallery128/">Enter Gallery Mode</a>
+        </article>
+
+        <article class="terminal-card terminal-luggable active-terminal">
+          <div class="terminal-visual" aria-hidden="true"><span class="terminal-screen"><i>FIELD NODE 01<br />RECEIPTS: READY<br />OPERATOR PRESENT</i></span><span class="terminal-deck"></span></div>
+          <p class="terminal-state available">AVAILABLE NOW · DEPLOYMENT</p>
+          <h3>Field Luggable Edition</h3>
+          <p class="terminal-tagline">Deploy the archive node.</p>
+          <p>A rugged operator view for infrastructure, physical systems, governance, evidence, and practical builds.</p>
+          <a class="button button-primary" href="fieldluggable/">Open Field Node</a>
         </article>
       </div>
 
@@ -94,13 +113,9 @@
     <h2 id="preview-title"></h2>
     <p id="preview-copy"></p>
     <div class="preview-screen" id="preview-screen" aria-hidden="true"></div>
-    <p class="preview-note">Preview states are used only for shells that are not yet interactive.</p>
+    <p class="preview-note">Every listed terminal edition is interactive.</p>
   </dialog>
 
-  <noscript>
-    <div class="noscript-panel">
-      JavaScript is not required to browse the archive. <a href="../network/">Open the standard Parallax Network page.</a>
-    </div>
-  </noscript>
+  <noscript><div class="noscript-panel">JavaScript is not required to browse the archive. <a href="../network/">Open the standard Parallax Network page.</a></div></noscript>
 </body>
 </html>
