@@ -1,0 +1,152 @@
+{
+  "packVersion": "0.1.0",
+  "updated": "2026-07-25",
+  "title": "RoomLight Data Spine — Publication Pack 1",
+  "description": "A source-led local sensing architecture, safety envelope, fixed-data Field Bench, and physical evidence path.",
+  "projects": [
+    {
+      "id": "roomlight-data-spine",
+      "title": "RoomLight Data Spine",
+      "aliases": ["RLDS", "ROOMLIGHT", "ROOM LIGHT", "DATA SPINE", "SENSOR SPINE"],
+      "mark": "RLDS",
+      "category": "physical",
+      "categoryLabel": "Local sensing & field evidence",
+      "status": "Published architecture + field bench",
+      "tone": "blue",
+      "featured": true,
+      "tier": "A",
+      "wave": 2,
+      "flagship": true,
+      "archiveFeatured": true,
+      "archiveOrder": 6,
+      "tagline": "A local-first environmental sensing spine that preserves sensor identity, calibration, uncertainty, human authority, and field receipts.",
+      "story": "RoomLight Data Spine connects identified room or field sensors to local packets, calibration and freshness checks, safety envelopes, human review, and evidence receipts. The retained source lineage includes starter firmware and the v0.2.2 safety patch. Publication Pack 1 makes the architecture and its boundaries inspectable while keeping live deployment, certified measurement, and actuator authority behind future physical receipts.",
+      "summary": "RoomLight observes stated conditions and preserves the context needed to inspect them. It separates readings from interpretation, interpretation from authority, and authority from equipment control. Stale, missing, disagreeing, uncalibrated, or implausible data should be quarantined rather than smoothed into false confidence.",
+      "see": "The local sensor-to-receipt architecture, calibration and packet-quality gates, safety envelope, human-review path, fixed-data Field Bench, retained starter-firmware lineage, and planned instrumented installation.",
+      "proof": "Seven public artifacts are connected: three reviewed SVG visuals, two public briefs, one fixed-data browser Field Bench, and the PAT Mk.1 Field integration. The Field Bench uses synthetic packets only, connects to no hardware, stores nothing, sends nothing, and controls nothing. Starter firmware and v0.2.2 safety lineage are retained as known source materials rather than mounted as fake downloads.",
+      "next": "Build an instrumented starter installation using named sensor models, stated calibration methods, visible local packet logs, packet-dropout and disagreement tests, manual interventions, maintenance records, and signed field receipts. Any actuator experiment must remain separately authorized, equipment-specific, bounded, fail-safe, and manually overridable.",
+      "claimBoundary": "RoomLight Data Spine is a local sensing and evidence architecture, not a certified instrument, medical device, emergency service, environmental safety guarantee, professional inspection, or automatic control authority. The published Field Bench uses fixed synthetic data and proves only presentation, packet review, quarantine logic, human disposition, and demonstration-receipt behavior. It does not prove live accuracy, code compliance, indoor-air safety, hazard detection, secure deployment, long-term reliability, or permission to control equipment.",
+      "visual": {
+        "kind": "asset",
+        "assetUrl": "../artifacts/roomlight-data-spine/roomlight-cover.svg",
+        "label": "RoomLight Data Spine",
+        "caption": "Local observation, calibration, safety envelope, human review, and field receipts—without silently converting a sensor reading into authority."
+      },
+      "signals": [
+        { "label": "Source lineage", "value": "Starter firmware + v0.2.2 safety patch" },
+        { "label": "Public proof", "value": "Fixed-data Field Bench" },
+        { "label": "Control posture", "value": "Observe first · no implied authority" },
+        { "label": "Next receipt", "value": "Instrumented starter installation" }
+      ],
+      "artifacts": [
+        {
+          "id": "roomlight-cover",
+          "type": "Visual artifact",
+          "role": "cover",
+          "title": "RoomLight Data Spine Archive Cover",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/roomlight-data-spine/roomlight-cover.svg",
+          "description": "A room node, calibration layer, safety envelope, human review, and receipt path with an explicit no-hazardous-control boundary.",
+          "url": "../artifacts/roomlight-data-spine/roomlight-cover.svg",
+          "linkLabel": "Open RoomLight cover →"
+        },
+        {
+          "id": "roomlight-sensor-receipt-flow",
+          "type": "Engineering diagram",
+          "role": "evidence flow",
+          "title": "Sensor-to-Receipt Flow",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/roomlight-data-spine/sensor-receipt-flow.svg",
+          "description": "Observation, local packet, quality gate, safety envelope, human review, and field receipt with uncertainty preserved at every step.",
+          "url": "../artifacts/roomlight-data-spine/sensor-receipt-flow.svg",
+          "linkLabel": "Open sensor-to-receipt flow →"
+        },
+        {
+          "id": "roomlight-safety-envelope",
+          "type": "Safety diagram",
+          "role": "authority boundary",
+          "title": "RoomLight Safety Envelope",
+          "status": "ready",
+          "mediaType": "image/svg+xml",
+          "thumbnailUrl": "../artifacts/roomlight-data-spine/safety-envelope-map.svg",
+          "description": "Allowed observations, human-review decisions, and prohibited certification, diagnosis, hidden monitoring, and unauthorized hazardous control.",
+          "url": "../artifacts/roomlight-data-spine/safety-envelope-map.svg",
+          "linkLabel": "Open safety envelope →"
+        },
+        {
+          "id": "roomlight-architecture-brief",
+          "type": "Public document brief",
+          "title": "RoomLight Data Spine Architecture",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Public architecture brief for local sensing, calibration, packet freshness, quarantine, safety envelopes, starter-firmware lineage, and field evidence.",
+          "url": "../artifacts/roomlight-data-spine/architecture-brief.html",
+          "linkLabel": "Read architecture brief →"
+        },
+        {
+          "id": "roomlight-safety-boundary-brief",
+          "type": "Public safety brief",
+          "title": "RoomLight Safety and Claim Boundary",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "Separates observation, interpretation, qualified inspection, emergency response, human authority, and equipment control.",
+          "url": "../artifacts/roomlight-data-spine/safety-boundary-brief.html",
+          "linkLabel": "Read safety boundary →"
+        },
+        {
+          "id": "roomlight-field-bench",
+          "type": "Interactive proof",
+          "title": "RoomLight Fixed-Data Field Bench",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "A synthetic packet-review demo covering fresh observations, stale calibration, sensor disagreement, packet dropout, quarantine, and denied control requests.",
+          "url": "../artifacts/roomlight-data-spine/field-bench/",
+          "linkLabel": "Open Field Bench →"
+        },
+        {
+          "id": "roomlight-pat-field-view",
+          "type": "Terminal integration",
+          "title": "PAT Mk.1 RoomLight Field View",
+          "status": "ready",
+          "mediaType": "text/html",
+          "description": "The Parallax-native terminal presentation for RoomLight mission, systems, evidence, and diagnostic context.",
+          "url": "../patmk1/?project=roomlight-data-spine&mode=field",
+          "linkLabel": "Open in PAT Mk.1 →"
+        },
+        {
+          "id": "roomlight-source-lineage",
+          "type": "Canonical source set",
+          "title": "RoomLight v0.2.2 Safety Patch and Starter Firmware Receipts",
+          "status": "known-locate",
+          "description": "Retained source materials documenting the starter firmware path, safety patch lineage, and implementation receipts. They are not mounted by this package.",
+          "action": "Inventory, review, and publish the complete source set only through an explicit source-release process."
+        },
+        {
+          "id": "roomlight-instrumented-installation",
+          "type": "Physical evidence",
+          "title": "Instrumented Starter Installation",
+          "status": "planned",
+          "description": "A physical starter deployment with named sensors, calibration records, local logs, outages, disagreement tests, maintenance, manual interventions, and field receipts.",
+          "action": "Build, instrument, test, photograph, document failures, and publish stated-condition evidence without converting readings into safety certification."
+        },
+        {
+          "id": "roomlight-signed-field-fixture",
+          "type": "Runtime evidence",
+          "title": "Signed Portable Field Receipt Fixture",
+          "status": "planned",
+          "description": "A portable packet-to-receipt dataset with sensor identity, method, calibration, uncertainty, authority, disposition, hashes, and signature metadata.",
+          "action": "Freeze the schema and verify deterministic inspection in two independent implementations."
+        }
+      ],
+      "relationships": [
+        { "projectId": "alpha-ledger-omega", "type": "field receipt backbone", "note": "ALO can preserve RoomLight sensor packets, calibration evidence, uncertainty, human disposition, maintenance, and control authority." },
+        { "projectId": "parallax-mendala", "type": "growing-system sensing", "note": "RoomLight provides a natural local-first sensing and evidence path for future MENDALA water, climate, lighting, and maintenance trials." },
+        { "projectId": "parallax-institute", "type": "institutional field program", "note": "The Institute can steward transparent physical trials and publish claim boundaries, failures, repairs, and public-benefit evidence." },
+        { "projectId": "signalbridge", "type": "verified signal transfer", "note": "SignalBridge can carry approved RoomLight observations without stripping source, uncertainty, or responsibility." },
+        { "projectId": "parallax-archive-terminal-system", "type": "public evidence surface", "note": "The Archive Terminal System presents RoomLight architecture, synthetic proofs, source lineage, and future field receipts." }
+      ]
+    }
+  ]
+}

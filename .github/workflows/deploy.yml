@@ -57,6 +57,9 @@ jobs:
       - name: Check Coherence Bridge boundaries
         run: npm run check:coherence
 
+      - name: Check RoomLight field-safety boundaries
+        run: npm run check:roomlight
+
       - name: Check public JavaScript
         run: npm run check:public-js
 
