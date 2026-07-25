@@ -225,6 +225,51 @@ function showLoadError(error) {
   grid.appendChild(message)
 }
 
+function installConstellationGateway() {
+  if (!window.location.pathname.endsWith('/links/network/')) return
+  const hero = document.querySelector('.network-hero')
+  if (!hero || document.getElementById('full-constellation-gateway')) return
+
+  const section = document.createElement('section')
+  section.id = 'full-constellation-gateway'
+  section.className = 'card network-section'
+  section.style.marginTop = '18px'
+  section.style.display = 'grid'
+  section.style.gridTemplateColumns = 'minmax(0,1fr) auto'
+  section.style.alignItems = 'center'
+  section.style.gap = '24px'
+  section.style.background = 'linear-gradient(135deg,rgba(88,230,169,.09),rgba(69,183,255,.09),rgba(152,103,255,.09))'
+
+  const copy = document.createElement('div')
+  const eyebrow = document.createElement('p')
+  eyebrow.className = 'eyebrow'
+  eyebrow.textContent = 'New guided entry layer'
+  const title = document.createElement('h2')
+  title.textContent = 'New here? Start with the Full Constellation.'
+  title.style.margin = '.4rem 0 .55rem'
+  const text = document.createElement('p')
+  text.style.color = 'var(--muted)'
+  text.style.lineHeight = '1.65'
+  text.textContent = 'Choose a human-sovereignty, governance, creation, physical-systems, or Archive journey; inspect ownership and evidence capsules; then follow the first bounded mock ecosystem Proof Run.'
+  copy.append(eyebrow, title, text)
+
+  const links = document.createElement('div')
+  links.className = 'hero-actions'
+  links.style.marginTop = '0'
+  const primary = document.createElement('a')
+  primary.className = 'action primary'
+  primary.href = '../field/'
+  primary.textContent = 'Enter Full Constellation'
+  const archive = document.createElement('a')
+  archive.className = 'action'
+  archive.href = '../archive/'
+  archive.textContent = 'Open the Archive'
+  links.append(primary, archive)
+
+  section.append(copy, links)
+  hero.insertAdjacentElement('afterend', section)
+}
+
 async function initArchive() {
   resultCount.textContent = 'Loading Archive Core…'
 
@@ -257,4 +302,5 @@ dialog.addEventListener('cancel', event => {
 search.addEventListener('input', renderProjects)
 window.addEventListener('popstate', syncProjectFromUrl)
 
+installConstellationGateway()
 initArchive()
