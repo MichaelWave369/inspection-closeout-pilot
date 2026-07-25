@@ -42,7 +42,7 @@
   async function load({ refresh = false } = {}) {
     if (cache && !refresh) return cache
 
-    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa] = await Promise.all([
+    const [base, flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus] = await Promise.all([
       fetchJson('projects.json'),
       fetchJson('flagship-pack.json'),
       fetchJson('terminal-system-pack.json'),
@@ -55,15 +55,16 @@
       fetchJson('roomlight-publication-pack.json'),
       fetchJson('double-c-publication-pack.json'),
       fetchJson('sosa-publication-pack.json'),
+      fetchJson('parallax-census-publication-pack.json'),
     ])
 
-    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa])
+    const projects = mergeProjects(base.projects, [flagship, terminalSystem, mendala, graphCinema, carbonLoop, alphaLedgerOmega, parallaxInstitute, coherenceBridge, roomLight, doubleC, sosa, parallaxCensus])
       .sort((a, b) => Number(a.archiveOrder ?? 999) - Number(b.archiveOrder ?? 999) || a.title.localeCompare(b.title))
 
     cache = {
       ...base,
-      schemaVersion: '0.12.0',
-      updated: sosa.updated || doubleC.updated || roomLight.updated || coherenceBridge.updated || parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
+      schemaVersion: '0.13.0',
+      updated: parallaxCensus.updated || sosa.updated || doubleC.updated || roomLight.updated || coherenceBridge.updated || parallaxInstitute.updated || alphaLedgerOmega.updated || carbonLoop.updated || graphCinema.updated || mendala.updated || terminalSystem.updated || flagship.updated || base.updated,
       projects,
       packs: [
         packRecord('flagship-wave-1', flagship),
@@ -77,6 +78,7 @@
         packRecord('roomlight-publication-1', roomLight),
         packRecord('double-c-publication-1', doubleC),
         packRecord('sosa-publication-1', sosa),
+        packRecord('parallax-census-publication-1', parallaxCensus),
       ],
     }
 
