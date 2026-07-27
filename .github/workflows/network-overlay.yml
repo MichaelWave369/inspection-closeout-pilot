@@ -1,0 +1,40 @@
+name: Build Enter The Field Network overlay
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'public/links/archive/**'
+      - 'public/links/network/**'
+      - 'public/links/field/**'
+      - 'public/links/gallery.css'
+      - 'public/links/gallery.js'
+      - 'scripts/build-netlify-network-overlay.mjs'
+      - '.github/workflows/network-overlay.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build and validate overlay
+        run: node scripts/build-netlify-network-overlay.mjs
+
+      - name: Upload Netlify integration package
+        uses: actions/upload-artifact@v4
+        with:
+          name: enter-the-field-network-overlay
+          path: dist-network-overlay
+          if-no-files-found: error
+          retention-days: 14
