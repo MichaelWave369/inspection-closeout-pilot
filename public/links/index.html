@@ -12,6 +12,55 @@
   <meta property="og:url" content="https://michaelwave369.github.io/inspection-closeout-pilot/links/" />
   <title>Michael W. Hughes | Connect</title>
   <link rel="stylesheet" href="gallery.css" />
+  <style>
+    .github-activity {
+      position: relative;
+      z-index: 2;
+      display: block;
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 20px;
+      color: inherit;
+      text-decoration: none;
+      background: linear-gradient(145deg, rgba(13,17,23,.96), rgba(18,24,34,.93));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .github-activity:hover {
+      transform: translateY(-2px);
+      border-color: rgba(88,230,169,.58);
+    }
+    .github-activity-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: baseline;
+      margin-bottom: 12px;
+      color: #f0f6fc;
+      font-size: .92rem;
+    }
+    .github-activity-head strong { color: #58e6a9; font-size: 1.08rem; }
+    .github-activity-head span:last-child { color: #8b949e; font-size: .78rem; white-space: nowrap; }
+    .github-activity img {
+      display: block;
+      width: 100%;
+      min-height: 92px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #0d1117;
+    }
+    .github-activity small {
+      display: block;
+      margin-top: 10px;
+      color: #8b949e;
+      font-size: .77rem;
+    }
+    @media (max-width: 520px) {
+      .github-activity-head { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .github-activity img { min-height: 72px; }
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -28,6 +77,15 @@
       </header>
 
       <p class="summary">Networks, field technology, systems building, collaborative intelligence, independent projects, playable worlds, and a whole lot of music.</p>
+
+      <a class="github-activity" href="https://github.com/MichaelWave369" target="_blank" rel="noopener" aria-label="View Michael W. Hughes on GitHub">
+        <div class="github-activity-head">
+          <span><strong>10,230</strong> contributions in the last year</span>
+          <span>GitHub activity ↗</span>
+        </div>
+        <img src="https://ghchart.rshah.org/58e6a9/MichaelWave369" alt="MichaelWave369 GitHub contribution graph" loading="eager" />
+        <small>Recent build activity · tap to explore the repositories</small>
+      </a>
 
       <nav class="direct-actions" aria-label="Contact actions">
         <a class="action primary" href="michael-hughes.vcf" download>Save Contact</a>
