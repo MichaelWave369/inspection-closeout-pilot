@@ -12,59 +12,13 @@
   <meta property="og:url" content="https://michaelwave369.github.io/inspection-closeout-pilot/links/" />
   <title>Michael W. Hughes | Connect</title>
   <link rel="stylesheet" href="gallery.css" />
-  <style>
-    .github-activity {
-      position: relative;
-      z-index: 2;
-      display: block;
-      margin-top: 18px;
-      padding: 16px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 20px;
-      color: inherit;
-      text-decoration: none;
-      background: linear-gradient(145deg, rgba(13,17,23,.96), rgba(18,24,34,.93));
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
-      transition: transform .18s ease, border-color .18s ease;
-    }
-    .github-activity:hover {
-      transform: translateY(-2px);
-      border-color: rgba(88,230,169,.58);
-    }
-    .github-activity-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      align-items: baseline;
-      margin-bottom: 12px;
-      color: #f0f6fc;
-      font-size: .92rem;
-    }
-    .github-activity-head strong { color: #58e6a9; font-size: 1.08rem; }
-    .github-activity-head span:last-child { color: #8b949e; font-size: .78rem; white-space: nowrap; }
-    .github-activity img {
-      display: block;
-      width: 100%;
-      min-height: 92px;
-      object-fit: contain;
-      border-radius: 12px;
-      background: #0d1117;
-    }
-    .github-activity small {
-      display: block;
-      margin-top: 10px;
-      color: #8b949e;
-      font-size: .77rem;
-    }
-    @media (max-width: 520px) {
-      .github-activity-head { align-items: flex-start; flex-direction: column; gap: 4px; }
-      .github-activity img { min-height: 72px; }
-    }
-  </style>
+  <link rel="stylesheet" href="portal.css" />
+  <script src="portal.js" defer></script>
 </head>
-<body>
+<body class="card-gateway">
   <main>
     <article class="card profile-card">
+      <div class="gateway-topline"><span>MichaelWave369 · Field Network</span><a href="#discover">Explore featured builds ↓</a></div>
       <header class="identity">
         <div class="avatar-wrap">
           <img class="avatar" src="https://avatars.githubusercontent.com/u/247459237?v=4" alt="Michael W. Hughes" />
@@ -76,31 +30,57 @@
         </div>
       </header>
 
-      <p class="summary">Networks, field technology, systems building, collaborative intelligence, independent projects, playable worlds, and a whole lot of music.</p>
+      <p class="summary">I build networks, tools, creative spaces, playable worlds, music, and independently published research. Follow a project, explore the living library, or simply get in touch.</p>
+      <div class="gateway-intro" aria-label="Areas of work">
+        <span class="gateway-pill">Infrastructure &amp; field systems</span>
+        <span class="gateway-pill">Independent software</span>
+        <span class="gateway-pill">Music, art &amp; research</span>
+      </div>
 
-      <a class="github-activity" href="https://github.com/MichaelWave369" target="_blank" rel="noopener" aria-label="View Michael W. Hughes on GitHub">
-        <div class="github-activity-head">
-          <span><strong>10,230</strong> contributions in the last year</span>
-          <span>GitHub activity ↗</span>
-        </div>
-        <img src="https://ghchart.rshah.org/58e6a9/MichaelWave369" alt="MichaelWave369 GitHub contribution graph" loading="eager" />
-        <small>Recent build activity · tap to explore the repositories</small>
-      </a>
-
-      <nav class="direct-actions" aria-label="Contact actions">
+            <nav class="direct-actions" aria-label="Contact actions">
         <a class="action primary" href="michael-hughes.vcf" download>Save Contact</a>
         <a class="action" href="tel:+15308385844">Call / Text</a>
         <a class="action" href="mailto:enterthefieldmichael@gmail.com">Email</a>
       </nav>
 
-      <a class="portfolio-entry" href="https://www.enterthefield.org/network/?entry=card">
-        <span class="portfolio-entry-mark">P</span>
-        <span>
+      <section class="portal-statement" aria-labelledby="gateway-headline">
+        <p class="eyebrow">Your doorway to the field</p>
+        <h2 id="gateway-headline">One card. <span>A whole universe of work.</span></h2>
+        <p>The quick way in: start with a guided living book, enter the broader Parallax Network, or browse a few hand-picked public builds below. Build outward. Circle back.</p>
+      </section>
+
+      <div class="portal-doors" aria-label="Main destinations">
+        <a class="portal-door primary-door" href="https://michaelwave369.github.io/FieldAtlas/" target="_blank" rel="noopener noreferrer">
+          <span class="door-mark" aria-hidden="true">✦ Featured destination</span>
+          <strong>Open The Field Atlas</strong>
+          <small>A living book of public projects, illustrated rooms, guided journeys, and links into the work.</small>
+          <span class="door-arrow">Enter the library ↗</span>
+        </a>
+        <a class="portal-door" href="https://www.enterthefield.org/" target="_blank" rel="noopener noreferrer">
+          <span class="door-mark">The main front door</span>
+          <strong>Enter The Field</strong>
+          <small>The broader home of the field, people, creations, and public work.</small>
+          <span class="door-arrow">Visit the main site ↗</span>
+        </a>
+      </div>
+      <div class="secondary-doors" aria-label="More ways to explore">
+        <a class="portal-door" href="https://www.enterthefield.org/network/?entry=card" target="_blank" rel="noopener noreferrer">
+          <span class="door-mark">Interactive network</span>
           <strong>Enter the Parallax Network</strong>
-          <small>Projects, public builds, games, media, research, and music</small>
-        </span>
-        <span class="arrow" aria-hidden="true">›</span>
-      </a>
+          <small>The original network doorway from your business card.</small>
+          <span class="door-arrow">Enter the network ↗</span>
+        </a>
+        <a class="portal-door" href="./field/">
+          <span class="door-mark">Guided discovery</span>
+          <strong>Full Constellation</strong>
+          <small>Explore public projects by their different paths and purposes.</small>
+          <span class="door-arrow">Open constellation →</span>
+        </a>
+      </div>
+      <div class="activity-strip">
+        <span>Independently built · Public projects · Source and context on GitHub</span>
+        <a href="https://github.com/MichaelWave369" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+      </div>
 
       <section>
         <h2 class="section-title">Work & Projects</h2>
@@ -153,6 +133,126 @@
         </div>
       </section>
     </article>
+
+    <section id="discover" class="card discovery" aria-labelledby="discover-title">
+      <div class="discovery-heading">
+        <div>
+          <p class="eyebrow">A few rooms in a much larger house</p>
+          <h2 id="discover-title">Explore the work</h2>
+          <p>Start anywhere. These are curated public repositories, not a claim that every prototype is a finished product. The Field Atlas has the broader navigable library.</p>
+        </div>
+      </div>
+
+      <div class="catalog-tools">
+        <label for="catalog-search">Search featured builds
+          <input id="catalog-search" type="search" placeholder="Try music, networks, research…" autocomplete="off" />
+        </label>
+        <button class="surprise" id="catalog-surprise" type="button">Surprise me ↗</button>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter public projects">
+        <button type="button" data-catalog-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-catalog-filter="field" aria-pressed="false">Field &amp; infrastructure</button>
+        <button type="button" data-catalog-filter="systems" aria-pressed="false">Systems &amp; AI</button>
+        <button type="button" data-catalog-filter="creative" aria-pressed="false">Creative</button>
+        <button type="button" data-catalog-filter="research" aria-pressed="false">Research</button>
+        <button type="button" data-catalog-filter="games" aria-pressed="false">Games</button>
+      </div>
+      <p id="catalog-count" class="catalog-count" role="status" aria-live="polite">12 curated public projects</p>
+      <div class="catalog-grid" id="catalog-grid">
+          <a class="catalog-card" data-category="field" href="https://github.com/MichaelWave369/Infinite-Porch" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">⌂</span>
+            <span class="catalog-category">field · INF</span>
+            <strong>Infinite Porch</strong>
+            <small>A governed front door and network entry architecture.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="field" href="https://github.com/MichaelWave369/Infinite-Commons" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">◇</span>
+            <span class="catalog-category">field · COM</span>
+            <strong>Infinite Commons</strong>
+            <small>A shared layer connecting people, services, and creative systems.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="systems" href="https://github.com/MichaelWave369/InfiniteInterconnects" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">⟡</span>
+            <span class="catalog-category">systems · NET</span>
+            <strong>Infinite Interconnects</strong>
+            <small>The network fabric concept tying the Porch, Commons, and worlds together.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="systems" href="https://github.com/MichaelWave369/SuperPhiVessel" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">Φ</span>
+            <span class="catalog-category">systems · AI</span>
+            <strong>Super Φ.Vessel</strong>
+            <small>Multi-model intelligence, practical tooling, and governed exploration.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="field" href="https://github.com/MichaelWave369/OpenBlueprintStudio" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">▦</span>
+            <span class="catalog-category">field · CAD</span>
+            <strong>OpenBlue Studio</strong>
+            <small>Original blueprint and spatial design tools for field work and beyond.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="systems" href="https://github.com/MichaelWave369/PorchTalk" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">⌘</span>
+            <span class="catalog-category">systems · LAN</span>
+            <strong>PorchTalk</strong>
+            <small>Local-first networking and device communication experiments.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="creative" href="https://github.com/MichaelWave369/Domistika" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">✳</span>
+            <span class="catalog-category">creative · ART</span>
+            <strong>Domistika</strong>
+            <small>A playground for original visual, motion, and generative experiences.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="creative" href="https://github.com/MichaelWave369/SiliconLouvre" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">◉</span>
+            <span class="catalog-category">creative · GALLERY</span>
+            <strong>Silicon Louvre</strong>
+            <small>An original interactive gallery of motion and optical illusion.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="creative" href="https://github.com/MichaelWave369/ChippyDip" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">♫</span>
+            <span class="catalog-category">creative · AUDIO</span>
+            <strong>ChippyDip</strong>
+            <small>A playable retro-console-inspired browser sound instrument.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="creative" href="https://github.com/MichaelWave369/MoreBounceMethod" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">✺</span>
+            <span class="catalog-category">creative · METHOD</span>
+            <strong>More Bounce Method</strong>
+            <small>A practical framework for empathy, responsibility, and constructive creativity.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="research" href="https://github.com/MichaelWave369/NestedBubbleGear" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">◎</span>
+            <span class="catalog-category">research · NBG</span>
+            <strong>Nested Bubble Gear</strong>
+            <small>Open research records, experiments, and evolving hypotheses.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+          <a class="catalog-card" data-category="games" href="https://github.com/MichaelWave369/PhiCade" target="_blank" rel="noopener noreferrer">
+            <span class="catalog-symbol" aria-hidden="true">▣</span>
+            <span class="catalog-category">games · PLAY</span>
+            <strong>PhiCade</strong>
+            <small>Experimental game and creative-play ecosystem.</small>
+            <span class="catalog-open">View public repository ↗</span>
+          </a>
+      </div>
+      <p id="catalog-empty" class="empty-message" hidden>No matches here. Try another keyword or filter.</p>
+
+      <div class="catalog-foot">
+        <a class="action primary" href="https://michaelwave369.github.io/FieldAtlas/" target="_blank" rel="noopener noreferrer">Browse the whole Field Atlas ↗</a>
+        <a class="action" href="./archive/">Visit the Parallax Archive →</a>
+        <a class="action" href="https://github.com/MichaelWave369" target="_blank" rel="noopener noreferrer">All GitHub repositories ↗</a>
+      </div>
+      <p class="contact-reference">Direct contact stays at the top for visitors scanning the printed business card.</p>
+    </section>
 
     <footer><strong>Michael W. Hughes</strong><br />Northern California · 530-838-5844</footer>
   </main>

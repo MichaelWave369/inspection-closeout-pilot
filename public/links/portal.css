@@ -1,0 +1,136 @@
+/* Card Atlas Gateway: scoped presentation for /links/ only.
+   The business-card URL, legacy portfolio pages and VCF remain unchanged. */
+:root { --card-gold:#f9cb76; --card-night:#090b19; }
+html { scroll-padding-top: 20px; }
+body.card-gateway {
+  background:
+    radial-gradient(circle at 50% -5%,rgba(249,203,118,.14),transparent 34%),
+    radial-gradient(circle at 4% 25%,rgba(69,183,255,.16),transparent 33%),
+    radial-gradient(circle at 94% 65%,rgba(152,103,255,.22),transparent 35%),
+    linear-gradient(145deg,#070711,#0a1221 58%,#090718);
+}
+body.card-gateway main { width:min(1160px,calc(100% - 28px)); padding-top:26px; }
+.card-gateway .profile-card { max-width:920px; }
+.card-gateway .identity { grid-template-columns:88px 1fr; }
+.card-gateway .avatar-wrap { width:88px;height:88px;border-radius:24px; }
+.card-gateway .avatar { border-radius:21px; }
+.card-gateway .profile-card::after { opacity:.5; }
+.card-gateway .profile-card .summary { max-width:75ch; }
+.card-gateway .gateway-topline {
+  display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
+  padding-bottom:20px;margin-bottom:25px;border-bottom:1px solid var(--line);
+  color:#dad9e8;font-size:.76rem;letter-spacing:.14em;font-weight:800;text-transform:uppercase;
+}
+.card-gateway .gateway-topline a { color:var(--card-gold);text-decoration:none;letter-spacing:0;text-transform:none; }
+.card-gateway .gateway-topline a:hover { text-decoration:underline; }
+.card-gateway .profile-card h1 { letter-spacing:-.055em; }
+.card-gateway .gateway-intro { display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:14px; }
+.card-gateway .gateway-pill {
+  font-size:.73rem;border:1px solid rgba(249,203,118,.27);border-radius:999px;
+  padding:6px 10px;color:#fce2ac;background:rgba(249,203,118,.06);
+}
+.card-gateway .direct-actions { margin-top:20px; }
+.card-gateway a:focus-visible,.card-gateway button:focus-visible,.card-gateway input:focus-visible {
+  outline:3px solid var(--card-gold);outline-offset:4px;
+}
+.card-gateway .portal-statement { margin-top:25px;position:relative;z-index:2; }
+.card-gateway .portal-statement h2 {
+  font-size:clamp(1.85rem,5.6vw,3.4rem);line-height:1.05;letter-spacing:-.045em;
+  margin:0 0 10px;max-width:18ch;
+}
+.card-gateway .portal-statement h2 span { color:var(--card-gold); }
+.card-gateway .portal-statement p { color:var(--muted);line-height:1.6;margin:0;max-width:66ch; }
+.card-gateway .portal-doors { display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin-top:20px;position:relative;z-index:2; }
+.card-gateway .portal-door {
+  display:flex;flex-direction:column;gap:9px;min-height:168px;
+  border-radius:24px;border:1px solid rgba(255,255,255,.13);padding:22px;
+  background:linear-gradient(145deg,rgba(23,34,63,.85),rgba(12,13,30,.9));
+  text-decoration:none;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.card-gateway .portal-door:hover { transform:translateY(-3px);border-color:rgba(249,203,118,.65);box-shadow:0 16px 38px rgba(0,0,0,.22); }
+.card-gateway .portal-door.primary-door {
+  background:radial-gradient(circle at 91% 15%,rgba(255,229,172,.22),transparent 30%),
+    linear-gradient(128deg,rgba(56,37,99,.94),rgba(17,37,58,.95));
+  border-color:rgba(249,203,118,.55);
+}
+.card-gateway .door-mark {
+  display:inline-flex;align-items:center;gap:8px;color:#f6d89b;text-transform:uppercase;
+  letter-spacing:.12em;font-size:.69rem;font-weight:850;
+}
+.card-gateway .portal-door strong { font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.1;letter-spacing:-.03em; }
+.card-gateway .portal-door small { font-size:.88rem;line-height:1.55;color:var(--muted);max-width:55ch; }
+.card-gateway .portal-door .door-arrow { color:#e7c57f;font-size:.85rem;font-weight:800;margin-top:auto; }
+.card-gateway .secondary-doors { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px;position:relative;z-index:2; }
+.card-gateway .secondary-doors .portal-door { min-height:128px;padding:18px; }
+.card-gateway .secondary-doors .portal-door strong { font-size:1.1rem; }
+.card-gateway .secondary-doors .portal-door small { font-size:.8rem; }
+.card-gateway .activity-strip {
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:9px;
+  margin:24px 0 0;padding:13px 16px;border:1px solid var(--line);border-radius:16px;
+  background:rgba(0,0,0,.2);font-size:.83rem;color:var(--muted);position:relative;z-index:2;
+}
+.card-gateway .activity-strip a { color:#c7f9e6;font-weight:800;text-decoration:none; }
+.card-gateway .activity-strip a:hover { text-decoration:underline; }
+.card-gateway .discovery { max-width:1100px;margin:26px auto 0; padding:clamp(20px,4vw,38px); }
+.card-gateway .discovery-heading { display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap; }
+.card-gateway .discovery-heading h2 { font-size:clamp(1.9rem,5vw,3rem);line-height:1.05;letter-spacing:-.04em;margin:0 0 8px; }
+.card-gateway .discovery-heading p { color:var(--muted);max-width:68ch;margin:0;line-height:1.6; }
+.card-gateway .discovery-heading .eyebrow { color:var(--card-gold);margin-bottom:9px; }
+.card-gateway .catalog-tools { display:flex;align-items:end;flex-wrap:wrap;gap:14px;margin:27px 0 16px; }
+.card-gateway .catalog-tools label { flex:1 1 250px;color:#eee9fa;font-weight:800;font-size:.8rem; }
+.card-gateway .catalog-tools input {
+  display:block;width:100%;margin-top:6px;border-radius:14px;border:1px solid var(--line-strong);
+  color:var(--text);background:rgba(6,8,18,.7);padding:12px 14px;
+}
+.card-gateway .catalog-tools .surprise {
+  appearance:none;border:1px solid rgba(249,203,118,.5);border-radius:13px;background:rgba(249,203,118,.08);
+  color:#f9dca2;font-weight:800;padding:12px 17px;cursor:pointer;
+}
+.card-gateway .filter-row { display:flex;gap:8px;flex-wrap:wrap; }
+.card-gateway .filter-row button {
+  appearance:none;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);
+  color:var(--text);padding:9px 13px;cursor:pointer;font-weight:750;
+}
+.card-gateway .filter-row button[aria-pressed="true"] { color:#10101c;background:var(--card-gold);border-color:transparent; }
+.card-gateway .catalog-count { min-height:1.2rem;margin:14px 0;color:var(--muted);font-size:.82rem; }
+.card-gateway .catalog-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px; }
+.card-gateway .catalog-card {
+  display:flex;flex-direction:column;gap:12px;min-height:208px;text-decoration:none;
+  padding:21px;border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(150deg,rgba(31,32,56,.8),rgba(12,23,38,.72));
+  transition:transform .2s ease,border-color .2s ease;
+}
+.card-gateway .catalog-card:hover { transform:translateY(-3px);border-color:rgba(88,230,169,.55); }
+.card-gateway .catalog-card[hidden] { display:none; }
+.card-gateway .catalog-card .catalog-symbol { font-size:1.65rem;color:#f4d395;line-height:1; }
+.card-gateway .catalog-card .catalog-category { font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#a4d9fa;font-weight:830; }
+.card-gateway .catalog-card strong { font-size:1.12rem;line-height:1.2; }
+.card-gateway .catalog-card small { font-size:.85rem;color:var(--muted);line-height:1.55; }
+.card-gateway .catalog-card .catalog-open { margin-top:auto;color:#aeefd4;font-weight:820;font-size:.79rem; }
+.card-gateway .empty-message { padding:24px;border:1px dashed var(--line-strong);border-radius:18px;color:var(--muted); }
+.card-gateway .catalog-foot { margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center; }
+.card-gateway .catalog-foot .action { min-width:185px; }
+.card-gateway .contact-reference { color:var(--muted);font-size:.82rem;text-align:center;line-height:1.5;margin:16px auto 0; }
+@media (max-width:850px) {
+ .card-gateway .catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:650px) {
+ body.card-gateway main { padding-top:12px; }
+ .card-gateway .profile-card { padding:20px 17px; }
+ .card-gateway .identity { grid-template-columns:69px 1fr;gap:13px; }
+ .card-gateway .avatar-wrap { width:69px;height:69px;border-radius:19px; }
+ .card-gateway .avatar { border-radius:16px; }
+ .card-gateway .profile-card h1 { font-size:clamp(1.85rem,7vw,2.5rem); }
+ .card-gateway .gateway-topline { margin-bottom:20px; }
+ .card-gateway .portal-doors,.card-gateway .secondary-doors,.card-gateway .catalog-grid { grid-template-columns:1fr; }
+ .card-gateway .portal-door { min-height:145px; }
+ .card-gateway .direct-actions { grid-template-columns:repeat(3,minmax(0,1fr));gap:7px; }
+ .card-gateway .direct-actions .action { padding:12px 5px;font-size:.78rem; }
+ .card-gateway .activity-strip { align-items:flex-start;flex-direction:column; }
+ .card-gateway .catalog-tools .surprise { width:100%; }
+}
+@media (prefers-reduced-motion:reduce) {
+ html { scroll-behavior:auto; }
+ .card-gateway .portal-door,.card-gateway .catalog-card { transition:none; }
+ .card-gateway .portal-door:hover,.card-gateway .catalog-card:hover { transform:none; }
+}
