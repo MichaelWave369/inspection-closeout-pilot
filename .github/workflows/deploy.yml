@@ -101,6 +101,9 @@ jobs:
       - name: Check public JavaScript
         run: npm run check:public-js
 
+      - name: Check physical business-card gateway
+        run: npm run check:card-gateway
+
       - name: Build site
         run: npm run build:site
 
