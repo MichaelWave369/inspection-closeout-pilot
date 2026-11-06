@@ -1,45 +1,38 @@
-// /links/ Card Atlas Gateway. Fully static: no tracking, API keys or remote scripts.
+// Φ369 /links/: local, dependency-free filtering only. No analytics or remote scripts.
 (() => {
-  const filters = [...document.querySelectorAll('[data-catalog-filter]')]
-  const cards = [...document.querySelectorAll('.catalog-card[data-category]')]
-  const search = document.getElementById('catalog-search')
-  const count = document.getElementById('catalog-count')
-  const empty = document.getElementById('catalog-empty')
-  const surprise = document.getElementById('catalog-surprise')
-  if (!cards.length || !search || !count || !empty || !surprise) return
+  'use strict'
+  const search = document.getElementById('project-search')
+  const buttons = Array.from(document.querySelectorAll('[data-filter]'))
+  const projects = Array.from(document.querySelectorAll('.project[data-category]'))
+  const count = document.getElementById('project-count')
+  const empty = document.getElementById('project-empty')
+  if (!search || !count || !empty || !projects.length) return
 
-  let category = 'all'
-  let shown = cards
-
-  function render() {
+  let selected = 'all'
+  const update = () => {
     const term = search.value.trim().toLocaleLowerCase()
-    shown = cards.filter(card => {
-      const matchesCategory = category === 'all' || card.dataset.category === category
-      const matchesText = (card.textContent || '').toLocaleLowerCase().includes(term)
-      const visible = matchesCategory && matchesText
-      card.hidden = !visible
-      return visible
-    })
-    count.textContent = shown.length + ' of ' + cards.length + ' curated public projects shown'
-    empty.hidden = shown.length > 0
-    surprise.disabled = shown.length === 0
-    filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.catalogFilter === category)))
+    let visible = 0
+    for (const project of projects) {
+      const categoryMatches = selected === 'all' || project.dataset.category === selected
+      const textMatches = (project.textContent || '').toLocaleLowerCase().includes(term)
+      const show = categoryMatches && textMatches
+      project.hidden = !show
+      if (show) visible += 1
+    }
+    count.textContent = visible + ' of ' + projects.length + ' featured projects'
+    empty.hidden = visible > 0
+    for (const button of buttons) {
+      const active = button.dataset.filter === selected
+      button.setAttribute('aria-pressed', String(active))
+      button.classList.toggle('active', active)
+    }
   }
-
-  filters.forEach(button => button.addEventListener('click', () => {
-    category = button.dataset.catalogFilter
-    render()
-  }))
-  search.addEventListener('input', render)
-  surprise.addEventListener('click', () => {
-    if (!shown.length) return
-    const chosen = shown[Math.floor(Math.random() * shown.length)]
-    // Explicit user gesture only. No background navigation or live-site guessing.
-    const anchor = document.createElement('a')
-    anchor.href = chosen.href
-    anchor.target = '_blank'
-    anchor.rel = 'noopener noreferrer'
-    anchor.click()
-  })
-  render()
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      selected = button.dataset.filter || 'all'
+      update()
+    })
+  }
+  search.addEventListener('input', update)
+  update()
 })()
